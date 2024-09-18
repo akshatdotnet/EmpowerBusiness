@@ -10,13 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		InitialSetup.txt = InitialSetup.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empower.Business", "Empower.Business\Empower.Business.csproj", "{80A2AA3D-53C9-46AB-BF7D-A3699B26CE64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Business", "Empower.Business\Empower.Business.csproj", "{80A2AA3D-53C9-46AB-BF7D-A3699B26CE64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empower.Data", "Empower.Data\Empower.Data.csproj", "{D955F13F-1687-4CE7-B0D5-B6ED3334BC57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Data", "Empower.Data\Empower.Data.csproj", "{D955F13F-1687-4CE7-B0D5-B6ED3334BC57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empower.Models", "Empower.Models\Empower.Models.csproj", "{69D6BD51-EB04-4E6F-B7E0-C63FF52E5092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Models", "Empower.Models\Empower.Models.csproj", "{69D6BD51-EB04-4E6F-B7E0-C63FF52E5092}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Empower.Utilities", "Empower.Utilities\Empower.Utilities.csproj", "{0709CA80-9C48-413B-8393-F3DF7D4433D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Utilities", "Empower.Utilities\Empower.Utilities.csproj", "{0709CA80-9C48-413B-8393-F3DF7D4433D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
