@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Empower.BMS\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Empower.BMS\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAIwBMAAABfAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAIwBwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-18T17:44:38.136Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "InitialSetup.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-08-17T10:43:01.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:43:01.679Z"
             }
           ]
         }
