@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\empower.bms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|solutionrelative:empower.bms\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\empower.bms\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|solutionrelative:empower.bms\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\empower.bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|solutionrelative:empower.bms\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\empower.bms\\empower.bms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FE803AD4-DB90-482D-BBD4-DF07696E23C7}|Empower.BMS\\Empower.BMS.csproj|solutionrelative:empower.bms\\empower.bms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{9BD578F2-60ED-45AD-B81C-ADE626F684D8}|Solution Items{9BD578F2-60ED-45AD-B81C-ADE626F684D8}|D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\InitialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9BD578F2-60ED-45AD-B81C-ADE626F684D8}|Solution Items{9BD578F2-60ED-45AD-B81C-ADE626F684D8}|solutionrelative:InitialSetup.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Empower.BMS\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Empower.BMS\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T06:55:24.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Empower.BMS",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Empower.BMS.csproj",
-              "RelativeDocumentMoniker": "Empower.BMS\\Empower.BMS.csproj",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Empower.BMS.csproj",
-              "RelativeToolTip": "Empower.BMS\\Empower.BMS.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-16T15:49:55.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\appsettings.json",
-              "RelativeDocumentMoniker": "Empower.BMS\\appsettings.json",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\appsettings.json",
-              "RelativeToolTip": "Empower.BMS\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-31T03:12:55.465Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Empower.BMS\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\Empower.BMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Empower.BMS\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwCoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T17:44:38.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InitialSetup.txt",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\InitialSetup.txt",
+              "RelativeDocumentMoniker": "InitialSetup.txt",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\InitialSetup.txt",
+              "RelativeToolTip": "InitialSetup.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-08-17T10:43:01.679Z",
               "EditorCaption": ""
             }
           ]
