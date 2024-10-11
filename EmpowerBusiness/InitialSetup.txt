@@ -1,0 +1,10 @@
+
+
+Project Structure and Solution Layers:
+Web Layer (MVC): Responsible for handling user interactions, displaying views, and managing request/response flow.
+Business Logic Layer (Services): Contains the core business logic of the application.
+Data Access Layer (Repositories): Manages database interactions using Entity Framework Core.
+Domain Models: Defines the entities that represent data within the system.
+Database: SQL Server or another supported database used with Entity Framework Core.
+
+

@@ -1,0 +1,633 @@
+﻿
+
+---------------------------------1. Schema Creation:--------------------------
+Follwoing Table Created for UserManagement :
+1.Channels
+2.Users
+3.PersonalDetails
+4.AddressDetails
+5.BankDetails
+6.KYCDetails
+7.TransactionLog
+
+CREATE TABLE Channel (
+    ChannelID INT IDENTITY(1,1) PRIMARY KEY,
+    Title VARCHAR(100) NOT NULL,               -- Channel title
+    BusinessName VARCHAR(100),                 -- Business name associated with the channel
+    BusinessType VARCHAR(50),                  -- Type of business
+    BusinessAddress VARCHAR(255),              -- Business address
+    PrimaryOwnerID INT FOREIGN KEY REFERENCES Users(UserID),  -- Refers to the primary owner in Users table
+    IsActive BIT DEFAULT 1,                    -- Indicates if the channel is active
+    IsDeleted BIT DEFAULT 0,                   -- Soft delete flag
+    CreatedBy VARCHAR(50),                     -- User who created the channel
+    CreatedDate DATETIME DEFAULT GETDATE(),    -- Channel creation timestamp
+    ModifiedBy VARCHAR(50),                    -- User who last modified the channel
+    ModifiedDate DATETIME                      -- Last modified timestamp
+);
+
+-- Store Procedure Channel_CRUD :
+
+============================================
+ALTER PROCEDURE [dbo].[Channel_CRUD]
+    @ActionType NVARCHAR(10),               -- Action to perform: 'Insert', 'Update', 'Delete', 'Select'
+    @ChannelID INT = NULL,                  -- Used for Update, Delete, and Select
+    @Title NVARCHAR(100) = NULL,            -- Channel title for Insert/Update
+    @BusinessName NVARCHAR(100) = NULL,     -- Business name for Insert/Update
+    @BusinessType NVARCHAR(50) = NULL,      -- Business type for Insert/Update
+    @BusinessAddress NVARCHAR(255) = NULL,  -- Business address for Insert/Update
+    @PrimaryOwnerID INT = NULL,             -- Primary Owner ID from Users table
+    @IsActive BIT = 1,                      -- Active flag (defaults to 1)
+    @CreatedBy NVARCHAR(50) = NULL,         -- Created by
+    @ModifiedBy NVARCHAR(50) = NULL         -- Modified by for Update
+AS
+BEGIN
+    -- Insert Operation
+    IF @ActionType = 'Insert'
+    BEGIN
+        INSERT INTO Channel (Title, BusinessName, BusinessType, BusinessAddress, PrimaryOwnerID, IsActive, CreatedBy, CreatedDate)
+        VALUES (@Title, @BusinessName, @BusinessType, @BusinessAddress, @PrimaryOwnerID, @IsActive, @CreatedBy, GETDATE());
+
+        PRINT 'Channel inserted successfully.';
+    END
+    
+    -- Update Operation
+    ELSE IF @ActionType = 'Update'
+    BEGIN
+        UPDATE Channel
+        SET Title = @Title,
+            BusinessName = @BusinessName,
+            BusinessType = @BusinessType,
+            BusinessAddress = @BusinessAddress,
+            PrimaryOwnerID = @PrimaryOwnerID,
+            IsActive = @IsActive,
+            ModifiedBy = @ModifiedBy,
+            ModifiedDate = GETDATE()
+        WHERE ChannelID = @ChannelID;
+
+        PRINT 'Channel updated successfully.';
+    END
+
+    -- Delete Operation (Soft Delete)
+    ELSE IF @ActionType = 'Delete'
+    BEGIN
+        UPDATE Channel
+        SET IsDeleted = 1, IsActive = 0, ModifiedBy = @ModifiedBy, ModifiedDate = GETDATE()
+        WHERE ChannelID = @ChannelID;
+
+        PRINT 'Channel deleted (soft delete) successfully.';
+    END
+
+    -- Select Operation
+    ELSE IF @ActionType = 'Select'
+    BEGIN
+        IF @ChannelID IS NOT NULL
+        BEGIN
+            SELECT * FROM Channel WHERE ChannelID = @ChannelID AND IsDeleted = 0;
+        END
+        ELSE
+        BEGIN
+            SELECT * FROM Channel WHERE IsDeleted = 0; -- Select all non-deleted channels
+        END
+    END
+END;
+
+============================================
+EXEC Channel_CRUD -- Action to perform: 'Insert', 'Update', 'Delete', 'Select'
+    @ActionType = 'Insert', 
+    @Title = 'Ginger Enterprises', 
+    @BusinessName = 'FMGC',
+    @BusinessType = 'Catering Services',
+    @BusinessAddress = 'Manish Complex,ComplexPhatak Rd, Bhayandar',
+    @PrimaryOwnerID = 1,  -- Assume user with ID 1 is the owner
+    @CreatedBy = 'admin';
+
+=============================================
+
+-- Create User Table
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    UserName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    MobileNumber VARCHAR(15) UNIQUE,      -- Mobile Number added    
+    PAN VARCHAR(10) UNIQUE,               -- PAN details
+    Aadhar VARCHAR(12) UNIQUE,            -- Aadhar details
+	PasswordHash VARCHAR(255) NOT NULL,
+    ChannelID INT FOREIGN KEY REFERENCES Channel(ChannelID),  -- Associated Channel
+    IsActive BIT DEFAULT 1,               -- Active status (soft delete flag)
+    IsDeleted BIT DEFAULT 0,              -- Soft delete flag
+    CreatedBy VARCHAR(50),                -- Created by user
+    CreatedDate DATETIME DEFAULT GETDATE(), -- Creation timestamp
+    ModifiedBy VARCHAR(50),               -- Last modified by user
+    ModifiedDate DATETIME                 -- Last modified timestamp
+);
+
+-- Create PersonalDetails Table linked to Users
+CREATE TABLE PersonalDetails (
+    PersonalID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT FOREIGN KEY REFERENCES Users(UserID),
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    DOB DATE NOT NULL,
+    PhoneNumber VARCHAR(15),
+    CreatedBy VARCHAR(50),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedBy VARCHAR(50),
+    ModifiedDate DATETIME,
+    IsActive BIT DEFAULT 1,
+    IsDeleted BIT DEFAULT 0
+);
+
+-- Create KYC Table linked to Users
+CREATE TABLE KYCDetails (
+    KYCID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT FOREIGN KEY REFERENCES Users(UserID),
+    KYCType VARCHAR(50),
+    DocumentNumber VARCHAR(50) UNIQUE,
+    VerifiedDate DATE,
+    Status VARCHAR(20),
+    CreatedBy VARCHAR(50),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedBy VARCHAR(50),
+    ModifiedDate DATETIME,
+    IsActive BIT DEFAULT 1,
+    IsDeleted BIT DEFAULT 0
+);
+
+
+-- Create BankDetails Table linked to Users
+CREATE TABLE BankDetails (
+    BankID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT FOREIGN KEY REFERENCES Users(UserID),
+    BankName VARCHAR(100),
+    AccountNumber VARCHAR(20) UNIQUE NOT NULL,
+    IFSCCode VARCHAR(11),
+    CreatedBy VARCHAR(50),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedBy VARCHAR(50),
+    ModifiedDate DATETIME,
+    IsActive BIT DEFAULT 1,
+    IsDeleted BIT DEFAULT 0
+);
+
+-- Create AddressDetails Table
+CREATE TABLE AddressDetails (
+    AddressID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT FOREIGN KEY REFERENCES Users(UserID),
+    AddressLine1 VARCHAR(255),
+    AddressLine2 VARCHAR(255),
+    City VARCHAR(100),
+    State VARCHAR(100),
+    PostalCode VARCHAR(10),
+    Country VARCHAR(50),
+    IsPrimaryAddress BIT DEFAULT 0,  -- Indicates if this is the primary address
+    CreatedBy VARCHAR(50),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedBy VARCHAR(50),
+    ModifiedDate DATETIME,
+    IsActive BIT DEFAULT 1,
+    IsDeleted BIT DEFAULT 0
+);
+
+-- Create TransactionLog Table
+
+CREATE TABLE TransactionLog (
+    TransactionID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT,                           -- Foreign Key from Users Table
+    ActionType VARCHAR(10),               -- 'Insert', 'Update', 'Delete'
+    TableName VARCHAR(50),                -- Name of the affected table
+    ActionTimestamp DATETIME DEFAULT GETDATE(), -- Timestamp of the action
+    Description VARCHAR(255),             -- Optional description of the change
+    CreatedBy VARCHAR(50),
+    IsDeleted BIT DEFAULT 0
+);
+
+
+
+---------------------------------2.Stored Procedures:--------------------------
+
+Unified CRUD Stored Procedure:
+
+
+CREATE PROCEDURE ManageUserDetails
+    @Action NVARCHAR(10),                 -- 'Insert', 'Update', 'Delete', 'Select'
+    @UserID INT = NULL,                   -- For Update, Delete, and Select
+    @UserName NVARCHAR(50) = NULL,        -- User Information
+    @Email NVARCHAR(100) = NULL,
+    @PasswordHash NVARCHAR(255) = NULL,
+    @FirstName NVARCHAR(50) = NULL,       -- Personal Details
+    @LastName NVARCHAR(50) = NULL,
+    @DOB DATE = NULL,
+    @PhoneNumber NVARCHAR(15) = NULL,
+    @Address NVARCHAR(255) = NULL,
+    @BankName NVARCHAR(100) = NULL,       -- Bank Details
+    @AccountNumber NVARCHAR(20) = NULL,
+    @IFSCCode NVARCHAR(11) = NULL,
+    @KYCType NVARCHAR(50) = NULL,         -- KYC Details
+    @DocumentNumber NVARCHAR(50) = NULL,
+    @AadharNumber NVARCHAR(12) = NULL,
+    @PANNumber NVARCHAR(10) = NULL,
+    @VerifiedDate DATE = NULL,
+    @Status NVARCHAR(20) = NULL           -- Common Status Field
+AS
+BEGIN
+    -- Begin transaction to handle all actions atomically
+    BEGIN TRANSACTION;
+    
+    -- Handle Insert operation
+    IF @Action = 'Insert'
+    BEGIN
+        -- Insert into Users table
+        INSERT INTO Users (UserName, Email, PasswordHash)
+        VALUES (@UserName, @Email, @PasswordHash);
+
+        -- Get the newly inserted UserID
+        DECLARE @NewUserID INT = SCOPE_IDENTITY();
+
+        -- Insert into PersonalDetails table
+        INSERT INTO PersonalDetails (UserID, FirstName, LastName, DOB, PhoneNumber, Address)
+        VALUES (@NewUserID, @FirstName, @LastName, @DOB, @PhoneNumber, @Address);
+
+        -- Insert into BankDetails table
+        INSERT INTO BankDetails (UserID, BankName, AccountNumber, IFSCCode)
+        VALUES (@NewUserID, @BankName, @AccountNumber, @IFSCCode);
+
+        -- Insert into KYC table
+        INSERT INTO KYC (UserID, KYCType, DocumentNumber, AadharNumber, PANNumber, VerifiedDate, Status)
+        VALUES (@NewUserID, @KYCType, @DocumentNumber, @AadharNumber, @PANNumber, @VerifiedDate, @Status);
+
+        -- Log the transaction (optional)
+        INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+        VALUES (@NewUserID, 'Insert', 'Users', 'User and details inserted');
+    END
+
+    -- Handle Update operation
+    ELSE IF @Action = 'Update'
+    BEGIN
+        -- Update Users table
+        UPDATE Users
+        SET UserName = @UserName, Email = @Email, PasswordHash = @PasswordHash
+        WHERE UserID = @UserID;
+
+        -- Update PersonalDetails table
+        UPDATE PersonalDetails
+        SET FirstName = @FirstName, LastName = @LastName, DOB = @DOB, PhoneNumber = @PhoneNumber, Address = @Address
+        WHERE UserID = @UserID;
+
+        -- Update BankDetails table
+        UPDATE BankDetails
+        SET BankName = @BankName, AccountNumber = @AccountNumber, IFSCCode = @IFSCCode
+        WHERE UserID = @UserID;
+
+        -- Update KYC table
+        UPDATE KYC
+        SET KYCType = @KYCType, DocumentNumber = @DocumentNumber, AadharNumber = @AadharNumber, PANNumber = @PANNumber, VerifiedDate = @VerifiedDate, Status = @Status
+        WHERE UserID = @UserID;
+
+        -- Log the transaction (optional)
+        INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+        VALUES (@UserID, 'Update', 'Users', 'User and details updated');
+    END
+
+    -- Handle Delete operation
+    ELSE IF @Action = 'Delete'
+    BEGIN
+        -- Delete from KYC table
+        DELETE FROM KYC WHERE UserID = @UserID;
+
+        -- Delete from BankDetails table
+        DELETE FROM BankDetails WHERE UserID = @UserID;
+
+        -- Delete from PersonalDetails table
+        DELETE FROM PersonalDetails WHERE UserID = @UserID;
+
+        -- Delete from Users table
+        DELETE FROM Users WHERE UserID = @UserID;
+
+        -- Log the transaction (optional)
+        INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+        VALUES (@UserID, 'Delete', 'Users', 'User and details deleted');
+    END
+
+    -- Handle Select operation (fetch user details)
+    ELSE IF @Action = 'Select'
+    BEGIN
+        -- Select from Users table
+        SELECT 
+            u.UserID, u.UserName, u.Email,
+            p.FirstName, p.LastName, p.DOB, p.PhoneNumber, p.Address,
+            b.BankName, b.AccountNumber, b.IFSCCode,
+            k.KYCType, k.DocumentNumber, k.AadharNumber, k.PANNumber, k.VerifiedDate, k.Status
+        FROM Users u
+        LEFT JOIN PersonalDetails p ON u.UserID = p.UserID
+        LEFT JOIN BankDetails b ON u.UserID = b.UserID
+        LEFT JOIN KYC k ON u.UserID = k.UserID
+        WHERE u.UserID = @UserID;
+    END
+
+    -- Commit the transaction after all operations
+    COMMIT TRANSACTION;
+END;
+
+==========
+
+
+
+
+
+
+
+
+CREATE PROCEDURE InsertUserDetails
+    @UserName VARCHAR(50),
+    @Email VARCHAR(100),
+    @PasswordHash VARCHAR(255),
+    @FirstName VARCHAR(50),
+    @LastName VARCHAR(50),
+    @DOB DATE,
+    @PhoneNumber VARCHAR(15),
+    @Address VARCHAR(255),
+    @BankName VARCHAR(100),
+    @AccountNumber VARCHAR(20),
+    @IFSCCode VARCHAR(11),
+    @KYCType VARCHAR(50),
+    @DocumentNumber VARCHAR(50),
+    @VerifiedDate DATE,
+    @Status VARCHAR(20)
+AS
+BEGIN
+    -- Insert into Users
+    INSERT INTO Users (UserName, Email, PasswordHash)
+    VALUES (@UserName, @Email, @PasswordHash);
+
+    -- Get the last inserted UserID
+    DECLARE @NewUserID INT = SCOPE_IDENTITY();
+
+    -- Insert into PersonalDetails
+    INSERT INTO PersonalDetails (UserID, FirstName, LastName, DOB, PhoneNumber, Address)
+    VALUES (@NewUserID, @FirstName, @LastName, @DOB, @PhoneNumber, @Address);
+
+    -- Insert into BankDetails
+    INSERT INTO BankDetails (UserID, BankName, AccountNumber, IFSCCode)
+    VALUES (@NewUserID, @BankName, @AccountNumber, @IFSCCode);
+
+    -- Insert into KYC
+    INSERT INTO KYC (UserID, KYCType, DocumentNumber, VerifiedDate, Status)
+    VALUES (@NewUserID, @KYCType, @DocumentNumber, @VerifiedDate, @Status);
+END;
+
+--------------
+CREATE PROCEDURE UpdateUserDetails
+    @UserID INT,
+    @UserName VARCHAR(50),
+    @Email VARCHAR(100),
+    @PasswordHash VARCHAR(255),
+    @FirstName VARCHAR(50),
+    @LastName VARCHAR(50),
+    @DOB DATE,
+    @PhoneNumber VARCHAR(15),
+    @Address VARCHAR(255),
+    @BankName VARCHAR(100),
+    @AccountNumber VARCHAR(20),
+    @IFSCCode VARCHAR(11),
+    @KYCType VARCHAR(50),
+    @DocumentNumber VARCHAR(50),
+    @VerifiedDate DATE,
+    @Status VARCHAR(20)
+AS
+BEGIN
+    -- Update Users
+    UPDATE Users
+    SET UserName = @UserName, Email = @Email, PasswordHash = @PasswordHash
+    WHERE UserID = @UserID;
+
+    -- Update PersonalDetails
+    UPDATE PersonalDetails
+    SET FirstName = @FirstName, LastName = @LastName, DOB = @DOB, PhoneNumber = @PhoneNumber, Address = @Address
+    WHERE UserID = @UserID;
+
+    -- Update BankDetails
+    UPDATE BankDetails
+    SET BankName = @BankName, AccountNumber = @AccountNumber, IFSCCode = @IFSCCode
+    WHERE UserID = @UserID;
+
+    -- Update KYC
+    UPDATE KYC
+    SET KYCType = @KYCType, DocumentNumber = @DocumentNumber, VerifiedDate = @VerifiedDate, Status = @Status
+    WHERE UserID = @UserID;
+END;
+
+-----------------
+CREATE PROCEDURE DeleteUserDetails
+    @UserID INT
+AS
+BEGIN
+    -- Delete from KYC
+    DELETE FROM KYC WHERE UserID = @UserID;
+
+    -- Delete from BankDetails
+    DELETE FROM BankDetails WHERE UserID = @UserID;
+
+    -- Delete from PersonalDetails
+    DELETE FROM PersonalDetails WHERE UserID = @UserID;
+
+    -- Delete from Users
+    DELETE FROM Users WHERE UserID = @UserID;
+END;
+
+---------------------------------3.Mock Data Insertion:--------------------------
+
+EXEC InsertUserDetails 
+    @UserName = 'john_doe',
+    @Email = 'john@example.com',
+    @PasswordHash = 'hashed_password',
+    @FirstName = 'John',
+    @LastName = 'Doe',
+    @DOB = '1985-06-15',
+    @PhoneNumber = '1234567890',
+    @Address = '123 Main Street',
+    @BankName = 'ABC Bank',
+    @AccountNumber = '1234567890',
+    @IFSCCode = 'ABCD0123456',
+    @KYCType = 'Passport',
+    @DocumentNumber = 'A1234567',
+    @VerifiedDate = '2023-01-01',
+    @Status = 'Verified';
+
+-------------------
+
+1. Schema Updates:
+
+-- Modify KYC Table to add Aadhar and PAN details
+ALTER TABLE KYC
+ADD AadharNumber VARCHAR(12), -- Aadhar is typically 12 digits
+    PANNumber VARCHAR(10);    -- PAN is typically 10 characters
+
+
+2. Updated Stored Procedures:
+
+Update User with Aadhar and PAN:
+
+CREATE PROCEDURE UpdateUserDetails
+    @UserID INT,
+    @UserName VARCHAR(50),
+    @Email VARCHAR(100),
+    @PasswordHash VARCHAR(255),
+    @FirstName VARCHAR(50),
+    @LastName VARCHAR(50),
+    @DOB DATE,
+    @PhoneNumber VARCHAR(15),
+    @Address VARCHAR(255),
+    @BankName VARCHAR(100),
+    @AccountNumber VARCHAR(20),
+    @IFSCCode VARCHAR(11),
+    @KYCType VARCHAR(50),
+    @DocumentNumber VARCHAR(50),
+    @AadharNumber VARCHAR(12),
+    @PANNumber VARCHAR(10),
+    @VerifiedDate DATE,
+    @Status VARCHAR(20)
+AS
+BEGIN
+    -- Update Users
+    UPDATE Users
+    SET UserName = @UserName, Email = @Email, PasswordHash = @PasswordHash
+    WHERE UserID = @UserID;
+
+    -- Update PersonalDetails
+    UPDATE PersonalDetails
+    SET FirstName = @FirstName, LastName = @LastName, DOB = @DOB, PhoneNumber = @PhoneNumber, Address = @Address
+    WHERE UserID = @UserID;
+
+    -- Update BankDetails
+    UPDATE BankDetails
+    SET BankName = @BankName, AccountNumber = @AccountNumber, IFSCCode = @IFSCCode
+    WHERE UserID = @UserID;
+
+    -- Update KYC with Aadhar and PAN
+    UPDATE KYC
+    SET KYCType = @KYCType, DocumentNumber = @DocumentNumber, AadharNumber = @AadharNumber, PANNumber = @PANNumber, VerifiedDate = @VerifiedDate, Status = @Status
+    WHERE UserID = @UserID;
+END;
+
+-------------------
+
+
+2. Modifying Stored Procedures to Log Transactions:
+
+CREATE PROCEDURE InsertUserDetails
+    @UserName VARCHAR(50),
+    @Email VARCHAR(100),
+    @PasswordHash VARCHAR(255),
+    @FirstName VARCHAR(50),
+    @LastName VARCHAR(50),
+    @DOB DATE,
+    @PhoneNumber VARCHAR(15),
+    @Address VARCHAR(255),
+    @BankName VARCHAR(100),
+    @AccountNumber VARCHAR(20),
+    @IFSCCode VARCHAR(11),
+    @KYCType VARCHAR(50),
+    @DocumentNumber VARCHAR(50),
+    @AadharNumber VARCHAR(12),
+    @PANNumber VARCHAR(10),
+    @VerifiedDate DATE,
+    @Status VARCHAR(20)
+AS
+BEGIN
+    -- Insert into Users
+    INSERT INTO Users (UserName, Email, PasswordHash)
+    VALUES (@UserName, @Email, @PasswordHash);
+
+    -- Get the last inserted UserID
+    DECLARE @NewUserID INT = SCOPE_IDENTITY();
+
+    -- Insert into PersonalDetails
+    INSERT INTO PersonalDetails (UserID, FirstName, LastName, DOB, PhoneNumber, Address)
+    VALUES (@NewUserID, @FirstName, @LastName, @DOB, @PhoneNumber, @Address);
+
+    -- Insert into BankDetails
+    INSERT INTO BankDetails (UserID, BankName, AccountNumber, IFSCCode)
+    VALUES (@NewUserID, @BankName, @AccountNumber, @IFSCCode);
+
+    -- Insert into KYC with Aadhar and PAN details
+    INSERT INTO KYC (UserID, KYCType, DocumentNumber, AadharNumber, PANNumber, VerifiedDate, Status)
+    VALUES (@NewUserID, @KYCType, @DocumentNumber, @AadharNumber, @PANNumber, @VerifiedDate, @Status);
+
+    -- Log the transaction in TransactionLog for each table insertion
+    INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+    VALUES (@NewUserID, 'Insert', 'Users', 'New user added');
+
+    INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+    VALUES (@NewUserID, 'Insert', 'PersonalDetails', 'Personal details added');
+
+    INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+    VALUES (@NewUserID, 'Insert', 'BankDetails', 'Bank details added');
+
+    INSERT INTO TransactionLog (UserID, ActionType, TableName, Description)
+    VALUES (@NewUserID, 'Insert', 'KYC', 'KYC details added');
+END;
+
+---------------------
+
+
+
+
+--------------
+EXEC ManageUserDetails 
+    @Action = 'Insert',
+    @UserName = 'jane_doe',
+    @Email = 'jane@example.com',
+    @PasswordHash = 'hashed_password',
+    @FirstName = 'Jane',
+    @LastName = 'Doe',
+    @DOB = '1990-01-01',
+    @PhoneNumber = '9876543210',
+    @Address = '456 Elm Street',
+    @BankName = 'XYZ Bank',
+    @AccountNumber = '0987654321',
+    @IFSCCode = 'XYZB0001234',
+    @KYCType = 'Passport',
+    @DocumentNumber = 'B1234567',
+    @AadharNumber = '987654321098',
+    @PANNumber = 'XYZPA1234X',
+    @VerifiedDate = '2024-01-01',
+    @Status = 'Verified';
+
+
+    -------------------
+
+    CREATE PROCEDURE CheckUserExistence
+    @Email NVARCHAR(100),
+    @PhoneNumber NVARCHAR(15)
+AS
+BEGIN
+    -- Declare a variable to store the count of users
+    DECLARE @UserCount INT;
+
+    -- Check if a user exists with the given email or phone number
+    SELECT @UserCount = COUNT(*)
+    FROM Users
+    WHERE Email = @Email OR PhoneNumber = @PhoneNumber;
+
+    -- Return a message based on whether the user exists or not
+    IF @UserCount > 0
+    BEGIN
+        -- If a user exists
+        PRINT 'User with this email or phone number already exists.';
+    END
+    ELSE
+    BEGIN
+        -- If no user exists
+        PRINT 'No user exists with this email or phone number. You can proceed.';
+    END
+END;
+
+-------
+EXEC CheckUserExistence 
+    @Email = 'john@example.com',
+    @PhoneNumber = '1234567890';
+
+
+
+
+

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.BMS", "Empower.BMS\Empower.BMS.csproj", "{FE803AD4-DB90-482D-BBD4-DF07696E23C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Web", "Empower.BMS\Empower.Web.csproj", "{FE803AD4-DB90-482D-BBD4-DF07696E23C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0709CA80-9C48-413B-8393-F3DF7D4433D6} = {0709CA80-9C48-413B-8393-F3DF7D4433D6}
+		{80A2AA3D-53C9-46AB-BF7D-A3699B26CE64} = {80A2AA3D-53C9-46AB-BF7D-A3699B26CE64}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BD578F2-60ED-45AD-B81C-ADE626F684D8}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +21,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Models", "Empower.Models\Empower.Models.csproj", "{69D6BD51-EB04-4E6F-B7E0-C63FF52E5092}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Utilities", "Empower.Utilities\Empower.Utilities.csproj", "{0709CA80-9C48-413B-8393-F3DF7D4433D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.WebAPI", "Empower.API\Empower.WebAPI.csproj", "{3C2ED147-47F9-4C6D-8ECB-BF095091161B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,10 @@ Global
 		{0709CA80-9C48-413B-8393-F3DF7D4433D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0709CA80-9C48-413B-8393-F3DF7D4433D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0709CA80-9C48-413B-8393-F3DF7D4433D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

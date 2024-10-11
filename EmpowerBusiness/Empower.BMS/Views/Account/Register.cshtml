@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["PageTitle"] = "Register Page";
+    // Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@model Empower.Models.Account.RegisterInputDTO
+
+<div class="account-pages mt-5 mb-5">
+
+    <div class="row justify-content-center">
+
+    </div>
+
+    <div class="card bg-pattern bgtrans">
+
+        <div class="card-body p-4">
+            <div class="text-center loginwelcome mb-4 mb-md-4">
+                <h1>Welcome</h1>
+                <p>Register with us</p>
+            </div>
+
+            <form asp-action="Register" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- UserName Field -->
+                <div class="form-floating mb-3 position-relative">
+                    <label asp-for="@Model.UserName" class="form-label">UserName *</label>
+                    <input asp-for="UserName" class="form-control" id="user-field" placeholder="John Cena">
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                    <i class="fa fa-user position-absolute" style="top: 38px; right: 10px;"></i>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-floating mb-3 position-relative">
+                    <label asp-for="@Model.EmailId" class="form-label">Email address *</label>
+                    <input asp-for="EmailId" class="form-control" id="email-field" placeholder="name@example.com">
+                    <span asp-validation-for="@Model.EmailId" class="text-danger"></span>
+                    <i class="fa fa-user position-absolute" style="top: 38px; right: 10px;"></i>
+                </div>
+
+                <!-- Mobile Field -->
+                <div class="form-floating mb-3 position-relative">
+                    <label asp-for="@Model.Mobile" class="form-label">Mobile *</label>
+                    <input asp-for="Mobile" class="form-control" id="mobile-field" placeholder="9920177082">
+                    <span asp-validation-for="@Model.Mobile" class="text-danger"></span>
+                    <i class="fa fa-user position-absolute" style="top: 38px; right: 10px;"></i>
+                </div>
+
+
+
+                <!-- Submit Button -->
+                <div class="text-center d-grid">
+                    <button type="submit" class="btn btn-primary shadow-lg btn-lg text-uppercase py-2">Register</button>
+                </div>
+            </form>
+
+        </div>
+            
+    </div>
+
+</div>

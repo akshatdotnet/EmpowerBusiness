@@ -1,0 +1,6 @@
+@Empower.API_HostAddress = http://localhost:5155
+
+GET {{Empower.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

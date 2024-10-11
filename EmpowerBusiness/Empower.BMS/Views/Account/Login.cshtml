@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["PageTitle"] = "Login Page";
+    // Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@model Empower.Models.Account.LoginInputDTO
+
+<style>
+    .validation-summary-errors ul {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+    }
+
+    .toggle-password {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 35px;
+    }
+</style>
+
+<div class="account-pages mt-5 mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="text-center m-auto">
+                    <div class="auth-brand">
+                        @* <a href="#" class="logo logo-dark text-center">
+                            <span class="logo-lg">
+                                <img src="~/images/logo-dark.png" alt="Company Logo" />
+                            </span>
+                        </a> *@
+                    </div>
+                    <h5 class="color1-text mb-4 mt-3">
+                        Empower business is a creative and technology-driven solution provider.
+                    </h5>
+                </div>
+
+                <div class="card bg-pattern bgtrans">
+                    <div class="card-body p-4">
+                        <div class="text-center loginwelcome mb-4 mb-md-4">
+                            <h1>Welcome</h1>
+                            <p>Login with email</p>
+                        </div>
+
+                        <form asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <!-- Email Field -->
+                            <div class="form-floating mb-3 position-relative">
+                                <label asp-for="@Model.UserEmail" class="form-label">Email address *</label>
+                                <input asp-for="UserEmail" class="form-control" id="email-field" placeholder="name@example.com">
+                                <span asp-validation-for="@Model.UserEmail" class="text-danger"></span>
+                                <i class="fa fa-user position-absolute" style="top: 38px; right: 10px;"></i>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="form-floating mb-3 position-relative">
+                                <label asp-for="@Model.Password" class="form-label">Password *</label>
+                                <input type="password" asp-for="Password" class="form-control" id="password-field" placeholder="Password">
+                                <i class="fa fa-eye toggle-password" id="toggle-password"></i>
+                                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                            </div>
+
+                            <!-- Remember Me Checkbox -->
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" asp-for="RememberMe" id="remember-me">
+                                <label class="form-check-label" asp-for="RememberMe">Remember Me</label>
+                            </div>
+
+                            <!-- Forgot Password -->
+                            <div class="mt-2 mb-2 text-end">
+                                <a href="/Account/ForgetPassword" class="text-muted fw-normal">Forgot Password?</a>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center d-grid">
+                                <button type="submit" class="btn btn-primary shadow-lg btn-lg text-uppercase py-2">Login</button>
+                            </div>
+                        </form>
+                    </div> <!-- end card-body -->
+                </div> <!-- end card -->
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</div>
+
+@section scripts {
+    <script>
+        // Toggle Password Visibility
+        $(document).ready(function () {
+            $('#toggle-password').click(function () {
+                let passwordField = $('#password-field');
+                let passwordFieldType = passwordField.attr('type');
+
+                if (passwordFieldType === 'password') {
+                    passwordField.attr('type', 'text');
+                    $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    passwordField.attr('type', 'password');
+                    $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+        });
+    </script>
+}
