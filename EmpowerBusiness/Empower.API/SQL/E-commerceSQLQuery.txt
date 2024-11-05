@@ -1,0 +1,145 @@
+﻿
+SQL Schema for E-commerce Application
+
+1. Products Table
+CREATE TABLE Products (
+    ProductID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    ProductDescription TEXT,
+    CategoryID INT, -- Foreign Key to Product Categories
+    Price DECIMAL(10, 2) NOT NULL,
+    SKU VARCHAR(100) UNIQUE, -- Stock Keeping Unit
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedDate DATETIME,
+    IsActive BIT DEFAULT 1
+);
+
+2. Categories Table
+CREATE TABLE Categories (
+    CategoryID INT IDENTITY(1,1) PRIMARY KEY,
+    CategoryName VARCHAR(100) NOT NULL,
+    Description TEXT
+);
+
+3. Inventory Table
+CREATE TABLE Inventory (
+    InventoryID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
+    QuantityInStock INT NOT NULL DEFAULT 0,
+    QuantitySold INT DEFAULT 0,
+    QuantityPurchased INT DEFAULT 0,
+    LastRestockDate DATETIME,
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedDate DATETIME
+);
+
+4. Sales Table
+CREATE TABLE Sales (
+    SaleID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
+    QuantitySold INT NOT NULL,
+    SalePrice DECIMAL(10, 2) NOT NULL, -- Price at which the product was sold
+    SaleDate DATETIME DEFAULT GETDATE(),
+    CustomerID INT, -- Optional foreign key if customer data is tracked
+    CreatedDate DATETIME DEFAULT GETDATE()
+);
+
+5. PurchaseOrders Table
+CREATE TABLE PurchaseOrders (
+    PurchaseOrderID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
+    SupplierID INT, -- Foreign Key to Suppliers Table
+    QuantityPurchased INT NOT NULL,
+    PurchasePrice DECIMAL(10, 2), -- Purchase Price per item
+    PurchaseDate DATETIME DEFAULT GETDATE(),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedDate DATETIME
+);
+
+6. Suppliers Table
+CREATE TABLE Suppliers (
+    SupplierID INT IDENTITY(1,1) PRIMARY KEY,
+    SupplierName VARCHAR(255) NOT NULL,
+    ContactInfo VARCHAR(255),
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    ModifiedDate DATETIME
+);
+
+Mock Data Inserts
+
+-- Insert into Categories
+INSERT INTO Categories (CategoryName, Description)
+VALUES ('Electronics', 'Devices and gadgets'),
+       ('Apparel', 'Clothing and accessories');
+
+-- Insert into Products
+INSERT INTO Products (ProductName, ProductDescription, CategoryID, Price, SKU)
+VALUES ('Smartphone', 'Latest model smartphone', 1, 699.99, 'ELEC-SM-001'),
+       ('T-Shirt', 'Cotton T-shirt', 2, 19.99, 'APP-T-SH-001');
+
+-- Insert into Inventory
+INSERT INTO Inventory (ProductID, QuantityInStock, QuantitySold, QuantityPurchased, LastRestockDate)
+VALUES (1, 100, 50, 150, '2024-09-01'),
+       (2, 500, 200, 700, '2024-09-01');
+
+-- Insert into Suppliers
+INSERT INTO Suppliers (SupplierName, ContactInfo)
+VALUES ('Tech Supplies Ltd', 'tech@supplies.com'),
+       ('Fashion Distributors Inc', 'fashion@distributors.com');
+
+-- Insert into PurchaseOrders
+INSERT INTO PurchaseOrders (ProductID, SupplierID, QuantityPurchased, PurchasePrice, PurchaseDate)
+VALUES (1, 1, 50, 500.00, '2024-09-01'),
+       (2, 2, 100, 10.00, '2024-09-01');
+
+-- Insert into Sales
+INSERT INTO Sales (ProductID, QuantitySold, SalePrice, SaleDate)
+VALUES (1, 5, 699.99, '2024-10-01'),
+       (2, 10, 19.99, '2024-10-01');
+
+
+1. Inventory Report
+SELECT 
+    p.ProductName,
+    i.QuantityInStock,
+    i.QuantitySold,
+    i.QuantityPurchased,
+    i.LastRestockDate
+FROM 
+    Inventory i
+JOIN 
+    Products p ON i.ProductID = p.ProductID;
+
+2. Sales Report
+SELECT 
+    p.ProductName,
+    SUM(s.QuantitySold) AS TotalUnitsSold,
+    SUM(s.SalePrice * s.QuantitySold) AS TotalRevenue
+FROM 
+    Sales s
+JOIN 
+    Products p ON s.ProductID = p.ProductID
+GROUP BY 
+    p.ProductName;
+
+3. Purchase Report
+SELECT 
+    p.ProductName,
+    po.QuantityPurchased,
+    po.PurchasePrice,
+    po.PurchaseDate,
+    s.SupplierName
+FROM 
+    PurchaseOrders po
+JOIN 
+    Products p ON po.ProductID = p.ProductID
+JOIN 
+    Suppliers s ON po.SupplierID = s.SupplierID;
+
+
+Best Practices
+Use IsActive and IsDeleted flags to handle soft deletes and archiving of products or categories.
+Indexes on ProductID, CategoryID, and SKU to improve query performance.
+Track changes with audit fields like CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate for all tables.
+Handle foreign key constraints to ensure data integrity across the tables.
+

@@ -22,7 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Models", "Empower.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.Utilities", "Empower.Utilities\Empower.Utilities.csproj", "{0709CA80-9C48-413B-8393-F3DF7D4433D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.WebAPI", "Empower.API\Empower.WebAPI.csproj", "{3C2ED147-47F9-4C6D-8ECB-BF095091161B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empower.API", "Empower.API\Empower.API.csproj", "{3C2ED147-47F9-4C6D-8ECB-BF095091161B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7AA0384F-34DA-45A7-BB5E-7F11D9DF9482}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,10 @@ Global
 		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C2ED147-47F9-4C6D-8ECB-BF095091161B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA0384F-34DA-45A7-BB5E-7F11D9DF9482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA0384F-34DA-45A7-BB5E-7F11D9DF9482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA0384F-34DA-45A7-BB5E-7F11D9DF9482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA0384F-34DA-45A7-BB5E-7F11D9DF9482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
