@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7C5AEAE-DE1C-4F7C-94F2-62E3CED596CD}|DotNet-Core\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\dotnet-core\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7C5AEAE-DE1C-4F7C-94F2-62E3CED596CD}|DotNet-Core\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:dotnet-core\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\dotnet-core\\consoleapp1\\practicaltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:dotnet-core\\consoleapp1\\practicaltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\weblayer\\consoleapp\\lis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:weblayer\\consoleapp\\lis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\weblayer\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:weblayer\\consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\weblayer\\consoleapp\\question2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:weblayer\\consoleapp\\question2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\weblayer\\consoleapp\\question1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A67C5635-FC4D-4603-8B6C-47A4E54F8575}|WebLayer\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:weblayer\\consoleapp\\question1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7C5AEAE-DE1C-4F7C-94F2-62E3CED596CD}|DotNet-Core\\ConsoleApp\\ConsoleApp.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\dotnet-core\\consoleapp\\services\\pdfreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7C5AEAE-DE1C-4F7C-94F2-62E3CED596CD}|DotNet-Core\\ConsoleApp\\ConsoleApp.csproj|solutionrelative:dotnet-core\\consoleapp\\services\\pdfreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\dotnet-core\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:dotnet-core\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LIS.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\LIS.cs",
-              "RelativeDocumentMoniker": "WebLayer\\ConsoleApp\\LIS.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\LIS.cs",
-              "RelativeToolTip": "WebLayer\\ConsoleApp\\LIS.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAswEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T11:37:13.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Question2.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Question2.cs",
-              "RelativeDocumentMoniker": "WebLayer\\ConsoleApp\\Question2.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Question2.cs",
-              "RelativeToolTip": "WebLayer\\ConsoleApp\\Question2.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T11:35:18.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Question1.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Question1.cs",
-              "RelativeDocumentMoniker": "WebLayer\\ConsoleApp\\Question1.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Question1.cs",
-              "RelativeToolTip": "WebLayer\\ConsoleApp\\Question1.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T11:34:18.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp\\Program.cs",
-              "RelativeDocumentMoniker": "DotNet-Core\\ConsoleApp\\Program.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp\\Program.cs",
-              "RelativeToolTip": "DotNet-Core\\ConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Title": "PracticalTest.cs",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\PracticalTest.cs",
+              "RelativeDocumentMoniker": "DotNet-Core\\ConsoleApp1\\PracticalTest.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\PracticalTest.cs",
+              "RelativeToolTip": "DotNet-Core\\ConsoleApp1\\PracticalTest.cs",
+              "ViewState": "AgIAAFcCAAAAAAAAAADwv2ACAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T11:21:29.76Z",
+              "WhenOpened": "2024-11-29T12:04:25.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PDFReport.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp\\Services\\PDFReport.cs",
-              "RelativeDocumentMoniker": "DotNet-Core\\ConsoleApp\\Services\\PDFReport.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp\\Services\\PDFReport.cs",
-              "RelativeToolTip": "DotNet-Core\\ConsoleApp\\Services\\PDFReport.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:57:36.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Program.cs",
-              "RelativeDocumentMoniker": "WebLayer\\ConsoleApp\\Program.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\WebLayer\\ConsoleApp\\Program.cs",
-              "RelativeToolTip": "WebLayer\\ConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "DotNet-Core\\ConsoleApp1\\Program.cs",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\Program.cs*",
+              "RelativeToolTip": "DotNet-Core\\ConsoleApp1\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T10:55:38.335Z",
+              "WhenOpened": "2024-11-29T11:49:41.97Z",
               "EditorCaption": ""
             }
           ]
