@@ -1,0 +1,177 @@
+
+A.Basic .NET Core Questions
+
+1.What is .NET Core, and how is it different from .NET Framework?
+Answer:
+.NET Core is a cross-platform, open-source framework used to build modern, cloud-based, 
+and internet-connected applications. Unlike the .NET Framework, which is Windows-only, 
+.NET Core runs on Windows, Linux, and macOS.
+Key differences:
+Performance: .NET Core is optimized for high performance.
+Cross-platform: Supports multiple OS.
+Dependency injection: Built-in DI container.
+Modular architecture: Applications can include only required libraries via NuGet packages.
+
+2.What is Kestrel in .NET Core?
+Answer:
+Kestrel is the default lightweight, cross-platform web server included in .NET Core. 
+It is designed for high performance and supports handling HTTP requests. Kestrel can work 
+independently or behind a reverse proxy like IIS, Nginx, or Apache.
+
+3.Explain Middleware in ASP.NET Core.
+Answer:
+Middleware are components in the HTTP request pipeline that process requests and responses. 
+Each middleware performs a specific task (e.g., authentication, logging) and either passes 
+the request to the next middleware or ends the request.
+Example:
+app.Use(async (context, next) =>
+{
+    // Pre-processing logic
+    await next.Invoke(); // Pass to the next middleware
+    // Post-processing logic
+});
+app.UseStaticFiles(); // Serve static files
+app.UseRouting();     // Route requests
+
+
+4.What are the new features in .NET 8 (LTS)?
+Answer:
+Native AOT (Ahead-of-Time) compilation.
+Improvements in Blazor for full-stack development.
+Better support for cloud-native applications, including containers and microservices.
+Simplified and faster dependency injection.
+Enhanced HTTP/3 support.
+
+B.Advanced .NET Core Questions
+1.How does Dependency Injection work in .NET Core?
+Answer:
+Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC). 
+.NET Core has a built-in DI container. You register services in the Startup.cs file under 
+the ConfigureServices method. 
+Example:
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddScoped<IMyService, MyService>();
+}
+
+
+2.What is the purpose of IHostedService in .NET Core?
+Answer:
+IHostedService is used to execute background tasks in ASP.NET Core applications. For example, 
+running recurring tasks or long-running processes. 
+Example:
+public class MyBackgroundService : IHostedService
+{
+    public Task StartAsync(CancellationToken cancellationToken)
+    {
+        // Start background task
+        return Task.CompletedTask;
+    }
+    
+    public Task StopAsync(CancellationToken cancellationToken)
+    {
+        // Clean up resources
+        return Task.CompletedTask;
+    }
+}
+
+3.How do you secure an API in ASP.NET Core?
+Answer:
+Use Authentication and Authorization:
+Implement JWT or OAuth2 for authentication.
+Use [Authorize] attributes for route protection.
+Enable HTTPS for secure communication.
+Implement rate limiting using libraries like AspNetCoreRateLimit.
+Validate input to prevent attacks (e.g., SQL injection, XSS).
+
+4.What is Entity Framework Core, and how does it differ from EF 6?
+Answer:
+Entity Framework Core (EF Core) is an ORM (Object-Relational Mapper) that allows developers to work 
+with databases using .NET objects.
+Differences from EF 6:
+Cross-platform support.
+Lightweight and modular.
+Improved LINQ translation.
+Supports NoSQL providers like Cosmos DB.
+
+C.Scenario-Based Questions
+1.How would you design a microservice using .NET Core?
+Answer:
+Use a modular architecture.
+Implement RESTful APIs.
+Secure communication using OAuth2/JWT.
+Use Swagger for API documentation.
+Use Docker for containerization and Kubernetes for orchestration.
+Store configurations using IConfiguration and tools like Azure Key Vault.
+
+2.How would you implement caching in .NET Core?
+Answer:
+Use in-memory caching with IMemoryCache for temporary data storage.
+Use distributed caching like Redis or SQL Server for shared caching across instances. 
+Example:
+services.AddDistributedMemoryCache(); // Or AddStackExchangeRedisCache()
+
+// Store cache
+await _cache.SetStringAsync("key", "value", new DistributedCacheEntryOptions
+{
+    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+});
+
+// Retrieve cache
+var value = await _cache.GetStringAsync("key");
+
+C.Design Patterns and Best Practices
+1.Explain the Repository Pattern.
+Answer:
+The Repository Pattern separates the data access logic from the business logic by abstracting 
+the database queries into a repository layer. 
+Example:
+public interface IRepository<T>
+{
+    IEnumerable<T> GetAll();
+    T GetById(int id);
+    void Add(T entity);
+}
+
+public class Repository<T> : IRepository<T>
+{
+    private readonly DbContext _context;
+    public Repository(DbContext context) { _context = context; }
+    public IEnumerable<T> GetAll() => _context.Set<T>().ToList();
+}
+
+
+2.What is CQRS, and how would you implement it in .NET Core?
+Answer:
+CQRS (Command Query Responsibility Segregation) separates the write and read operations 
+into distinct models.
+Commands handle data mutations (e.g., CreateUserCommand).
+Queries handle data retrieval (e.g., GetUserQuery).
+Use MediatR to implement CQRS in .NET Core.
+
+D.General Problem-Solving Question
+1.How would you debug a performance issue in a .NET Core application?
+Answer:
+Use profiling tools like dotTrace, Visual Studio Profiler, or Application Insights.
+Analyze bottlenecks in database queries using EF Core logging.
+Optimize memory usage by avoiding large object allocations.
+Use async and await for better thread management.
+
+E.Behavioral/Team-Related Questions
+1.How do you handle version control in a team project?
+Answer:
+Use Git with branching strategies like Git Flow or Feature Branching.
+Use PR (Pull Request) reviews to maintain code quality.
+Follow semantic versioning (e.g., 1.0.0) for releases.
+
+2.How do you ensure quality in a .NET Core application?
+Answer:
+Write unit and integration tests using xUnit or MSTest.
+Use dependency injection to mock services during testing.
+Implement CI/CD pipelines for automated builds and tests.
+
+
+
+
+
+

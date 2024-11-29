@@ -1,0 +1,207 @@
+﻿
+SolidConsoleApp/
+├── Interfaces/
+│   ├── IReport.cs
+│   ├── IUserOperations.cs
+│   ├── IUserValidator.cs
+│   ├── ILogger.cs
+├── Models/
+│   ├── User.cs
+├── Services/
+│   ├── UserRepository.cs
+│   ├── UserValidator.cs
+│   ├── ConsoleLogger.cs
+│   ├── CSVReport.cs
+│   ├── PDFReport.cs
+│   ├── UserService.cs
+│   ├── FileUserRepository.cs
+├── Program.cs
+
+
+
+
+
+
+
+
+
+
+
+
+A.Basic C# Questions
+1.What are the main features of C#?
+Answer:
+Object-oriented programming: Encapsulation, inheritance, polymorphism, and abstraction.
+Type Safety: Strongly-typed language with runtime type-checking.
+Garbage Collection: Automatic memory management.
+Asynchronous programming: Built-in support for async/await.
+LINQ: Language-Integrated Query for querying collections.
+Interoperability: Works with COM components and native code.
+
+2.Explain the concept of Managed Code and Unmanaged Code.
+Answer:
+Managed Code: Code executed by the CLR (Common Language Runtime). It benefits from features like 
+garbage collection, type safety, and exception handling.
+Unmanaged Code: Code executed directly by the operating system. Examples include code written in C/C++.
+
+3.What is the difference between ref and out keywords in C#?
+Answer:
+ref: The variable must be initialized before being passed.
+out: The variable does not need to be initialized before being passed, but it must be assigned 
+inside the method.
+Example:
+void Example(ref int refParam, out int outParam)
+{
+    refParam += 10;   // ref variable is used directly
+    outParam = 20;    // out variable must be assigned a value
+}
+
+B.Advanced C# Questions
+1.What are Delegates and Events in C#?
+Answer:
+Delegates: A delegate is a type-safe pointer to a method. It can reference any method 
+with a matching signature.
+Example:
+public delegate void PrintMessage(string message);
+
+Events: Events are based on delegates and are used to enable a publisher-subscriber model.
+Example:
+public event PrintMessage OnPrint;
+OnPrint?.Invoke("Hello, World!");
+
+2.What is the difference between abstract class and interface?
+Answer:
+Feature	            Abstract Class	                        Interface
+Methods	            Can have abstract and concrete methods.	Only abstract methods (default).
+Fields	            Can have fields.	                    Cannot have fields.
+Multiple            Inheritance	Not supported.	            Supported.
+Access Modifiers	Supports access modifiers.	            Cannot have access modifiers.
+
+Example:
+abstract class Shape { public abstract void Draw(); }
+interface IShape { void Draw(); }
+
+3.What are Generics in C#?
+Answer:
+Generics allow you to define type-safe data structures and methods without specifying the data type 
+in advance.
+Example:
+public class GenericClass<T>
+{
+    public T Value { get; set; }
+    public void Display(T input) { Console.WriteLine(input); }
+}
+
+C.Scenario-Based Questions
+1.How would you handle exceptions in a C# application?
+Answer:
+Use try-catch-finally blocks for exception handling. For global exception handling, 
+use AppDomain.UnhandledException or middleware in ASP.NET Core. 
+Example:
+try
+{
+    int result = 10 / 0;
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine($"Error: {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Execution completed.");
+}
+
+2.How would you ensure thread safety in a multithreaded application?
+Answer:
+Use locks with lock or Monitor:
+
+private static readonly object _lock = new object();
+lock (_lock) { /* Critical section */ }
+
+Use thread-safe collections like ConcurrentDictionary.
+Use async/await for asynchronous programming.
+
+3.How do you handle file I/O in C#?
+Answer:
+Use classes from the System.IO namespace like File, StreamReader, and StreamWriter.
+Example:
+string content = File.ReadAllText("file.txt");
+File.WriteAllText("output.txt", content.ToUpper());
+
+D.C# Design Patterns
+1.Explain the Singleton Design Pattern.
+Answer:
+The Singleton pattern ensures that a class has only one instance and provides a 
+global point of access to it. 
+Example:
+public class Singleton
+{
+    private static readonly Singleton _instance = new Singleton();
+    private Singleton() { }
+    public static Singleton Instance => _instance;
+}
+
+2.What is Dependency Injection (DI) in C#?
+Answer:
+Dependency Injection is a technique where an object receives its dependencies from an 
+external source rather than creating them internally. 
+In ASP.NET Core, DI is built-in. 
+Example:
+services.AddScoped<IMyService, MyService>();
+
+3.Explain the Observer Design Pattern.
+Answer:
+The Observer pattern defines a one-to-many relationship where multiple observers 
+are notified of state changes.
+Example:
+public class Subject
+{
+    private readonly List<IObserver> _observers = new();
+    public void Attach(IObserver observer) => _observers.Add(observer);
+    public void Notify() => _observers.ForEach(o => o.Update());
+}
+
+E.Real-World Problem-Solving Questions
+1.How would you implement caching in a C# application?
+Answer:
+Use MemoryCache or Distributed Cache:
+
+IMemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
+_cache.Set("key", "value", TimeSpan.FromMinutes(5));
+var value = _cache.Get<string>("key");
+
+2.How would you optimize the performance of a LINQ query?
+Answer:
+Use deferred execution.
+Minimize in-memory operations (.ToList()).
+Use compiled queries in Entity Framework.
+Filter data as early as possible (e.g., before projection).
+
+3.How would you create a REST API using C#?
+Answer:
+Use ASP.NET Core to create RESTful endpoints.
+Implement controllers and routes:
+
+[ApiController]
+[Route("api/[controller]")]
+public class UsersController : ControllerBase
+{
+    [HttpGet("{id}")]
+    public IActionResult GetUser(int id)
+    {
+        var user = new { Id = id, Name = "John Doe" };
+        return Ok(user);
+    }
+}
+
+F.Behavioral Questions
+1.How do you manage version control in a team project?
+Answer:
+Use Git with branch strategies like GitFlow or Feature Branching. 
+Perform code reviews and follow semantic versioning (e.g., 1.0.0).
+
+2.How do you ensure code quality in a C# project?
+Answer:
+Write unit tests using xUnit or NUnit.
+Use CI/CD pipelines for automated testing.
+Perform regular code reviews and use static analysis tools like SonarQube.
