@@ -14,7 +14,7 @@ namespace ConsoleApp
 
     class Program5
     {
-        static void Main()
+        public static void NNNMain()
         {
             var person = new { Name = "Alice", Age = 25 };
             string jsonString = JsonSerializer.Serialize(person);

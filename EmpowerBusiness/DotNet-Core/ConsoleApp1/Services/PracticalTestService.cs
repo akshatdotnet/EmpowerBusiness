@@ -1,36 +1,45 @@
-﻿using System;
+﻿using ConsoleApp1.Interfaces;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Metrics;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Numerics;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using static ConsoleApp1.PracticalTest;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.Services
 {
-    internal class PracticalTest
+    public class PracticalTestService : IPracticalTest
     {
-        //1. Reverse a String
-        //Problem: Write a method to reverse a string without using built-in reverse functions.
+
+        #region 1.Reverse String Example
+        public void ReverseString()
+        {
+            string reversestring = ReverseString("hello");
+            Console.WriteLine(reversestring);
+            Console.ReadLine();
+
+        }
+
         public static string ReverseString(string input)
         {
             char[] charArray = input.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
-        // Input: "hello"
-        // Output: "olleh"
+        #endregion
 
-        //2. Check for Palindrome
-        //Problem: Write a method to check if a string is a palindrome.
+        #region 2.Check for Palindrome Example
+
+        public void Palindrome()
+        {
+            bool IsPalidrome = IsPalindrome("madam");
+            Console.WriteLine(IsPalidrome);
+            Console.ReadLine();
+            // Input: "madam"
+            // Output: true
+        }
+
         public static bool IsPalindrome(string input)
         {
             int start = 0, end = input.Length - 1;
@@ -41,11 +50,22 @@ namespace ConsoleApp1
             }
             return true;
         }
-        // Input: "madam"
-        // Output: true
 
-        //3.Find Duplicates in an Array
-        //Problem: Write a method to find duplicate elements in an array.
+        #endregion
+
+        #region 3.Find Duplicates in an Array
+        public void FindDuplicates()
+        {
+            List<int> duplicateNumbers = FindDuplicates([1, 2, 3, 1, 4, 2]);
+            // Console.WriteLine(Numbers);
+            // Print duplicates
+            //Console.WriteLine("Duplicate numbers: " + string.Join(", ", duplicateNumbers));
+            Console.WriteLine("[" + string.Join(", ", duplicateNumbers) + "]");
+
+
+            // Input: [1, 2, 3, 1, 4, 2]
+            // Output: [1, 2]
+        }
         public static List<int> FindDuplicates(int[] numbers)
         {
             var duplicates = new List<int>();
@@ -59,11 +79,16 @@ namespace ConsoleApp1
             return duplicates;
         }
 
-        // Input: [1, 2, 3, 1, 4, 2]
-        // Output: [1, 2]
+        #endregion
 
-        //4. Print Fibonacci Series
-        //Problem: Generate the first N Fibonacci numbers.
+        #region 4. Print Fibonacci Series
+
+        public void PrintFibonacci()
+        {
+            PrintFibonacci(5);
+            // Input: 5
+            // Output: 0 1 1 2 3
+        }
         public static void PrintFibonacci(int n)
         {
             int a = 0, b = 1;
@@ -78,11 +103,13 @@ namespace ConsoleApp1
             }
         }
 
-        // Input: 5
-        // Output: 0 1 1 2 3
+        #endregion
 
-        //5. Implement Singleton Pattern
-        //Problem: Create a thread-safe Singleton class.
+        #region 5. Implement Singleton Pattern
+        public void SingletoneExample()
+        {
+
+        }
         public sealed class Singleton
         {
             private static readonly Lazy<Singleton> _instance = new(() => new Singleton());
@@ -92,18 +119,37 @@ namespace ConsoleApp1
             public static Singleton Instance => _instance.Value;
         }
 
-        //6. LINQ Query to Filter and Sort
-        //Problem: Use LINQ to filter even numbers and sort them in descending order.
+        #endregion
+
+        #region 6. LINQ Query to Filter and Sort
+        public void FilterAndSortExample()
+        {
+            List<int> FilterAndSortNumbers = FilterAndSort([3, 5, 2, 8, 6]);
+
+            // FilterAndSort
+            Console.WriteLine("[" + string.Join(", ", FilterAndSortNumbers) + "]");
+
+            // Input: [3, 5, 2, 8, 6]
+            // Output: [8, 6, 2]
+        }
         public static List<int> FilterAndSort(int[] numbers)
         {
             return numbers.Where(n => n % 2 == 0).OrderByDescending(n => n).ToList();
         }
 
-        // Input: [3, 5, 2, 8, 6]
-        // Output: [8, 6, 2]
 
-        //7. Find the First Non-Repeating Character
-        //Problem: Find the first non-repeating character in a string.
+        #endregion
+
+        #region 7. Find the First Non-Repeating Character
+        public void FirstNonRepeatingCharExample()
+        {
+            var charactpr = FirstNonRepeatingChar("swiss");
+            Console.WriteLine(charactpr);
+
+            // Input: "swiss"
+            // Output: 'w'
+        }
+
         public static char? FirstNonRepeatingChar(string input)
         {
             var count = new Dictionary<char, int>();
@@ -114,11 +160,14 @@ namespace ConsoleApp1
             return input.FirstOrDefault(c => count[c] == 1);
         }
 
-        // Input: "swiss"
-        // Output: 'w'
+        #endregion
 
-        //8. Multithreading Example
-        //Problem: Use multithreading to print numbers from 1 to 10 in two threads.
+        #region 8. Multithreading Example
+        public void PrintNumbersExample()
+        {
+            PrintNumbers();
+        }
+
         public static void PrintNumbers()
         {
             Thread t1 = new Thread(() =>
@@ -140,9 +189,23 @@ namespace ConsoleApp1
             t2.Join();
         }
 
+        #endregion
 
-        //9. Dependency Injection Example
-        //Problem: Demonstrate Dependency Injection using interfaces.
+        #region 9. Dependency Injection Example
+
+        public void DependencyInjectionExample()
+        {
+            ILogger logger = new ConsoleLogger();
+            var app = new Application(logger);
+            app.Run();
+
+            // Usage
+            //ILogger logger = new ConsoleLogger();
+            //var app = new Application(logger);
+            //app.Run();
+
+        }
+
         public interface ILogger
         {
             void Log(string message);
@@ -162,13 +225,17 @@ namespace ConsoleApp1
             public void Run() => _logger.Log("Application is running");
         }
 
-        // Usage
-        //ILogger logger = new ConsoleLogger();
-        //var app = new Application(logger);
-        //app.Run();
 
-        //10. Calculate Factorial Using Recursion
-        //Problem: Write a method to calculate the factorial of a number using recursion.
+        #endregion
+
+        #region 10. Calculate Factorial Using Recursion
+        public void FactorialExample()
+        {
+            Factorial(5);
+            // Input: 5
+            // Output: 120
+        }
+
         public static int Factorial(int n)
         {
             if (n == 0 || n == 1)
@@ -176,12 +243,25 @@ namespace ConsoleApp1
             return n * Factorial(n - 1);
         }
 
-        // Input: 5
-        // Output: 120
+        #endregion
 
-        //1. Sort a Custom Object Using LINQ
-        //Problem: Sort a list of employees by their salary in ascending and descending order.
+        #region 1. Sort a Custom Object Using LINQ
+        public void sortLinqExample()
+        {
+            sortLinq();
 
+            //Output:
+
+            //Employees sorted by Salary(Ascending):
+            //Bob: 50000
+            //Alice: 60000
+            //Charlie: 70000
+            //
+            //Employees sorted by Salary(Descending):
+            //Charlie: 70000
+            //Alice: 60000
+            //Bob: 50000
+        }
         public static void sortLinq()
         {
             var employees = new List<Employee>
@@ -202,18 +282,6 @@ namespace ConsoleApp1
             sortedDesc.ForEach(e => Console.WriteLine($"{e.Name}: {e.Salary}"));
 
         }
-        //Output:
-
-        //Employees sorted by Salary(Ascending):
-        //Bob: 50000
-        //Alice: 60000
-        //Charlie: 70000
-        //
-        //Employees sorted by Salary(Descending):
-        //Charlie: 70000
-        //Alice: 60000
-        //Bob: 50000
-
         public class Employee
         {
             public int Id { get; set; }
@@ -221,9 +289,13 @@ namespace ConsoleApp1
             public decimal Salary { get; set; }
         }
 
+        #endregion
 
-        //2. Custom Exception Handling
-        //Problem: Create a custom exception class and demonstrate its usage.
+        #region 2. Custom Exception Handling
+        public void CustExcepExample()
+        {
+            CustExcep();
+        }
         public static void CustExcep()
         {
             try
@@ -232,7 +304,7 @@ namespace ConsoleApp1
                 int age = int.Parse(Console.ReadLine());
                 ValidateAge(age);
             }
-            catch (InvalidAgeException ex)
+            catch (AgeValidationException ex)
             {
                 Console.WriteLine($"Custom Exception Caught: {ex.Message}");
             }
@@ -242,20 +314,32 @@ namespace ConsoleApp1
             }
         }
 
+        // Step 1: Define a custom exception class
+        public class AgeValidationException : Exception
+        {
+            public AgeValidationException(string message) : base(message) { }
+        }
+
         //Enter your age: 16
         //Custom Exception Caught: Age must be 18 or older.
-
         static void ValidateAge(int age)
         {
             if (age < 18)
             {
-                throw new InvalidAgeException("Age must be 18 or older.");
+                throw new AgeValidationException("Age must be 18 or older.");
             }
             Console.WriteLine("Age is valid.");
         }
 
-        //Factory Pattern
-        //Problem: Create a factory to generate different types of shapes.
+        #endregion
+
+        #region Factory Pattern
+
+        public void factorygenerateExample()
+        {
+            factorygenerate();
+        }
+
         public static void factorygenerate()
         {
             Console.Write("Enter the shape to draw (circle/rectangle): ");
@@ -292,10 +376,18 @@ namespace ConsoleApp1
         }
         //Enter the shape to draw(circle/rectangle) : circle
         //Drawing a Circle
+        #endregion
 
-        //Strategy Pattern
-        //Problem: Implement different strategies for calculating discounts.
+        #region Strategy Pattern
+        public void strategiescalculatingExample()
+        {
+            strategiescalculating();
+            //Choose Discount Type: 1-No Discount, 2-Seasonal, 3-Clearance
+            //2
+            //Enter the original price: 100
+            //Total Price after Discount: 90
 
+        }
         public static void strategiescalculating()
         {
             Console.WriteLine("Choose Discount Type: 1-No Discount, 2-Seasonal, 3-Clearance");
@@ -317,12 +409,6 @@ namespace ConsoleApp1
             decimal total = cart.CalculateTotal(price);
             Console.WriteLine($"Total Price after Discount: {total}");
         }
-
-        //Choose Discount Type: 1-No Discount, 2-Seasonal, 3-Clearance
-        //2
-        //Enter the original price: 100
-        //Total Price after Discount: 90
-
 
         public interface IDiscountStrategy
         {
@@ -359,10 +445,14 @@ namespace ConsoleApp1
             }
         }
 
+        #endregion
 
 
-        //1. LINQ: Grouping and Aggregation
-        //Problem: Given a list of sales data, calculate the total sales for each product category.
+        #region 1. LINQ: Grouping and Aggregation
+        public void GetCalculateSalesExample()
+        {
+            GetCalculateSales();
+        }
 
         public static void GetCalculateSales()
         {
@@ -402,8 +492,21 @@ namespace ConsoleApp1
             public decimal Amount { get; set; }
         }
 
-        //2. Multithreading: Producer-Consumer Problem
-        //Problem: Implement a thread-safe producer-consumer queue using BlockingCollection.
+
+        #endregion
+
+
+        #region 2. Multithreading: Producer-Consumer Problem
+        public void MultithreadingExample()
+        {
+            BlockingCollection();
+
+            //Producing: 1
+            //Producing: 2
+            //Consuming: 1
+            //Producing: 3
+            //Consuming: 2
+        }
 
         public static void BlockingCollection()
         {
@@ -434,16 +537,18 @@ namespace ConsoleApp1
             Task.WaitAll(producer, consumer);
         }
 
-        //Producing: 1
-        //Producing: 2
-        //Consuming: 1
-        //Producing: 3
-        //Consuming: 2
-
-        //3. OOP: Implement Polymorphism with Virtual Methods
-        //Problem: Create a system where employees can have different types of bonuses based on their roles.
+        #endregion
 
 
+
+        #region 3. OOP: Implement Polymorphism with Virtual Methods
+        public void EmpBasedRolesExample()
+        {
+            empbonesebasedroles();
+
+            //Alice's Bonus: 5000
+            //Bob's Bonus: 12000
+        }
         public static void empbonesebasedroles()
         {
             var employees = new List<Employee1>
@@ -458,11 +563,6 @@ namespace ConsoleApp1
             }
 
         }
-
-        //Alice's Bonus: 5000
-        //Bob's Bonus: 12000
-
-
         public abstract class Employee1
         {
             public string Name { get; set; }
@@ -470,7 +570,6 @@ namespace ConsoleApp1
 
             public abstract decimal CalculateBonus();
         }
-
         public class Manager : Employee1
         {
             public override decimal CalculateBonus() => BaseSalary * 0.1m;
@@ -481,9 +580,14 @@ namespace ConsoleApp1
             public override decimal CalculateBonus() => BaseSalary * 0.2m;
         }
 
+        #endregion
 
-        //4. Event Handling with Delegates
-        //Problem: Implement a notification system that triggers an event when a file is uploaded.
+        #region 4. Event Handling with Delegates
+
+        public void EvenExamHandDelExample()
+        {
+            notificationtriggers();
+        }
         public static void notificationtriggers()
         {
             var uploader = new FileUploader();
@@ -524,26 +628,26 @@ namespace ConsoleApp1
             }
         }
 
+        #endregion
 
-        //5. Design Patterns: Repository Pattern with Dependency Injection
-        //Problem: Create a repository layer for accessing user data with dependency injection.
+        #region 5. Design Patterns: Repository Pattern with Dependency Injection
+        public void repositoryDiExample()
+        {
+            repositoryDi();
 
+            //Users:
+            //Alice
+            //Bob
+            //Charlie
+
+        }
         public static void repositoryDi()
         {
             IUserRepository userRepository = new UserRepository();
             var userService = new UserService(userRepository);
-
             Console.WriteLine("Users:");
             userService.DisplayUsers();
-
         }
-
-        //Users:
-        //Alice
-        //Bob
-        //Charlie
-
-
         public interface IUserRepository
         {
             IEnumerable<string> GetAllUsers();
@@ -575,10 +679,15 @@ namespace ConsoleApp1
             }
         }
 
+        #endregion
 
-        //6. Async/Await with Task
-        //Problem: Fetch data asynchronously from a simulated API.
-
+        #region 6. Async/Await with Task
+        public void FechDataAsyncExample()
+        {
+            FechDataAsync();
+            //Fetching data...
+            //Data fetched from API
+        }
         public async static void FechDataAsync()
         {
             var apiService = new ApiService();
@@ -586,9 +695,6 @@ namespace ConsoleApp1
             string data = await apiService.GetDataAsync();
             Console.WriteLine(data);
         }
-        //Fetching data...
-        //Data fetched from API
-
         public class ApiService
         {
             public async Task<string> GetDataAsync()
@@ -598,9 +704,16 @@ namespace ConsoleApp1
             }
         }
 
+        #endregion
 
-        //7. Generic Repository with LINQ
-        //Problem: Create a generic repository to perform CRUD operations.
+
+        #region 7. Generic Repository with LINQ
+
+        public void GenericRepoExample()
+        {
+            GenRepoCrud();
+        }
+
 
         public static void GenRepoCrud()
         {
@@ -643,10 +756,183 @@ namespace ConsoleApp1
             public string Name { get; set; }
         }
 
+        #endregion
 
 
+        #region ListingNode
+        public void ListingNodeExample()
+        {
+            ListingNode();
+        }
+
+        //Input [1, 2, 3, 4]
+        public static void ListingNode()
+        {
+            string line;
+            while ((line = Console.ReadLine()) != null)
+            {
+                ListNode head = StringToListNode(line);
+                PrettyPrintLinkedList(head);
+            }
+        }
+        //Output 1->2->3->4
 
 
+        public class ListNode //This is a simple linked list node definition.
+        {
+            public int val;
+            public ListNode next;
+            public ListNode(int x)
+            {
+                val = x;
+                next = null;
+            }
+        }
 
+        //These Helper methods remove leading and trailing spaces from a string.
+        public static void TrimLeftTrailingSpaces(ref string input)
+        {
+            input = input.TrimStart();
+        }
+
+        public static void TrimRightTrailingSpaces(ref string input)
+        {
+            input = input.TrimEnd();
+        }
+
+        //This method converts a string representation of a list (e.g., "[1, 2, 3]") into a List<int>.
+        public static List<int> StringToIntegerList(string input)
+        {
+            List<int> output = new List<int>();
+            TrimLeftTrailingSpaces(ref input);
+            TrimRightTrailingSpaces(ref input);
+            input = input.Substring(1, input.Length - 2);
+            string[] items = input.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string item in items)
+            {
+                output.Add(int.Parse(item));
+            }
+            return output;
+        }
+
+        //This method converts the List<int> into a linked list of type ListNode.
+        public static ListNode StringToListNode(string input)
+        {
+            // Generate list from the input
+            List<int> list = StringToIntegerList(input);
+
+            // Now convert that list into linked list
+            ListNode dummyRoot = new ListNode(0);
+            ListNode ptr = dummyRoot;
+            foreach (int item in list)
+            {
+                ptr.next = new ListNode(item);
+                ptr = ptr.next;
+            }
+            ptr = dummyRoot.next;
+            return ptr;
+        }
+
+        //This method prints a linked list in a human-readable format.
+        public static void PrettyPrintLinkedList(ListNode node)
+        {
+            while (node != null && node.next != null)
+            {
+                Console.Write(node.val + "->");
+                node = node.next;
+            }
+
+            if (node != null)
+            {
+                Console.WriteLine(node.val);
+            }
+            else
+            {
+                Console.WriteLine("Empty LinkedList");
+            }
+        }
+
+        #endregion
+
+
+        #region inputString
+        
+        public void inputStringExample()
+        {
+            string inputString = "DDAABCCA";
+            string output = CountCharacters(inputString);
+            Console.WriteLine(output);
+            //Output : D2A2B1C2A1
+        }
+        public static string CountCharacters(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+
+            StringBuilder result = new StringBuilder(); // To store the final result
+            int count = 1; // Counter for character occurrences
+
+            // Loop through the string to count consecutive characters
+            for (int i = 1; i < input.Length; i++)
+            {
+                if (input[i] == input[i - 1])
+                {
+                    count++; // Increment the count if the character matches the previous one
+                }
+                else
+                {
+                    result.Append(input[i - 1]); // Append the character
+                    result.Append(count); // Append its count
+                    count = 1; // Reset count
+                }
+            }
+
+            // Append the last character and its count
+            result.Append(input[input.Length - 1]);
+            result.Append(count);
+
+            return result.ToString();
+        }
+
+        #endregion
+
+
+        #region PartialClassExample
+        public void PartialClassExample()
+        {
+            PartialClass();
+        }
+
+        public void PartialClass()
+        {
+            Employee2 emp = new Employee2
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                Department = "IT",
+                Salary = 60000
+            };
+
+            Console.WriteLine($"Full Name: {emp.GetFullName()}");
+            emp.DisplayProfessionalInfo();
+        }
+
+        public class Employee2
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Department { get; set; }
+            public double Salary { get; set; }
+
+            public string GetFullName()
+            {
+                return $"{FirstName} {LastName}";
+            }
+
+            public void DisplayProfessionalInfo()
+            {
+                Console.WriteLine($"Department: {Department}, Salary: {Salary}");
+            }
+        }
+        #endregion
     }
 }

@@ -27,7 +27,7 @@ namespace ConsoleApp
 
     class Program10
     {
-        static void Main()
+        public static void NainProgram10()
         {
             var publisher = new Publisher();
             publisher.OnPublish += (sender, args) => Console.WriteLine("Subscriber notified!");

@@ -1,0 +1,15 @@
+﻿@model Empower.Web.Models.Invoice
+
+<h1>Invoice Details</h1>
+<p><strong>Order Number:</strong> @Model.OrderNumber</p>
+<p><strong>Invoice Number:</strong> @Model.InvoiceNumber</p>
+<p><strong>Order Date:</strong> @Model.OrderDate.ToShortDateString()</p>
+<p><strong>Invoice Date:</strong> @Model.InvoiceDate.ToShortDateString()</p>
+<p><strong>Description:</strong> @Model.Description</p>
+<p><strong>Unit Price:</strong> ₹@Model.UnitPrice</p>
+<p><strong>Tax Rate:</strong> @Model.TaxRate%</p>
+<p><strong>Tax Amount:</strong> ₹@Model.TaxAmount</p>
+<p><strong>Total Amount:</strong> ₹@Model.TotalAmount</p>
+<p><strong>Amount in Words:</strong> @Model.AmountInWords</p>
+
+<a href="/Invoice/GeneratePdf">Download PDF</a>

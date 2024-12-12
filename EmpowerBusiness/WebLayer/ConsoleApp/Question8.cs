@@ -20,7 +20,7 @@ namespace ConsoleApp
 
     class Program8
     {
-        static void Main()
+        public static void NNNMain()
         {
             try
             {

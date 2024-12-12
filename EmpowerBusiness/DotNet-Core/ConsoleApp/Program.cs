@@ -9,10 +9,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 class Program
 {
-    static void Main(string[] args)
-    {
-        // Setup Dependency Injection
-        var serviceProvider = new ServiceCollection()
+static void Main(string[] args)
+{
+    // Setup Dependency Injection
+    var serviceProvider = new ServiceCollection()
             .AddScoped<IUserOperations, UserService>()        // Add User Service
             .AddScoped<IUserValidator, UserValidator>()       // Add User Validator
             .AddScoped<ILogger, ConsoleLogger>()              // Add Logger

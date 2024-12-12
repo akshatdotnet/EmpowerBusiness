@@ -26,7 +26,7 @@ namespace ConsoleApp
 
     class Program6
     {
-        static void Main()
+        public static void NNNMain()
         {
             IAnimal animal = new Dog();
             animal.Speak();

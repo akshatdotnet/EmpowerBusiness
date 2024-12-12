@@ -16,7 +16,7 @@ namespace ConsoleApp
 
     class Program7
     {
-        static void Main()
+        public static void NNNMain()
         {
             var list = new List<int> { 1, 2, 3 };
             PrintItems(list);

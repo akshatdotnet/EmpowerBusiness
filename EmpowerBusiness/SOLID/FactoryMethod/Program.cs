@@ -1,8 +1,8 @@
 ﻿// Client code
-class Program
-{
-    static void Main(string[] args)
-    {
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
         // Create a JavaCreator object
         Creator javaCreator = new JavaCreator();
 
@@ -20,10 +20,10 @@ class Program
         dotNetTech.GetFramework();
 
         Console.ReadLine();
-    }
-    //Output: Spring
-    //Output: Core
-}
+//    }
+//    //Output: Spring
+//    //Output: Core
+//}
 
 
 

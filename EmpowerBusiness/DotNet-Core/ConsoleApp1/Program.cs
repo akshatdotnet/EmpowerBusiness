@@ -1,27 +1,20 @@
-﻿
+﻿using ConsoleApp1.Interfaces;
+using ConsoleApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text;
 
 
 
-//================
-//try
-//{
-//    int x = 0; int y = 0;
-//   // int x = 5 / 0; // This will throw a DivideByZeroException
-//    //Console.WriteLine(x);
-//   // throw new Exception();
-//    throw new DivideByZeroException("This is a divide by zero exception.");
+// Set up Dependency Injection (DI)
+var serviceProvider = new ServiceCollection()
+    .AddScoped<IPracticalTest, PracticalTestService>() // Register Service
+    .BuildServiceProvider();
 
-//}
-//catch (DivideByZeroException ex)
-//{
-//    Console.WriteLine("Caught DivideByZeroException: " + ex.Message); // Specific exception handling
-//}
-//catch (NullReferenceException ex)
-//{
-//    Console.WriteLine("Caught NullReferenceException: " + ex.Message); // Specific exception handling
-//}
-//catch (Exception ex)
-//{
-//    Console.WriteLine("Caught Exception: " + ex.Message); // General exception handling
-//}
+// Resolve the service
+var Service = serviceProvider.GetRequiredService<IPracticalTest>();
+
+// Call the method from the service
+Service.ListingNodeExample();
+
+
 

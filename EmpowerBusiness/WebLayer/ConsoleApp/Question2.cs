@@ -16,7 +16,7 @@ namespace ConsoleApp
 
     class Program
     {
-        static void Main()
+        public static void NNNMain()
         {
             try
             {
