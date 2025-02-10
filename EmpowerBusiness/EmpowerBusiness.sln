@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9BD578F2-60ED-45AD-B81C-ADE626F684D8}"
 	ProjectSection(SolutionItems) = preProject
-		InitialSetup.txt = InitialSetup.txt
+		Solution Items\InitialSetup.txt = Solution Items\InitialSetup.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNet-Framework-Code", "DotNet-Framework-Code", "{18C27A4A-3234-4925-91A4-310ED66E5706}"
@@ -167,6 +167,38 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "DotNet-Core\ConsoleApp1\ConsoleApp1.csproj", "{E555A728-46A6-46DC-B857-562FD103F6C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CleanArchitecture", "CleanArchitecture", "{9EBB7D0B-C2B0-420D-A70A-F7747C3F11E9}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "DotNet-Core\WinFormsApp1\WinFormsApp1.csproj", "{3F75F17A-2428-44B2-80AB-15BD4DB7F26A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Monolithic", "Monolithic", "{51731151-220A-4BE3-A524-88FBD6894AC5}"
+	ProjectSection(SolutionItems) = preProject
+		Monolithic\Monolithic.txt = Monolithic\Monolithic.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModuleMonolith", "ModuleMonolith", "{87B21A0A-EF55-424F-B485-9659994844E9}"
+	ProjectSection(SolutionItems) = preProject
+		ModuleMonolith\ModuleMonolith.txt = ModuleMonolith\ModuleMonolith.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{ABEDB46B-2C04-4D7A-BA01-F073104C2EAD}"
+	ProjectSection(SolutionItems) = preProject
+		Microservices\Microservices.txt = Microservices\Microservices.txt
+	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsWebApp", "WebLayer\NodejsWebApp\NodejsWebApp.njsproj", "{2C0F0A68-6D60-4097-BE41-A13390756E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "DotNet-Core\WpfApp1\WpfApp1.csproj", "{73395847-F28A-4DE7-B37C-CBF89D9388EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevOps", "DevOps", "{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}"
+	ProjectSection(SolutionItems) = preProject
+		DotNet-Core\DevOps\CSharp.txt = DotNet-Core\DevOps\CSharp.txt
+		DotNet-Core\DevOps\DevOps.txt = DotNet-Core\DevOps\DevOps.txt
+		DotNet-Core\DevOps\SolutionArchitect.txt = DotNet-Core\DevOps\SolutionArchitect.txt
+		DotNet-Core\DevOps\TextFile.txt = DotNet-Core\DevOps\TextFile.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -470,6 +502,18 @@ Global
 		{E555A728-46A6-46DC-B857-562FD103F6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E555A728-46A6-46DC-B857-562FD103F6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E555A728-46A6-46DC-B857-562FD103F6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F75F17A-2428-44B2-80AB-15BD4DB7F26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F75F17A-2428-44B2-80AB-15BD4DB7F26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F75F17A-2428-44B2-80AB-15BD4DB7F26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F75F17A-2428-44B2-80AB-15BD4DB7F26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0F0A68-6D60-4097-BE41-A13390756E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0F0A68-6D60-4097-BE41-A13390756E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0F0A68-6D60-4097-BE41-A13390756E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0F0A68-6D60-4097-BE41-A13390756E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73395847-F28A-4DE7-B37C-CBF89D9388EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73395847-F28A-4DE7-B37C-CBF89D9388EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73395847-F28A-4DE7-B37C-CBF89D9388EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73395847-F28A-4DE7-B37C-CBF89D9388EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -549,6 +593,10 @@ Global
 		{D26ECE2D-6E88-4073-A906-B2B145DEF2A3} = {9402FBC6-F00E-478F-961D-E7BF4E52C6AE}
 		{B7C5AEAE-DE1C-4F7C-94F2-62E3CED596CD} = {933A03F3-4C89-4330-A171-31119404053F}
 		{E555A728-46A6-46DC-B857-562FD103F6C9} = {933A03F3-4C89-4330-A171-31119404053F}
+		{3F75F17A-2428-44B2-80AB-15BD4DB7F26A} = {933A03F3-4C89-4330-A171-31119404053F}
+		{2C0F0A68-6D60-4097-BE41-A13390756E6A} = {FF31EA0F-1D21-45E8-A90E-C18FC2A915EC}
+		{73395847-F28A-4DE7-B37C-CBF89D9388EA} = {933A03F3-4C89-4330-A171-31119404053F}
+		{33B57839-4FBD-40C7-BEBB-7957FC9F8E11} = {933A03F3-4C89-4330-A171-31119404053F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B79ACF8A-57C2-46F0-8B47-5C2F093198BF}

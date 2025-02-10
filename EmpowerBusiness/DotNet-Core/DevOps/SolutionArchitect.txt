@@ -1,0 +1,1719 @@
+﻿
+
+
+
+
+========================================
+1,000+ ChatGPT Prompts
+https://www.superhuman.ai/c/1000_chatgpt_prompts?utm_campaign=you-re-officially-superhuman&utm_medium=newsletter&utm_source=superhuman
+========================================
+Test API
+https://projectapi.gerasim.in/swagger/index.html
+https://projectapi.gerasim.in/index.html
+
+
+========================================
+Freelance Engineering Works
+
+.NET Solution Architect - Microservices, Software Architect, Azure DevOps
+
+C#,SQL,.NET Core MVC, Web API, LINQ, Entity Framework Core
+HTML5, CSS3, JavaScript, Bootstrap, JQuery, 
+Angular, NodeJS, Type Script
+GitHub, Azure DevOps, 
+
+DevOps Engineer (with Cloud Azure)
+Azure Devops, Iac, Arm Templates, Aks, ARM, Cicd Pipeline
+Docker, Kubernetes, Agile, and CI/CD practices	
+
+How Higher level language convert into machine language in .net.
+	CLR Common Language Runtime
+	Basically CLR is heart of .Net its provide a runtime environment to your application it handled your code execution.
+	Source Code => MSIL => (Just In Time Compiler)   => Native or Machine (.exe or .dll)
+	Your Source Code converted into MSIL (Microsoft Intermediate Language) and MSIL with the help Of JIT converted into 
+	native or Machine code.
+
+Architecture Design :	
+Monolith - A single, all-in-one factory where every department (e.g., assembly, packaging) works under one roof.
+Modular Monolith - A factory with separate departments under one roof, each working independently but still part of one building.
+Microservices -	A distributed set of specialized factories, each handling a specific task, located in different locations.
+
+#Azure Services
+	1.Virtual Machine
+	2.Azure Functions
+	3.Azure Blob Storage
+	4.Azure Dist Storage
+	5.Azure Synapse
+	6.Azure DNS
+	7.Azure Load Balance
+	8.Azure Content Delivery Network (CDN)
+	9.Azure Cosmos DB
+	10.Azure SQL Database
+	11.Azure Cache for Redis
+	12.Azure Event Hubs
+	13.Azure HDInsight
+	14.Computer vision (Cognitive services)
+	15.Service Bus
+	16.Queue Storage
+	17.Azure Monitor
+========================================
+C# Programming Syllabus
+1. Introduction to C#
+	Overview of the .NET Framework and .NET Core
+	Understanding CLR (Common Language Runtime)
+	C# as a language: History, Features, and Use Cases
+	Setting up the environment: Visual Studio, .NET SDK, and CLI
+	Creating your first C# program
+2. C# Language Fundamentals
+	Syntax Basics
+	Keywords, Identifiers, and Data Types
+	Constants and Variables
+	Type Inference (var and dynamic)
+	Operators
+	Arithmetic, Logical, Comparison, and Assignment Operators
+	Bitwise and Conditional Operators
+	Control Flow Statements
+	If-else, switch-case
+	Loops: for, foreach, while, do-while
+	Break, Continue, and Goto Statements
+3. Object-Oriented Programming (OOP)
+	Core Principles
+	Encapsulation
+	Abstraction
+	Inheritance
+	Polymorphism
+	Classes and Objects
+	Defining Classes and Creating Objects
+	Constructors and Destructors
+	Static Members and Static Classes
+	Access Modifiers
+	Public, Private, Protected, Internal
+	Interfaces and Abstract Classes
+	Defining and Implementing Interfaces
+	Abstract Classes vs Interfaces
+	Method Overloading and Overriding
+	Properties and Indexers
+4. Advanced OOP Concepts
+	Delegates and Events
+	Understanding Delegates
+	Event Handling in C#
+	Generics
+	Generic Methods and Classes
+	Constraints in Generics
+	Collections
+	List, Dictionary, HashSet, Queue, and Stack
+	LINQ to Objects for Querying Collections
+	Reflection
+	Metadata and Runtime Type Information
+	Attributes
+	Built-in Attributes
+	Custom Attributes
+5. Exception Handling
+	Understanding Exceptions
+	Try, Catch, Finally Blocks
+	Throwing Exceptions
+	Custom Exceptions
+	Best Practices in Exception Handling
+6. File Handling and I/O
+	File and Directory Operations
+	Reading and Writing Files
+	StreamReader and StreamWriter
+	BinaryReader and BinaryWriter
+	Working with FileInfo and DirectoryInfo
+	Asynchronous File Handling
+7. Multithreading and Asynchronous Programming
+	Threading Basics
+	Creating and Managing Threads
+	Thread Synchronization
+	Tasks and Parallel Programming
+	Task Parallel Library (TPL)
+	Using async and await for Asynchronous Operations
+	Concurrent Collections
+8. Data Access in C#
+	Introduction to ADO.NET
+	Connecting to Databases
+	CRUD Operations
+	Entity Framework (EF) Core
+	Code-First and Database-First Approaches
+	Querying Data with LINQ
+	Working with Stored Procedures
+9. Language Integrated Query (LINQ)
+	LINQ Basics
+	LINQ Syntax and Query Operators
+	Filtering, Sorting, and Aggregating Data
+	LINQ to XML
+	Reading and Writing XML
+	LINQ to SQL/EF Core
+10. Working with APIs
+	Building and Consuming REST APIs
+	Using HttpClient for API calls
+	Serialization and Deserialization
+	JSON with Newtonsoft.Json and System.Text.Json
+11. GUI Development with Windows Forms/WPF
+	Introduction to Windows Forms
+	Basics of Windows Presentation Foundation (WPF)
+	XAML Basics
+	Binding and Data Contexts
+	MVVM Pattern
+12. C# in Web Development
+	Overview of ASP.NET Core
+	MVC Pattern in ASP.NET Core
+	Razor Pages
+	Dependency Injection in ASP.NET Core
+	Building RESTful APIs
+	Using Swagger for API Documentation
+	Authentication with JWT
+13. Testing and Debugging
+	Unit Testing with MSTest and xUnit
+	Debugging Techniques in Visual Studio
+	Logging and Monitoring
+14. Advanced Topics
+	Design Patterns in C#
+	Singleton, Factory, Repository, etc.
+	Memory Management
+	Garbage Collection
+	IDisposable and the using Statement
+	Performance Optimization
+	Benchmarking and Profiling
+	Asynchronous Streams
+15. Cross-Platform Development
+	Introduction to .NET MAUI (Multi-platform App UI)
+	Building Mobile and Desktop Apps
+16. Deployment and Cloud Integration
+	Publishing Applications
+	Self-Contained vs Framework-Dependent Deployment
+	Introduction to Docker for .NET Applications
+	Integrating with Azure/AWS
+	Azure App Services
+	Azure Blob Storage
+17. Project Work
+	Capstone Project: Build a complete application combining multiple aspects of C# programming.
+	Example: E-Commerce System, Travel and tourism, Properties Management System, or User Management & Billing, Invocing, Inventory System.
+
+========================================
+SQL Syllabus Overview
+1. Introduction to SQL
+	What is SQL?
+	Importance and Use Cases of SQL
+	Role of SQL in Databases
+	Relational Database Management Systems (RDBMS)
+	Overview of RDBMS (MySQL, PostgreSQL, SQL Server, Oracle)
+	Understanding Tables, Rows, and Columns
+	Installing and Setting Up SQL Environment
+	MySQL Workbench, SQL Server Management Studio (SSMS), or other tools
+2. Basics of SQL
+	Data Types
+	Numeric, String, Date, and Time Data Types
+	Basic SQL Commands
+	SELECT, FROM, and WHERE
+	INSERT, UPDATE, and DELETE
+	CREATE, ALTER, and DROP
+	Understanding NULL and NOT NULL
+	Comments in SQL
+3. SQL Operators
+	Comparison Operators
+	=, !=, <, >, <=, >=
+	Logical Operators
+	AND, OR, NOT
+	Arithmetic Operators
+	+, -, *, /
+	BETWEEN, LIKE, and IN
+	IS NULL vs IS NOT NULL
+4. Retrieving Data with SELECT
+	Basic SELECT Queries
+	Selecting Specific Columns
+	Renaming Columns with Aliases
+	Using DISTINCT for Unique Values
+	Filtering Data
+	Using the WHERE Clause
+	Combining Conditions with AND, OR, and NOT
+	Sorting Data with ORDER BY
+	Ascending (ASC) and Descending (DESC)
+5. Aggregating Data
+	Aggregate Functions
+	COUNT, SUM, AVG, MIN, MAX
+	Using GROUP BY Clause
+	Filtering Groups with HAVING Clause
+	Combining Aggregate Functions with WHERE and HAVING
+6. Joins in SQL
+	Understanding Relationships Between Tables
+	Types of Joins
+	INNER JOIN
+	LEFT JOIN (Outer Join)
+	RIGHT JOIN (Outer Join)
+	FULL JOIN (Full Outer Join)
+	SELF JOIN
+	CROSS JOIN
+	Practical Examples of Joins
+7. Subqueries
+	Introduction to Subqueries
+	Single-Row Subqueries
+	Using Subqueries in SELECT, WHERE, and FROM
+	Multi-Row Subqueries
+	Using IN, ANY, and ALL with Subqueries
+	Correlated Subqueries
+	Difference Between Subqueries and Correlated Subqueries
+8. Advanced SQL Functions
+	String Functions
+	CONCAT, SUBSTRING, LENGTH, TRIM
+	Numeric Functions
+	ROUND, ABS, POWER
+	Date and Time Functions
+	NOW, CURDATE, DATEDIFF, TIMESTAMPDIFF
+	Conversion Functions
+	CAST, CONVERT
+9. Data Manipulation
+	Inserting Data with INSERT Statements
+	Bulk Inserts
+	Updating Existing Records
+	UPDATE with Conditional Filters
+	Deleting Records Safely
+	DELETE with Filters
+10. Data Definition
+	Creating and Modifying Tables
+	CREATE TABLE
+	Adding Constraints: PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, DEFAULT
+	Altering Tables
+	Adding, Modifying, and Dropping Columns
+	Adding and Dropping Constraints
+	Deleting Tables
+	DROP TABLE vs TRUNCATE TABLE
+11. Indexing
+	What are Indexes?
+	Importance of Indexes for Query Performance
+	Creating and Dropping Indexes
+	Single-Column and Multi-Column Indexes
+	Unique Indexes
+	Performance Considerations with Indexes
+12. Transactions and Concurrency
+	Understanding Transactions
+	BEGIN, COMMIT, ROLLBACK
+	Ensuring Data Integrity with ACID Properties
+	Savepoints in Transactions
+	Handling Concurrency
+	Locks (Shared, Exclusive)
+	Deadlocks and How to Avoid Them
+13. Views
+	Creating Views
+	Simple and Complex Views
+	Updating Data Through Views
+	Dropping Views
+	Benefits and Limitations of Views
+14. Stored Procedures and Functions
+	Introduction to Stored Procedures
+	Creating and Executing Stored Procedures
+	Using Input and Output Parameters
+	User-Defined Functions
+	Scalar Functions
+	Table-Valued Functions
+	Differences Between Procedures and Functions
+15. Triggers
+	Introduction to Triggers
+	Row-Level and Statement-Level Triggers
+	Creating Triggers
+	BEFORE and AFTER Triggers
+	Common Use Cases for Triggers
+	Managing and Disabling Triggers
+16. Advanced SQL Concepts
+	Working with Temporary Tables
+	CTE (Common Table Expressions)
+	Recursive Queries with CTE
+	Pivoting and Unpivoting Data
+	Window Functions
+	ROW_NUMBER, RANK, DENSE_RANK, NTILE
+	OVER and Partitioning
+17. Database Security
+	User Authentication and Permissions
+	GRANT, REVOKE, and DENY
+	Managing Roles
+	Securing SQL Data
+	Encryption and Decryption
+	Using SSL for Secure Connections
+18. Optimization and Performance Tuning
+	Optimizing Queries
+	Analyzing Query Execution Plans
+	Avoiding Cartesian Products
+	Using Indexes Effectively
+	Normalization and Denormalization
+	Partitioning Tables for Performance
+19. NoSQL vs SQL
+	Introduction to NoSQL Databases
+	Comparing SQL and NoSQL
+	Key-Value Stores
+	Document Databases
+	Column-Family Stores
+20. SQL Integration with Programming Languages
+	Connecting SQL with C#, Java, Python, etc.
+	Using Libraries (e.g., ADO.NET, JDBC, SQLAlchemy)
+	Writing Dynamic SQL Queries
+	Parameterized Queries to Prevent SQL Injection
+21. SQL in Data Analytics
+	Using SQL for Data Analysis
+	Statistical Analysis with SQL
+	Integrating SQL with BI Tools (Power BI, Tableau)
+	Data Warehousing Concepts
+	ETL Processes Using SQL
+22. Capstone Project
+	Building a Real-World Database
+	Example Projects: Library Management System, E-commerce Database, Employee Management System
+	Using Advanced SQL Features
+	Writing Complex Queries
+========================================
+
+ADO.NET, Dapper, and EF Core Syllabus Overview
+1. Introduction to Data Access in .NET
+	What is Data Access?
+	Overview of ADO.NET, Dapper, and EF Core
+	Differences and Use Cases of Each
+	Understanding RDBMS in the Context of .NET
+	Setting Up the Environment
+	SQL Server, Visual Studio, .NET SDK
+
+ADO.NET Syllabus
+2. ADO.NET Basics
+	Introduction to ADO.NET
+	Architecture: Connected vs Disconnected Models
+	Understanding Namespaces: System.Data, System.Data.SqlClient
+	Connecting to Databases
+	SqlConnection Object
+	Connection Strings
+	Executing Queries
+	SqlCommand Object
+	Executing SELECT, INSERT, UPDATE, DELETE
+	Working with Stored Procedures
+	Reading Data
+	Using SqlDataReader
+	Handling Multiple Result Sets
+	Disconnected Model
+	DataSet and DataTable
+	Using DataAdapter for CRUD Operations
+	3. Advanced ADO.NET
+	Transactions
+	Managing Transactions with SqlTransaction
+	Commit and Rollback
+	Parameterization
+	Preventing SQL Injection with Parameterized Queries
+	Error Handling
+	Exception Management in ADO.NET
+	Handling Database Timeouts
+	Working with XML
+	Reading and Writing XML Data with ADO.NET
+Dapper Syllabus
+4. Introduction to Dapper
+	Overview of Dapper
+	What is Dapper and Why Use It?
+	Installing Dapper via NuGet
+	Getting Started
+	Setting Up Connections with Dapper
+	Executing SQL Queries
+	Query, QueryFirst, QuerySingle, Execute
+	Mapping Data
+	Object Mapping with Dapper
+	Handling Complex Types and Nested Objects
+5. Advanced Dapper
+	Stored Procedures with Dapper
+	Using Stored Procedures for CRUD Operations
+	Output Parameters
+	Dynamic Parameters
+	Using DynamicParameters
+	Managing Multiple Parameters
+	Transactions
+	Managing Transactions with Dapper
+	Performance Optimization
+	Query Optimization with Dapper
+	Bulk Inserts and Updates
+	Third-Party Extensions
+	Using Dapper Contrib for Simplified CRUD
+	Dapper Extensions for Advanced Scenarios
+	Entity Framework Core (EF Core) Syllabus
+6. Introduction to EF Core
+	What is EF Core?
+	EF Core vs EF 6
+	Benefits of Using EF Core
+	Setting Up EF Core
+	Installing EF Core via NuGet
+	Configuring DbContext
+	Connecting to SQL Server
+	Code-First Approach
+	Creating Models and DbContext
+	Database Creation and Migrations
+	Applying Migrations with CLI and Package Manager Console
+	Database-First Approach
+	Generating Models from an Existing Database
+	Updating Models from Database Changes
+7. Querying Data with EF Core
+	Basic Queries
+	LINQ to Entities
+	Fetching Single and Multiple Records
+	Filtering, Sorting, and Paging
+	Where, OrderBy, Skip, Take
+	Using Projection (Select) for Specific Fields
+	Eager, Lazy, and Explicit Loading
+	Managing Related Data with Navigation Properties
+	Raw SQL Queries
+	Executing SQL Queries in EF Core
+8. CRUD Operations in EF Core
+	Create
+	Adding Data to the Database
+	Read
+	Retrieving Data with LINQ
+	Update
+	Updating Entities with SaveChanges
+	Change Tracking in EF Core
+	Delete
+	Deleting Entities
+	Handling Cascade Deletes
+9. Advanced EF Core
+	Configurations
+	Configuring Entities with Fluent API
+	Data Annotations for Constraints
+	Relationships
+	One-to-One, One-to-Many, Many-to-Many
+	Configuring Relationships in Fluent API
+	Inheritance
+	Table-Per-Hierarchy (TPH)
+	Table-Per-Type (TPT)
+	Performance Optimization
+	Understanding Change Tracking
+	Using AsNoTracking for Read-Only Queries
+	Batch Processing
+	Concurrency Handling
+	Optimistic and Pessimistic Concurrency
+	Transactions
+	Managing Transactions with EF Core
+	Using IDbContextTransaction
+10. EF Core Advanced Features
+	Migrations
+	Advanced Scenarios in Migrations
+	Rolling Back Migrations
+	Working with Stored Procedures
+	Calling Stored Procedures in EF Core
+	Value Conversions
+	Converting Custom Types
+	Unit Testing EF Core
+	Mocking DbContext for Unit Tests
+	Multi-Tenancy
+	Implementing Multi-Tenant Applications with EF Core
+	Comparative Insights and Integration
+11. Choosing the Right Data Access Technology
+	When to Use ADO.NET
+	High Performance, Fine-Grained Control
+	When to Use Dapper
+	Lightweight, Fast, and Flexible
+	When to Use EF Core
+	Object-Oriented, Feature-Rich, and Scalable
+12. Integrating ADO.NET, Dapper, and EF Core
+	Mixing Technologies in a Single Application
+	Migrating from ADO.NET/Dapper to EF Core
+	Best Practices for a Layered Architecture
+13. Capstone Project
+	Building a Real-World Application Using All Three:
+	Example: Library Management System, E-Commerce Platform
+	ADO.NET for Performance-Critical Queries
+	Dapper for Lightweight, Specific Use Cases
+	EF Core for Complex Data Models
+
+========================================
+ASP.NET Core MVC Syllabus Overview
+1. Introduction to ASP.NET Core MVC
+	What is ASP.NET Core MVC?
+	Overview of MVC Architecture (Model-View-Controller)
+	Differences Between ASP.NET and ASP.NET Core
+	Advantages of Using ASP.NET Core MVC
+	Installing and Setting Up ASP.NET Core
+	Visual Studio/Visual Studio Code Setup
+	Creating Your First ASP.NET Core MVC Application
+2. Fundamentals of ASP.NET Core MVC
+	Project Structure
+	Understanding the Default Folder Structure
+	Key Files: Startup.cs, Program.cs, and appsettings.json
+	Routing in MVC
+	Understanding URL Routing and Middleware
+	Conventional Routing vs Attribute Routing
+	Controllers
+	Creating and Using Controllers
+	Action Methods and Return Types
+	Using IActionResult and ViewResult
+	Views
+	Razor View Engine Basics
+	Creating and Using Razor Views
+	Using Layouts for Consistent UI
+	Partial Views
+	Models
+	Creating Models
+	Using Models with Views
+	Understanding ViewModel Patterns
+3. Working with Data
+	Entity Framework Core Integration
+	Setting Up EF Core in an ASP.NET Core MVC Project
+	Code-First Approach for Database Integration
+	Database Migrations
+	Data Binding
+	Passing Data Between Controller and View
+	Strongly Typed Views
+	Using ViewBag, ViewData, and TempData
+	Form Handling
+	Creating Forms in Razor
+	Model Binding and Validation
+	Working with HttpPost and HttpGet
+4. Dependency Injection and Services
+	Understanding Dependency Injection (DI) in ASP.NET Core
+	Configuring Services in Startup.cs
+	Using Built-In Services
+	Creating and Injecting Custom Services
+5. Handling User Input and Validation
+	Model Validation
+	Data Annotations for Validation
+	Custom Validation Attributes
+	Client-Side Validation with jQuery and Bootstrap
+	Handling Validation Errors
+	ModelState.IsValid
+	Displaying Validation Messages in Views
+6. Advanced Routing
+	Attribute Routing in Depth
+	Using Route Constraints
+	Areas in ASP.NET Core MVC
+	Organizing Large Applications with Areas
+7. Authentication and Authorization
+	Introduction to Security in ASP.NET Core
+	Authentication vs Authorization
+	Implementing Authentication
+	Using ASP.NET Core Identity
+	External Login Providers (Google, Facebook, etc.)
+	Implementing Authorization
+	Role-Based Authorization
+	Policy-Based Authorization
+	Claims-Based Authorization
+	Securing APIs and MVC Applications with JWT
+8. Filters in ASP.NET Core MVC
+	Introduction to Filters
+	Action Filters
+	Result Filters
+	Exception Filters
+	Authorization Filters
+	Custom Filters
+	Creating and Registering Custom Filters
+9. Working with Razor Pages
+	What are Razor Pages?
+	Difference Between Razor Pages and MVC
+	Building Applications Using Razor Pages
+	Integrating Razor Pages with MVC Applications
+10. View Components and Tag Helpers
+	View Components
+	Creating and Using View Components
+	Passing Data to View Components
+	Tag Helpers
+	Using Built-In Tag Helpers
+	Creating Custom Tag Helpers
+11. State Management
+	Managing State in ASP.NET Core
+	View State and Session State
+	Working with Cookies
+	TempData and Its Use Cases
+12. Error Handling and Logging
+	Implementing Error Handling in MVC Applications
+	UseExceptionHandler Middleware
+	Custom Error Pages
+	Logging in ASP.NET Core
+	Using Built-In Logging Framework
+	Third-Party Logging Tools (e.g., Serilog, NLog)
+13. Performance Optimization
+	Bundling and Minification
+	Caching in ASP.NET Core MVC
+	In-Memory Caching
+	Distributed Caching
+	Response Caching
+	Using Asynchronous Programming for Better Performance
+	Profiling and Diagnostics
+14. File Upload and Download
+	Handling File Uploads
+	Single and Multiple File Uploads
+	Validating and Saving Uploaded Files
+	Implementing File Download Functionality
+15. Working with APIs
+	Creating and Consuming APIs in MVC
+	Building RESTful APIs
+	Consuming External APIs Using HttpClient
+	Using Swagger for API Documentation
+	Versioning APIs in ASP.NET Core
+16. Deployment
+	Publishing ASP.NET Core MVC Applications
+	Hosting on IIS
+	Deploying to Azure or AWS
+	Dockerizing ASP.NET Core MVC Applications
+	Configuring Environment Variables
+	Handling Application Settings with appsettings.json
+17. Testing ASP.NET Core MVC Applications
+	Unit Testing
+	Testing Controllers and Services
+	Integration Testing
+	Setting Up Integration Tests
+	Mocking Dependencies Using Moq
+18. Advanced Topics
+	Custom Middleware in ASP.NET Core
+	SignalR for Real-Time Communication
+	Using gRPC in ASP.NET Core MVC
+	Localization and Globalization
+	Supporting Multiple Languages
+	Date, Time, and Number Formatting
+	Advanced EF Core Features
+	Query Optimization
+	Raw SQL and Stored Procedures
+19. Capstone Project
+	Building a Complete ASP.NET Core MVC Application
+	Example Project: E-Commerce Website, Library Management System, or HR Management System
+	Integrating Authentication, Role Management, and Data Binding
+	Implementing Advanced Features Like Caching, Logging, and Error Handling
+========================================
+HTML, CSS, and JavaScript Syllabus Overview
+1. HTML (HyperText Markup Language)
+	Basics of HTML
+	Introduction to HTML
+	What is HTML?
+	Importance of HTML in Web Development
+	HTML Document Structure: <!DOCTYPE>, <html>, <head>, <body>
+	Basic HTML Tags
+	Headings (<h1> to <h6>)
+	Paragraphs (<p>)
+	Links (<a>)
+	Images (<img>)
+	Lists (Ordered <ol>, Unordered <ul>, and Description <dl>)
+	Attributes in HTML
+	Global Attributes: id, class, style, title
+	Specific Attributes for Tags (e.g., src, alt, href)
+	Intermediate HTML
+	Semantic HTML
+	Tags: <header>, <footer>, <article>, <section>, <aside>, <main>
+	Importance of Semantic Elements for SEO and Accessibility
+	Forms in HTML
+	Form Elements: <form>, <input>, <textarea>, <button>, <select>, <option>
+	Input Types: Text, Password, Email, Number, Checkbox, Radio, File, Date
+	Form Attributes: action, method, name, placeholder, required
+	Multimedia in HTML
+	Embedding Videos (<video>) and Audio (<audio>)
+	Using <iframe> for External Content (e.g., Google Maps, YouTube)
+	Tables in HTML
+	Table Tags: <table>, <tr>, <td>, <th>, <caption>
+	Spanning Rows and Columns: rowspan, colspan
+	Advanced HTML
+	HTML5 Features
+	New Input Types: Color, Range, Date, Time
+	<canvas> for Graphics
+	<svg> for Scalable Vector Graphics
+	Accessibility in HTML
+	Using ARIA Roles
+	Writing Accessible Forms
+	Metadata and SEO
+	Meta Tags: keywords, description, viewport
+	Importance of the <title> and <meta> Tags
+2. CSS (Cascading Style Sheets)
+	Basics of CSS
+	Introduction to CSS
+	What is CSS?
+	CSS Syntax: Selectors, Properties, and Values
+	Inline, Internal, and External CSS
+	Linking CSS to HTML (<link> tag)
+	Selectors in CSS
+	Basic Selectors: *, element, .class, #id
+	Grouping and Combining Selectors
+	Attribute Selectors
+	Styling Text
+	Font Properties: font-family, font-size, font-weight, font-style
+	Text Properties: color, text-align, line-height, text-decoration
+	Colors in CSS
+	Using Hex, RGB, RGBA, HSL, and HSLA
+	Intermediate CSS
+	Box Model
+	Understanding Content, Padding, Border, and Margin
+	Setting Width and Height
+	box-sizing Property
+	CSS Positioning
+	Static, Relative, Absolute, Fixed, Sticky
+	Z-Index and Stacking Context
+	Display and Visibility
+	display: Block, Inline, Inline-Block, None
+	Visibility vs display: none
+	Flexbox
+	Introduction to Flexible Box Layout
+	Flex Container Properties: justify-content, align-items, align-content
+	Flex Item Properties: flex-grow, flex-shrink, flex-basis
+	Styling Lists, Links, and Tables
+	Customizing List Styles
+	Styling Links with Pseudo-Classes: :link, :visited, :hover, :active
+	Table Borders, Padding, and Backgrounds
+Advanced CSS
+	CSS Grid Layout
+	Defining Grid Containers and Items
+	Grid Lines, Areas, and Templates
+	Combining Grid and Flexbox
+	CSS Transitions and Animations
+	Adding Transitions: transition-property, transition-duration
+	Keyframe Animations: @keyframes
+	CSS Media Queries
+	Introduction to Responsive Web Design
+	Using Breakpoints for Different Screen Sizes
+	CSS Variables
+	Defining and Using Variables
+	Benefits of CSS Variables
+	CSS Frameworks
+	Overview of Popular Frameworks: Bootstrap, Tailwind CSS
+3. JavaScript (JS)
+	Basics of JavaScript
+	Introduction to JavaScript
+	What is JavaScript?
+	Linking JavaScript to HTML
+	JavaScript Syntax and Statements
+	Data Types and Variables
+	Primitive Data Types: string, number, boolean, null, undefined
+	var, let, const Keywords
+	Operators
+	Arithmetic, Assignment, Comparison, Logical, Ternary
+	Conditional Statements
+	if, else if, else
+	switch Statements
+	Loops
+	for, while, do-while
+	for...of and for...in
+	Intermediate JavaScript
+	Functions
+	Defining Functions: function and Arrow Functions
+	Function Parameters and Return Values
+	Arrays
+	Array Methods: push, pop, shift, unshift, splice, slice
+	Iterating Arrays: forEach, map, filter, reduce
+	Objects
+	Creating and Using Objects
+	Object Methods and this
+	Accessing Properties: Dot Notation vs Bracket Notation
+	DOM Manipulation
+	Selecting Elements: getElementById, querySelector
+	Modifying Elements: innerHTML, style, classList
+	Adding and Removing Elements
+	Events
+	Adding Event Listeners
+	Common Events: click, mouseover, keydown, submit
+	Advanced JavaScript
+	ES6+ Features
+	Template Literals
+	Destructuring Assignment
+	Spread and Rest Operators
+	Promises and Async/Await
+	Error Handling
+	Try-Catch Blocks
+	Throwing Custom Errors
+	Fetch API
+	Making GET and POST Requests
+	Working with JSON Data
+	JavaScript Modules
+	Exporting and Importing Modules
+	Object-Oriented Programming
+	Classes and Prototypes
+	Inheritance
+4. Integration and Advanced Topics
+	Responsive Web Design
+	Combining HTML, CSS, and JavaScript for Responsive Websites
+	Media Queries and JavaScript for Dynamic Resizing
+	Frameworks and Libraries Overview
+	Introduction to jQuery, React, and Angular
+	Why Use Frameworks/Libraries?
+	Browser Developer Tools
+	Debugging JavaScript with DevTools
+	Inspecting HTML and CSS
+	Performance Optimization
+	Minifying HTML, CSS, and JS
+	Best Practices for Loading Scripts
+	Accessibility and SEO
+	Making Web Pages Accessible
+	Using Proper HTML Tags for SEO
+5. Capstone Project
+	Building a Full Web Page
+	Example Projects: Portfolio Website, Blog, or E-Commerce Frontend
+	Using HTML for Structure, CSS for Styling, and JavaScript for Interactivity
+
+========================================
+Bootstrap and jQuery Syllabus Overview
+1. Introduction to Bootstrap
+	What is Bootstrap?
+	Benefits of Using Bootstrap
+	Setting Up Bootstrap in Your Project
+	Bootstrap CDN vs Local Installation
+	Understanding the Grid System
+2. Bootstrap Components
+	Typography: Headings, Paragraphs, and Text Utilities
+	Buttons: Variants, Sizes, and States
+	Navigation: Navbar, Breadcrumbs, Pagination
+	Forms: Input Types, Validation, Form Groups, Input Groups
+	Tables: Responsive Tables, Table Styles
+	Cards: Basic Cards, Card Groups, and Decks
+	Modals: Creating Modals, Configurations, and Events
+	Alerts: Success, Warning, Info, and Error Alerts
+	Badges and Pills: Usage in Buttons and Lists
+	Progress Bars: Animations and Striped Bars
+3. Bootstrap Utilities
+	Spacing: Margin and Padding Classes
+	Colors: Background and Text Colors
+	Borders: Utilities for Adding and Styling Borders
+	Flexbox: Alignment, Justification, and Ordering
+	Visibility: Show/Hide Elements Responsively
+	Display Properties: Inline, Block, and Hidden
+4. Responsive Design with Bootstrap
+	Breakpoints and Media Queries
+	Hiding/Showing Elements Based on Screen Size
+	Responsive Images and Videos
+	Using Containers: Fixed, Fluid, and Responsive Containers
+5. Customizing Bootstrap
+	Overriding Bootstrap Styles with CSS
+	Using Sass for Customizing Bootstrap
+	Bootstrap Themes: Integrating and Customizing
+6. Introduction to jQuery
+	What is jQuery?
+	Setting Up jQuery in a Project (CDN and Local)
+	Benefits of Using jQuery
+	Basic Syntax and Selectors
+7. DOM Manipulation with jQuery
+	Selecting Elements
+	Adding/Removing Elements (append, prepend, remove)
+	Modifying Attributes and Content (attr, text, html, val)
+	Adding and Removing Classes (addClass, removeClass, toggleClass)
+8. Event Handling in jQuery
+	Event Binding and Delegation
+	Common Events: click, hover, focus, blur, submit
+	Event Object and Propagation
+9. Animations and Effects
+	Hiding/Showing Elements (hide, show, toggle)
+	Fading Effects: fadeIn, fadeOut, fadeToggle
+	Sliding Effects: slideUp, slideDown, slideToggle
+	Custom Animations Using animate
+10. AJAX with jQuery
+	Introduction to AJAX and its Importance
+	Making GET and POST Requests
+	Handling JSON Data
+	Error Handling in AJAX
+	Loading Content Dynamically
+11. Advanced jQuery
+	Chaining Methods
+	Understanding Callbacks and Promises
+	Working with Plugins: Sliders, Carousels, and Lightboxes
+	Creating Custom jQuery Plugins
+12. Bootstrap + jQuery Integration
+	Creating Interactive Components with jQuery and Bootstrap
+	Dynamically Modifying Bootstrap Modals, Tooltips, and Popovers
+	Validating Forms with jQuery and Bootstrap
+	Responsive Menus with jQuery
+13. Practical Projects
+	Responsive Web Page Using Bootstrap
+	Interactive Form with Validation (Bootstrap + jQuery)
+	Dynamic Carousel or Image Gallery
+	AJAX-powered Contact Form
+	Mini Dashboard Using Bootstrap Cards and jQuery
+	Learning Outcomes
+	Build responsive and interactive web pages using Bootstrap and jQuery.
+	Customize Bootstrap components for specific design requirements.
+	Use jQuery to manipulate DOM elements and handle user events effectively.
+	Integrate Bootstrap's UI components with jQuery for enhanced interactivity.
+========================================
+Angular Syllabus Overview
+1. Introduction to Angular
+	Overview of Angular Framework
+	Features and Advantages
+	Setting up the Development Environment (Node.js, Angular CLI)
+	Creating the First Angular Application
+	Project Structure and Files
+2. TypeScript Fundamentals
+	Introduction to TypeScript
+	Variables, Data Types, and Functions
+	Classes, Interfaces, and Inheritance
+	Modules and Decorators
+	Understanding Promises and Async/Await
+3. Angular Basics
+	Angular Modules (NgModule)
+	Components and Templates
+	Data Binding:
+	Interpolation
+	Property Binding
+	Event Binding
+	Two-Way Binding
+	Directives:
+	Structural (*ngIf, *ngFor)
+	Attribute Directives ([ngClass], [ngStyle])
+4. Angular Forms
+	Template-Driven Forms
+	Using ngModel
+	Form Validation and Error Messages
+	Reactive Forms
+	Creating Forms with FormGroup and FormControl
+	Custom Validators and Dynamic Forms
+5. Angular Services and Dependency Injection
+	What are Services?
+	Creating and Using Services
+	Dependency Injection Basics
+	Singleton Services and Service Scopes
+6. Routing and Navigation
+	Setting up the Angular Router
+	Configuring Routes and Nested Routes
+	Route Parameters and Query Parameters
+	Lazy Loading Modules
+	Guards: AuthGuard and CanActivate
+7. HTTP and APIs
+	Using Angular’s HTTP Client
+	Performing CRUD Operations (GET, POST, PUT, DELETE)
+	Handling Errors and Observables
+	Consuming and Displaying RESTful API Data
+8. RxJS and Observables
+	Introduction to Reactive Programming
+	Observables vs Promises
+	Common RxJS Operators (map, filter, switchMap)
+	Handling Streams and Async Data
+9. Angular Material
+	Installing and Setting Up Angular Material
+	Using Components: Buttons, Cards, Tables, Dialogs, and Forms
+	Customizing Themes and Styling
+	Building Responsive UIs
+10. Advanced Topics
+	Component Communication: Input, Output, and Event Emitters
+	ViewChild and ContentChild Decorators
+	Lifecycle Hooks (ngOnInit, ngOnChanges, ngAfterViewInit)
+	Dynamic Component Loading
+	State Management with NgRx (Introduction)
+	Optimizing Angular Applications (Lazy Loading, OnPush Strategy)
+11. Testing Angular Applications
+	Unit Testing with Jasmine and Karma
+	Testing Components, Services, and Pipes
+	End-to-End Testing with Protractor or Cypress
+12. Deployment
+	Building an Angular Application for Production
+	Hosting Angular Applications on Servers (e.g., Firebase, AWS, or Azure)
+	Optimizing Application Performance
+13. Practical Projects
+	Todo Application with Reactive Forms
+	E-commerce Website with Shopping Cart and Product Management
+	Blog Application with Routing and CRUD Operations
+	Real-Time Chat Application using WebSocket
+Learning Outcomes
+Master the fundamentals of Angular for building robust web applications.
+Learn to integrate Angular with RESTful APIs and external libraries.
+Understand how to optimize and deploy Angular applications for production.
+========================================
+
+Azure Cloud Engineer :
+
+1. What are Azure Resource Groups, and why are they important?
+Purpose: To assess your understanding of Azure's resource organization and management.
+Answer: Azure Resource Groups are logical containers that hold related Azure resources (e.g., VMs, databases, storage) 
+for easier management and grouping. They allow resource grouping by lifecycle, ownership, or other factors, 
+enabling efficient organization, access control, cost management, and deployment.
+
+2. How does Azure Load Balancer differ from Azure Application Gateway?
+Purpose: To test your understanding of Azure networking components.
+Answer:
+Azure Load Balancer operates at Layer 4 (TCP/UDP) and is used for high availability and routing traffic to backend servers.
+Azure Application Gateway works at Layer 7 (HTTP/HTTPS), providing application-level routing, SSL termination, and 
+Web Application Firewall (WAF) capabilities.
+
+3. What is Azure DevOps, and how is it used?
+Purpose: To check your knowledge of CI/CD and DevOps practices.
+Answer: Azure DevOps is a cloud service for managing DevOps processes. It includes tools for version control (via Git), 
+CI/CD pipelines, test automation, artifact management, and project tracking. It integrates well with Azure to automate deployments 
+and application lifecycles.
+
+4. Explain the differences between Azure Blob Storage, File Storage, and Disk Storage.
+Purpose: To understand your grasp of Azure's storage solutions.
+Answer:
+Blob Storage: Unstructured data (e.g., images, videos). Ideal for scalable storage.
+File Storage: Managed file shares accessible over SMB protocol. Suitable for shared access across systems.
+Disk Storage: Persistent block storage attached to Azure VMs. Used for high IOPS and low-latency workloads.
+
+5. How do you secure an Azure Virtual Machine?
+Purpose: To gauge your understanding of VM security practices.
+Answer:
+Use Network Security Groups (NSGs) to limit access by IP and ports.
+Enable Azure Defender for advanced threat protection.
+Apply Azure Disk Encryption for data security.
+Configure Just-In-Time (JIT) VM Access for RDP/SSH.
+Regularly patch and update the VM.
+
+6. What is Azure Kubernetes Service (AKS), and why is it used?
+Purpose: To assess your familiarity with container orchestration.
+Answer: Azure Kubernetes Service (AKS) simplifies deploying, scaling, and managing containerized applications using Kubernetes. 
+It automates cluster management, reduces overhead, and integrates with other Azure services (e.g., Azure Monitor).
+
+7. Describe how Azure Role-Based Access Control (RBAC) works.
+Purpose: To check your knowledge of access control and security in Azure.
+Answer: Azure RBAC is a system that provides fine-grained access management of Azure resources. 
+Roles (Owner, Contributor, Reader, etc.) are assigned to users, groups, or service principals at different scopes 
+(subscription, resource group, or resource level).
+
+8. What is an Azure Logic App, and when would you use it?
+Purpose: To test your understanding of automation tools in Azure.
+Answer: Azure Logic Apps are a cloud-based service to build workflows for automating processes, integrating apps, and 
+handling event-driven tasks. Example use cases include email notifications, data synchronization, or processing Azure Storage blobs.
+
+9. Explain the difference between Azure Functions and Azure App Service.
+Purpose: To understand your knowledge of Azure PaaS offerings.
+Answer:
+Azure Functions: Serverless compute service for executing event-driven code snippets (e.g., data processing, triggers).
+Azure App Service: Fully managed PaaS for hosting web applications, REST APIs, and mobile backends.
+
+10. How do you monitor and optimize costs in Azure?
+Purpose: To evaluate your cost management skills.
+Answer:
+Use Azure Cost Management + Billing to analyze spending trends.
+Implement budgets and alerts for cost control.
+Use Azure Advisor to identify cost-saving opportunities.
+Optimize resources by resizing VMs, shutting down unused resources, and implementing auto-scaling.
+
+====Scenario Base 
+
+1. Cost Optimization Scenario
+Question: Your manager notices a spike in Azure spending this month. They ask you to investigate and optimize the cloud costs. 
+What steps would you take to identify and reduce unnecessary spending?
+Answer:
+Analyze Costs: Use Azure Cost Management + Billing to identify the services consuming the most resources.
+Right-Sizing Resources: Check for underutilized VMs, storage, or other services and resize them to match actual needs.
+Shutdown Idle Resources: Identify resources running in non-production environments and shut them down during off-hours 
+using Azure Automation or schedules.
+Use Reserved Instances: For predictable workloads, switch to Azure Reserved Instances to save costs.
+Enable Cost Alerts: Set budgets and configure alerts for threshold breaches.
+Azure Advisor: Use recommendations from Azure Advisor for performance and cost optimization.
+
+2. Migration Scenario
+Question: Your company wants to migrate an on-premises SQL Server database to Azure. The database is critical, 
+and downtime must be minimized. How would you approach the migration, and which Azure service would you use?
+Answer:
+Assessment: Use Azure Migrate or Data Migration Assistant (DMA) to assess database compatibility and identify migration blockers.
+Choose a Service: If downtime must be minimized, use Azure SQL Database Managed Instance or SQL Server on Azure VM.
+Migration Tool: Use Azure Database Migration Service (DMS) for a seamless migration with minimal downtime.
+Sync Mechanism: For near-zero downtime, use transactional replication or a staging database for cutover.
+Testing: Perform a dry run to verify application compatibility.
+
+3. Networking Scenario
+Question: You need to set up a secure connection between your on-premises data center and Azure resources. 
+The connection should have high reliability and encryption. Which Azure service would you choose, and how would you configure it?
+Answer:
+Choose Service: Use Azure VPN Gateway or Azure ExpressRoute for secure connections.
+VPN Gateway:
+Deploy a site-to-site VPN with IPsec/IKE encryption.
+Configure local network gateways with your on-premises IP address range.
+Use Azure Network Security Groups (NSGs) for additional filtering.
+ExpressRoute (if higher reliability and low latency are needed):
+Partner with an ExpressRoute provider to set up a dedicated private connection.
+Enable ExpressRoute Global Reach for redundancy.
+
+4. High Availability Scenario
+Question: Your organization runs a web application hosted on Azure App Service. The application must be highly available 
+across multiple regions. How would you design the architecture to meet this requirement?
+Answer:
+Primary Setup: Deploy the application in multiple Azure regions.
+Traffic Management: Use Azure Traffic Manager for geo-redundancy and load balancing.
+Configure routing methods (e.g., performance-based or failover).
+Database Replication: Use Active Geo-Replication for Azure SQL or Cosmos DB for global distribution of data.
+Storage Redundancy: Configure Geo-Redundant Storage (GRS) for data stored in Azure Blob Storage.
+Monitor Health: Set up health probes in Traffic Manager to detect failures.
+
+5. Disaster Recovery Scenario
+Question: Your client requires a disaster recovery plan for an Azure-based application. How would you implement a disaster 
+recovery solution using Azure services, and which tools would you use to test it?
+Answer:
+Define RTO and RPO: Clarify recovery objectives (e.g., downtime allowed and acceptable data loss).
+Azure Services: Use Azure Site Recovery (ASR) to replicate workloads to a secondary region.
+Data Backup: Enable Azure Backup for VMs, databases, and files.
+Testing: Perform regular disaster recovery drills using the Test Failover feature in ASR without impacting production.
+Failover Strategy: Use automated failover groups for databases and preconfigure routing in Traffic Manager.
+
+6. Monitoring and Alerting Scenario
+Question: A critical production application hosted on Azure has intermittent performance issues. How would you set up monitoring 
+and alerts to identify the root cause and prevent future incidents?
+Answer:
+Enable Monitoring: Use Azure Monitor to collect logs and metrics for all resources.
+Application Insights: Integrate Azure Application Insights to monitor application performance and telemetry.
+Diagnostics: Enable Diagnostic Logs for detailed resource-level logging.
+Set Alerts: Configure alerts for key metrics like CPU usage, response time, or error rate.
+Dashboard: Create an Azure Monitor Dashboard to visualize metrics in real time.
+Root Cause Analysis: Use Log Analytics Workspace to analyze logs and identify patterns.
+
+7. Security and Compliance Scenario
+Question: Your organization needs to comply with strict regulatory requirements (e.g., GDPR or HIPAA). 
+What steps would you take to secure Azure resources and ensure compliance?
+Answer:
+Azure Policy: Define and enforce compliance policies using Azure Policy (e.g., restrict data storage locations).
+Encryption: Use Azure Key Vault for secrets and encryption keys. Enable encryption at rest and in transit for sensitive data.
+Identity Management: Implement Azure AD Conditional Access, MFA, and role-based access control (RBAC).
+Compliance Dashboard: Use Azure Security Center and the Compliance Manager to monitor and report compliance.
+Auditing: Enable Azure Monitor and audit logs for all critical resources.
+
+8. Scaling Scenario
+Question: A retail company is preparing for Black Friday, and traffic to their eCommerce platform hosted on Azure is expected 
+to increase tenfold. How would you ensure the platform can handle the increased load?
+Answer:
+Auto-Scaling: Enable Azure App Service Autoscale for the web application.
+Cache Layer: Use Azure Cache for Redis to offload read-heavy operations.
+CDN: Deploy a Content Delivery Network (CDN) to serve static assets.
+Database Scaling: Use Read Replicas for Azure SQL or scale Cosmos DB throughput.
+Load Testing: Perform load tests using Azure Load Testing to identify bottlenecks.
+
+9. Third-Party Integration Scenario
+Question: You need to integrate Azure services with a third-party API that requires IP whitelisting for security. 
+How would you ensure your Azure resources use a consistent public IP address when communicating with the third-party API?
+Answer:
+Static IP: Assign a static public IP to the Azure resource (e.g., Azure App Service or VM).
+NAT Gateway: Use Azure NAT Gateway for consistent outbound IP across multiple resources in a Virtual Network.
+API Management: Place the integration behind Azure API Management to route traffic through a single IP.
+
+10. Multi-Tenant Application Scenario
+Question: You’re building a SaaS application on Azure for multiple customers (tenants). Each tenant requires data isolation, 
+but you want to keep costs low. How would you design the solution?
+Answer:
+Data Isolation: Use a single database with row-level security (RLS) or separate databases for critical tenants.
+Authentication: Implement Azure AD B2C for tenant-based authentication.
+Resource Sharing: Share resources like App Service and Storage but configure strict RBAC policies.
+Scaling: Use Elastic Pools for SQL databases to share resources while isolating performance.
+
+========================================
+C# .Net Syllabus :
+1. C# Basics
+	Data Types and Variables
+	Constants and Readonly
+	Operators (Arithmetic, Logical, Relational)
+	String Manipulations (StringBuilder, Interpolation)
+	Arrays and Collections (List, Dictionary, Queue, Stack)
+	Nullable Types
+	Control Statements (if, switch, for, foreach, while)
+2. Object-Oriented Programming (OOP)
+	Class and Object
+	Encapsulation, Abstraction, Inheritance, Polymorphism
+	Static vs Instance Members
+	Access Modifiers (public, private, protected, internal)
+	Constructors (Default, Parameterized, Copy)
+	Method Overloading and Overriding
+	Abstract Classes and Interfaces
+	Sealed Classes and Methods
+3. Exception Handling
+	Try, Catch, Finally
+	Custom Exceptions
+	Best Practices for Exception Handling
+4. Advanced Topics
+	Delegates and Events
+	Anonymous Methods and Lambdas
+	LINQ (Language-Integrated Query)
+	Where, Select, GroupBy, OrderBy, etc.
+	Extension Methods
+	Reflection and Attributes
+	Dynamic Type
+	Lazy Initialization
+	Tuples
+5. Asynchronous Programming
+	Async/Await
+	Task vs Thread
+	Threading (ThreadPool, Threads, Synchronization)
+	Parallel Programming (Parallel.For, PLINQ)
+6. Memory Management
+	Garbage Collection
+	Dispose Pattern and IDisposable
+	Finalizers
+	Weak References
+7. Design Patterns
+	Singleton
+	Factory Method
+	Repository
+	Dependency Injection
+	Adapter, Decorator, Observer Patterns (commonly used)
+8. File I/O
+	Reading and Writing Files (File, StreamReader, StreamWriter)
+	Working with JSON/XML (Newtonsoft.Json, System.Text.Json)
+	Serialization and Deserialization
+9. Entity Framework Core
+	Code First vs Database First
+	Migrations
+	LINQ with EF
+	Lazy Loading, Eager Loading, Explicit Loading
+10. ASP.NET Core
+	Middleware and Pipeline
+	Dependency Injection
+	Filters (Authorization, Action, Exception Filters)
+	Authentication and Authorization (JWT, OAuth)
+	Model Binding and Validation
+	Routing (Attribute Routing, Conventional Routing)
+11. Microservices and Web APIs
+	RESTful Principles
+	Creating Web APIs using ASP.NET Core
+	Versioning
+	Swagger/OpenAPI
+	Exception Handling in Web APIs
+12. Testing
+	Unit Testing Frameworks (MSTest, NUnit, xUnit)
+	Mocking Frameworks (Moq)
+	Integration Testing
+13. C# 8.0 and Later Features
+	Nullable Reference Types
+	Switch Expressions
+	Pattern Matching Enhancements
+	Async Streams
+	Records (C# 9.0)
+	Global Usings (C# 10.0)
+14. Performance and Optimization
+	StringBuilder vs String
+	Value vs Reference Types
+	Boxing and Unboxing
+	Span<T>, Memory<T>, and ref struct
+15. Miscellaneous
+	SOLID Principles
+	Resharper and Code Analysis Tools
+	How var works
+	Difference between IEnumerable, IQueryable, and List
+	What's new in .NET (like .NET 6 or .NET 8)
+
+========================================
+
+NodeJS :
+1. What is Node.js?
+Answer:
+Node.js is a JavaScript runtime built on Chrome's V8 engine. It is used for developing server-side and networking applications. 
+Node.js is event-driven, non-blocking, and follows the single-threaded model with a callback mechanism, 
+making it ideal for I/O-heavy applications.
+
+2. What is the difference between process.nextTick() and setImmediate()?
+Answer:
+process.nextTick(): Executes a callback after the current operation completes but before the event loop continues.
+setImmediate(): Executes a callback after the event loop's current phase completes, in the check phase.
+Example:
+process.nextTick(() => console.log('nextTick'));
+setImmediate(() => console.log('setImmediate'));
+console.log('current operation');
+// Output: 
+// current operation
+// nextTick
+// setImmediate
+
+3. What is the Event Loop in Node.js?
+Answer:
+The Event Loop is the core of Node.js's asynchronous execution model. It handles callbacks, performs non-blocking I/O operations, 
+and processes events in different phases (e.g., timers, I/O, poll, check). It enables Node.js to handle multiple requests 
+without blocking a single thread.
+
+4. How does Node.js handle asynchronous code?
+Answer:
+Node.js handles asynchronous code using:
+Callbacks: A function executed after the operation is complete.
+Promises: A modern way to handle async operations, providing .then() and .catch() methods.
+Async/Await: A cleaner syntax for handling Promises.
+Example:
+async function fetchData() {
+    try {
+        const data = await someAsyncFunction();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+5. What is the difference between require and import?
+Answer:
+require: Used in CommonJS modules. It is synchronous and works in all Node.js versions.
+import: Used in ES Modules (ESM). It is asynchronous and requires enabling type: "module" in package.json.
+Example:
+// CommonJS
+const fs = require('fs');
+// ES Modules
+import fs from 'fs';
+
+================================================
+
+https://www.youtube.com/watch?v=H9M02of22z4&t=115s
+Contact Manage App Using NodeJS :
+
+Rest API Convention
+CRUD Action			HTTP Method				Endpoints
+Get AllContacts		Get						/api/contacts
+Get Contact			Get						/api/contacts/:id
+Create Contact		POST					/api/contacts
+Update Contact		PUT						/api/contacts/:id
+Delete Contact		Delete					/api/contacts/:id
+
+Install Node.js
+VisualStudio Code
+ThunderClient
+
+
+	*Intro
+	*Project Introduction & Rest API convention
+	*Project Setup - Contact Management App
+	*Create an Express Server
+	*Thunder Client Setup
+	*Express Router & Contacts CRUD Route Setup
+	*Create Contact Controller for Contacts CRUD Operations
+	*Multiple HTTP Methods per Route
+	*Built-in Middleware for POST Request Body
+	*Express - Throw Error
+	*Error Handling Middleware
+	*Express Async Handler
+	*MongoDb Setup
+	*Connect Express App to MondoDB Database
+	*Mongoose Schema for Contacts
+	*CRUD Get All Contacts
+	*CRUD Create New Contact
+	*CRUD Get Contact
+	*CRUD Update Contact
+	*CRUD Delete Contact
+	*Adding User Routes - Registration, Login & Current
+	*Adding User Controller
+	*Mongoose Schema for User
+	*User Registration & Password Hashing
+	*JWT Access Token & User Login 
+	*Protecting Routes - User
+	*Verify JWT Token Middleware
+	*Handle Relationship User & Contact Schema
+	*Protecting Routes - Contact
+	*Logged in User Get All Contacts 
+	*Logged in User Create New Contact 
+	*Logged in User Update & Delete Contact 
+	*Outro
+
+================================================
+https://www.youtube.com/watch?v=sCNXjkbiGDQ&t=2s
+https://www.youtube.com/watch?v=MIJt9H69QVc
+
+What is angular?
+=> Angular is a component based framework for building structured,
+scalable and single page web applications for client side.
+
+What are Angular advantages?
+=> 
+It is relatively simple to build single page applications(components)
+To make flexible and structured applicatoins (Oops frendly).
+It is Cross platform and Open Source (Free)
+Reusable Code (Services)
+Testability (spec.ts)
+
+What is the difference between angular and angular js? or
+What are the advantages of Angular?
+=>	
+Angular
+	1.It support both javascript and typescript.
+	2.this framework has a component based architecture.
+	3.it has cli tool.
+	4.it uses dependency injection.
+	5.it also support mobile brwsers.
+	6.it is very fast.
+	
+Angular JS
+	1.It only Support JavaScript.
+	2.This framework has a model-view-controller (mvc) architecture.
+	3.It does not have CLI tool.
+	4.It does not use Dependency Injection.
+	5.It does not support mobile browsers.
+	6.It is not so fast.
+	
+What is NPM?
+=> NPM/ Node package manager is an online repository
+from where you can be used in your angular project.
+
+What is CLI tool?
+=> CLI is a command-line interface tool that you use to
+initialize and develop angular applications.
+
+What is the role of Angular.json file in Anuglar?
+=> The angular.json file is the primary configuration
+file for an angular project.
+
+What is the difference betweeh JIT and AOT in Angular?
+=> Both JIT and AOT are used to compile angular typescript components to
+javascript becouse browser understands JavaScript not typescript.
+
+Angular Compile			Details
+Just-in-time 			Compiles your application in the browser at runtime.
+						This was the default until angular8.
+Ahead-of-Time			Compiles your application and libraries at build time.
+						This is the default starting in Angular9.
+	
+What are components in Angular?
+=> 	Components are the most basic UI building block of an Angular app.
+
+What is a Selector and Template?
+=> A selector is used to identify each component uniquely into the component tree.
+
+What is Module in Angular? OR
+What is app.module.ts file?
+=> Module is a place where you can group the components, directives, pipes, 
+and services which are related to the application.
+
+What is Typescript? Whar are the advantages of typescript over javascript?
+=>
+	1.Typescript is a strongly typed language.
+	2.Typescript is a superset of javascript.
+	3.it has object oriented features.
+	4.Detect error at compile time.
+	
+
+Angular :
+Chapter 1: Angular Framework
+Chapter 2: Components & Modules
+Chapter 3: Data Binding
+Chapter 4: Directives
+Chapter 5: Decorator & Pipes
+Chapter 6: Services & Dependency Injection
+Chapter 7: Decorators & Lifecycle-Hooks
+Chapter 8: Routing
+Chapter 9: Observable\ HttpClient\ RxJS
+Chapter 10: Typescript-Basics
+Chapter 11: Typescript - OOPS
+Chapter 12: Angular Forms
+Chapter 13: Authentication/ JWT/ Auth Gurad/ HTTP Interceptor
+Chapter 14: Components Communication 
+
+================================================
+
+TypeScript :
+1. What is TypeScript, and how is it different from JavaScript?
+Answer: TypeScript is a superset of JavaScript that adds static typing and additional features such as interfaces, 
+enums, and generics. It is compiled into plain JavaScript to ensure compatibility with browsers.
+Key Differences:
+TypeScript supports static typing, while JavaScript is dynamically typed.
+TypeScript provides type safety, reducing runtime errors.
+TypeScript includes modern features like interfaces, decorators, and generics.
+
+2. What are TypeScript interfaces, and how are they used?
+Answer: An interface in TypeScript is a contract that defines the shape of an object, specifying its properties 
+and methods without implementing them.
+Example:
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const getUser = (user: User) => {
+  console.log(user.name);
+};
+
+getUser({ id: 1, name: "John Doe", email: "john.doe@example.com" });
+
+Interfaces enforce type safety for objects, ensuring they adhere to the defined structure.
+
+3. What are TypeScript generics, and why are they useful?
+Answer: Generics allow you to create reusable components or functions that work with a variety of types 
+without sacrificing type safety.
+Example:
+function identity<T>(value: T): T {
+  return value;
+}
+console.log(identity<number>(42));   // 42
+console.log(identity<string>("Hello")); // Hello
+Generics make components flexible and reusable by allowing the type to be specified dynamically.
+
+4. What are the key advantages of TypeScript over plain JavaScript?
+Answer:
+Static Typing: Detects type-related errors at compile time.
+Improved Code Readability: With interfaces, enums, and type annotations, TypeScript makes code more maintainable.
+IDE Support: Offers excellent support for IntelliSense, autocompletion, and refactoring in editors like VS Code.
+Backward Compatibility: Compiles to JavaScript, ensuring compatibility with older browsers.
+Object-Oriented Features: Supports classes, interfaces, and inheritance, making it easier to write OOP-style code.
+
+5. What are TypeScript enums, and how are they used?
+Answer: Enums in TypeScript are used to define a set of named constant values, which makes code more readable 
+and easier to maintain.
+Example:
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+
+const getColorName = (color: Color): string => {
+  switch (color) {
+    case Color.Red:
+      return "Red";
+    case Color.Green:
+      return "Green";
+    case Color.Blue:
+      return "Blue";
+    default:
+      return "Unknown";
+  }
+};
+
+console.log(getColorName(Color.Green)); // Green
+Enums improve code readability and reduce magic numbers.
+
+
+================================================
+Step 1: Initialize the Project
+Create a new directory:
+bash
+mkdir nodejs-crud
+cd nodejs-crud
+Initialize the project with npm:
+bash
+npm init -y
+This generates a package.json file.
+
+Step 2: Install Required Dependencies
+Install the necessary packages:
+bash
+npm install express body-parser mongoose cors nodemon
+express: Web framework for Node.js.
+body-parser: Parses incoming request bodies (JSON).
+mongoose: Connects to MongoDB.
+cors: Handles Cross-Origin Resource Sharing.
+nodemon: Automatically restarts the server during development.
+
+Step 3: Create the Project Structure
+Organize your project like this:
+graphql
+nodejs-crud/
+│
+├── server.js          # Main entry file
+├── models/            # Folder for MongoDB models
+│   └── item.js        # Mongoose schema for an Item
+├── routes/            # Folder for routes
+│   └── itemRoutes.js  # CRUD routes for Items
+├── package.json
+
+Step 4: Connect to MongoDB
+Set up MongoDB (use MongoDB Atlas or a local database).
+Step 4.1: Install MongoDB
+Ensure MongoDB is running locally (or use a cloud service like Atlas).
+Step 4.2: Connect to MongoDB in server.js
+Create server.js:
+javascript :code
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+// App Initialization
+const app = express();
+const PORT = 5000;
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+// MongoDB Connection
+mongoose
+  .connect("mongodb://localhost:27017/cruddb", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
+// Routes
+app.use("/api/items", require("./routes/itemRoutes"));
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+Step 5: Create the Mongoose Model
+Create the models/item.js file:
+
+javascript:code
+const mongoose = require("mongoose");
+
+const itemSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+});
+
+module.exports = mongoose.model("Item", itemSchema);
+
+Step 6: Create CRUD Routes
+Create the routes/itemRoutes.js file:
+javascript:code
+const express = require("express");
+const router = express.Router();
+const Item = require("../models/item");
+
+// Get All Items
+router.get("/", async (req, res) => {
+  try {
+    const items = await Item.find();
+    res.json(items);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Create a New Item
+router.post("/", async (req, res) => {
+  const item = new Item({
+    name: req.body.name,
+    description: req.body.description,
+  });
+
+  try {
+    const newItem = await item.save();
+    res.status(201).json(newItem);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Update an Item
+router.put("/:id", async (req, res) => {
+  try {
+    const updatedItem = await Item.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(updatedItem);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Delete an Item
+router.delete("/:id", async (req, res) => {
+  try {
+    await Item.findByIdAndDelete(req.params.id);
+    res.status(204).send();
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+module.exports = router;
+
+Step 7: Run the Application
+Start MongoDB:
+bash:code
+mongod
+Start the server with nodemon:
+bash:code
+npx nodemon server.js
+Step 8: Test the Endpoints
+Use a tool like Postman or cURL to test the API.
+
+Endpoints
+GET /api/items
+Fetch all items.
+
+POST /api/items
+Create a new item.
+Body (JSON):
+{
+  "name": "Sample Item",
+  "description": "This is a sample description."
+}
+
+PUT /api/items/:id
+Update an item.
+Body (JSON):
+{
+  "name": "Updated Item",
+  "description": "Updated description."
+}
+
+DELETE /api/items/:id
+Delete an item.
+
+
+
+
+
+
+
+
+
+
+
+

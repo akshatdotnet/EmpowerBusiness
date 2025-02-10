@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|d:\\vaishnav engineering\\code\\.net 8 lts\\empower.business\\empowerbusiness\\dotnet-core\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E555A728-46A6-46DC-B857-562FD103F6C9}|DotNet-Core\\ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:dotnet-core\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\CSharp.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|solutionrelative:DotNet-Core\\DevOps\\CSharp.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\TextFile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|solutionrelative:DotNet-Core\\DevOps\\TextFile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\DevOps.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|solutionrelative:DotNet-Core\\DevOps\\DevOps.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\SolutionArchitect.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|DevOps{33B57839-4FBD-40C7-BEBB-7957FC9F8E11}|solutionrelative:DotNet-Core\\DevOps\\SolutionArchitect.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TextFile.txt",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\TextFile.txt",
+              "RelativeDocumentMoniker": "DotNet-Core\\DevOps\\TextFile.txt",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\TextFile.txt",
+              "RelativeToolTip": "DotNet-Core\\DevOps\\TextFile.txt",
+              "ViewState": "AgIAALICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-05T14:23:03.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SolutionArchitect.txt",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\SolutionArchitect.txt",
+              "RelativeDocumentMoniker": "DotNet-Core\\DevOps\\SolutionArchitect.txt",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\SolutionArchitect.txt",
+              "RelativeToolTip": "DotNet-Core\\DevOps\\SolutionArchitect.txt",
+              "ViewState": "AgIAAOQFAAAAAAAAAAAAANAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-05T14:22:47.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DevOps.txt",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\DevOps.txt",
+              "RelativeDocumentMoniker": "DotNet-Core\\DevOps\\DevOps.txt",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\DevOps.txt",
+              "RelativeToolTip": "DotNet-Core\\DevOps\\DevOps.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-05T14:22:44.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "DotNet-Core\\ConsoleApp1\\Program.cs",
-              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "DotNet-Core\\ConsoleApp1\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:33:04.879Z",
+              "Title": "CSharp.txt",
+              "DocumentMoniker": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\CSharp.txt",
+              "RelativeDocumentMoniker": "DotNet-Core\\DevOps\\CSharp.txt",
+              "ToolTip": "D:\\Vaishnav Engineering\\Code\\.NET 8 LTS\\Empower.Business\\EmpowerBusiness\\DotNet-Core\\DevOps\\CSharp.txt*",
+              "RelativeToolTip": "DotNet-Core\\DevOps\\CSharp.txt*",
+              "ViewState": "AgIAAJ8EAAAAAAAAAAAAALQEAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-05T12:56:09.865Z",
               "EditorCaption": ""
             }
           ]

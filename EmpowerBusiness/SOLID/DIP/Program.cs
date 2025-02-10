@@ -5,13 +5,14 @@
 //  Details should depend upon abstractions.
 
 
-static void Main(string[] args)
-{
+//static void Main(string[] args)
+//{
     FileLogger logger = new FileLogger();
     DataAccessLayer dal = new DataAccessLayer(logger);
     dal.AddCustomer("John Smith");
     //dal.AddCustomer("John Smith", "john@example.com");
-}
+    Console.ReadLine();
+//}
 
 
 //public class FileLogger
@@ -42,6 +43,8 @@ public class FileLogger : ILogger
     public void Log(string message)
     {
         // write message to a log file
+        Console.WriteLine(message);
+        //Console.ReadLine();
     }
 }
 

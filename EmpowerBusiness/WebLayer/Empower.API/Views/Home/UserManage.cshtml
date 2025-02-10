@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    @* <link rel="stylesheet" href="styles.css"> *@
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+            .controls input,
+            .controls select,
+            .controls button {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .controls button {
+                background-color: #003366;
+                color: white;
+                cursor: pointer;
+            }
+
+                .controls button:hover {
+                    background-color: #00509e;
+                }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+            table th,
+            table td {
+                padding: 10px;
+                border: 1px solid #ccc;
+                text-align: left;
+            }
+
+            table th {
+                background-color: #003366;
+                color: white;
+            }
+
+        .pagination {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+            .pagination button {
+                padding: 10px;
+                margin: 0 5px;
+                background-color: #003366;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .pagination button:hover {
+                    background-color: #00509e;
+                }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Management</h1>
+    </header>
+
+    <div class="container">
+        <!-- Search and Filter -->
+        <div class="controls">
+            <input type="text" id="searchBox" placeholder="Search by name or email" />
+            <select id="filterRole">
+                <option value="">Filter by role</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+            <button id="addUserBtn">Add User</button>
+        </div>
+
+        <!-- User Table -->
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will go here -->
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="currentPage">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+
+    <!-- User Form Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add User</h2>
+            <form id="userForm">
+                <input type="hidden" id="userId" />
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
+                <label for="role">Role:</label>
+                <select id="role" required>
+                    <option value="Admin">Admin</option>
+                    <option value="User">User</option>
+                </select>
+                <button type="submit" id="saveUser">Save</button>
+            </form>
+        </div>
+    </div>
+
+    @* <script src="script.js"></script> *@
+    <script>
+                // Mock Data
+        let users = [
+            { id: 1, name: "John Doe", email: "john.doe@example.com", role: "Admin" },
+            { id: 2, name: "Jane Smith", email: "jane.smith@example.com", role: "User" },
+            { id: 3, name: "Alice Brown", email: "alice.brown@example.com", role: "Admin" },
+            { id: 4, name: "Bob White", email: "bob.white@example.com", role: "User" },
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 2;
+
+        // Utility functions
+        function renderTable() {
+            const tableBody = document.querySelector("#userTable tbody");
+            tableBody.innerHTML = "";
+
+            const filteredUsers = users.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+            filteredUsers.forEach((user, index) => {
+                const row = `<tr>
+                    <td>${(currentPage - 1) * itemsPerPage + index + 1}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.role}</td>
+                    <td>
+                        <button onclick="editUser(${user.id})">Edit</button>
+                        <button onclick="deleteUser(${user.id})">Delete</button>
+                    </td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+
+            document.querySelector("#currentPage").textContent = currentPage;
+        }
+
+        function searchAndFilter() {
+            const searchValue = document.querySelector("#searchBox").value.toLowerCase();
+            const filterValue = document.querySelector("#filterRole").value;
+
+            const filteredUsers = users.filter(user => {
+                return (
+                    (user.name.toLowerCase().includes(searchValue) || user.email.toLowerCase().includes(searchValue)) &&
+                    (filterValue === "" || user.role === filterValue)
+                );
+            });
+
+            renderTable(filteredUsers);
+        }
+
+        // CRUD Operations
+        function addUser(user) {
+            user.id = users.length + 1;
+            users.push(user);
+            renderTable();
+        }
+
+        function editUser(id) {
+            const user = users.find(user => user.id === id);
+            document.querySelector("#userId").value = user.id;
+            document.querySelector("#name").value = user.name;
+            document.querySelector("#email").value = user.email;
+            document.querySelector("#role").value = user.role;
+            document.querySelector("#userModal").style.display = "flex";
+        }
+
+        function deleteUser(id) {
+            users = users.filter(user => user.id !== id);
+            renderTable();
+        }
+
+        // Event Listeners
+        document.querySelector("#addUserBtn").addEventListener("click", () => {
+            document.querySelector("#userForm").reset();
+            document.querySelector("#userModal").style.display = "flex";
+        });
+
+        document.querySelector("#userForm").addEventListener("submit", event => {
+            event.preventDefault();
+
+            const id = document.querySelector("#userId").value;
+            const name = document.querySelector("#name").value;
+            const email = document.querySelector("#email").value;
+            const role = document.querySelector("#role").value;
+
+            if (id) {
+                const user = users.find(user => user.id === parseInt(id));
+                user.name = name;
+                user.email = email;
+                user.role = role;
+            } else {
+                addUser({ name, email, role });
+            }
+
+            document.querySelector("#userModal").style.display = "none";
+            renderTable();
+        });
+
+        document.querySelector("#prevPage").addEventListener("click", () => {
+            if (currentPage > 1) currentPage--;
+            renderTable();
+        });
+
+        document.querySelector("#nextPage").addEventListener("click", () => {
+            if (currentPage * itemsPerPage < users.length) currentPage++;
+            renderTable();
+        });
+
+        document.querySelector("#searchBox").addEventListener("input", searchAndFilter);
+        document.querySelector("#filterRole").addEventListener("change", searchAndFilter);
+
+        document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector("#userModal").style.display = "none";
+        });
+
+        // Initial Render
+        renderTable();
+
+    </script>
+</body>
+</html>

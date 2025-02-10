@@ -1,0 +1,702 @@
+
+Freelance Engineering Works
+.NET Solution Architect - Microservices, Software Architect, Azure DevOps
+
+===================================================
+C#,SQL,.NET Core MVC, Web API, LINQ, Entity Framework Core
+HTML5, CSS3, JavaScript, Bootstrap, JQuery, 
+Angular, NodeJS, Type Script
+GitHub, Azure DevOps, 
+===================================================
+DevOps Engineer (with Cloud Azure)
+Azure Devops, Iac, Arm Templates, Aks, ARM, Cicd Pipeline
+Docker, Kubernetes, Agile, and CI/CD practices	
+===================================================
+
+Build a proof of concept e-commerce store using Angular, .Net and Stripe for payment processing
+
+Develop Microservices on .NET 8 used ASP.NET Web API, Docker, RabbitMQ, MassTransit, gRPC, 
+Yarp Gateway, Redis,SqlServer
+
+Build real world e-commerce application using ASP.NET Core MVC, Entity Framework Core and 
+ASP.NET Core Identity
+
+===================================================
+
+
+
+===================================================
+
+
+What is Azure DevOps, and why is it used?
+Answer: Azure DevOps is a cloud-based platform that provides tools for planning, 
+developing, testing, deploying, and monitoring applications. 
+It is used to facilitate collaboration, automate CI/CD pipelines, 
+and integrate with other tools to enhance the software development lifecycle (SDLC).
+
+What are the main services offered by Azure DevOps?
+Answer:
+Azure Repos: Version control using Git or TFVC.
+Azure Pipelines: CI/CD automation.
+Azure Boards: Agile planning and project tracking.
+Azure Test Plans: Manual and exploratory testing.
+Azure Artifacts: Package management (NuGet, npm, etc.).
+
+How does Azure DevOps differ from GitHub?
+Answer: Azure DevOps focuses on enterprise-grade CI/CD pipelines, 
+project management, and end-to-end DevOps capabilities, while GitHub 
+emphasizes source code management and collaboration with strong integration 
+with GitHub Actions for CI/CD.
+
+CI/CD Questions
+How do you create and manage CI/CD pipelines in Azure DevOps?
+Answer:
+Use Azure Pipelines to create YAML or classic pipelines.
+Define build pipelines for compiling, testing, and packaging code.
+Set up release pipelines to deploy code across environments.
+Integrate with triggers like Git commits or pull requests.
+
+What is the difference between a build pipeline and a release pipeline?
+Answer:
+Build Pipeline: Automates the process of compiling code, running tests, 
+and creating build artifacts.
+Release Pipeline: Automates the deployment of these artifacts to various 
+environments (e.g., Dev, QA, Prod).
+
+How do you implement deployment strategies like Blue-Green or Canary releases in Azure DevOps?
+Answer:
+Use deployment slots in Azure App Services for Blue-Green deployments.
+Configure pipeline stages to route incremental traffic to new versions for Canary releases.
+Leverage Azure Traffic Manager for traffic management.
+Infrastructure as Code (IaC)
+
+What tools do you use for Infrastructure as Code in Azure?
+Answer:
+Azure Resource Manager (ARM) Templates: Declarative JSON templates for Azure resources.
+Terraform: Open-source IaC tool for provisioning cloud resources.
+Bicep: Simplified syntax for ARM templates.
+
+How do you ensure IaC is integrated into DevOps pipelines?
+Answer:
+Use Terraform or ARM templates in Azure Pipelines.
+Automate infrastructure deployment and updates through CI/CD pipelines.
+Implement state management and change validation.
+
+Monitoring and Security
+
+How do you monitor applications deployed via Azure DevOps?
+Answer:
+Use Azure Monitor for performance metrics and logs.
+Integrate with Application Insights for application-level monitoring.
+Set up alerts and dashboards for proactive monitoring.
+
+How do you secure pipelines in Azure DevOps?
+Answer:
+Use Service Connections to securely connect to Azure services.
+Encrypt secrets using Azure Key Vault and link them in pipelines.
+Implement role-based access control (RBAC) for pipelines and artifacts.
+Team Collaboration and Project Management
+
+How do you use Azure Boards for project management?
+Answer:
+Manage user stories, tasks, and bugs using Kanban or Scrum boards.
+Track progress with sprints, backlogs, and burndown charts.
+Link work items to commits, builds, and deployments for traceability.
+
+How do you manage permissions and access control in Azure DevOps?
+Answer:
+Use RBAC to assign roles at the organization, project, or resource level.
+Define custom security groups and policies for access control.
+Regularly audit permissions to ensure compliance.
+
+Best Practices and Troubleshooting
+
+What are some best practices for setting up DevOps pipelines?
+Answer:
+Use YAML pipelines for version control and reusability.
+Implement automated testing at every stage.
+Use staging environments for validation before production deployment.
+Monitor pipelines and optimize for performance.
+
+How do you troubleshoot a failed pipeline in Azure DevOps?
+Answer:
+Analyze the error logs and task-specific outputs.
+Check for missing dependencies or configuration mismatches.
+Validate branch policies and pipeline triggers.
+Debug locally if necessary.
+
+Scenario-Based Questions
+How would you migrate a project to Azure DevOps from another tool?
+Answer:
+Use Azure DevOps Migration Tools to import repositories, pipelines, and work items.
+Test migration in a staging environment.
+Train the team and document new processes.
+
+How do you handle cross-team collaboration in a large organization?
+Answer:
+Use Azure Boards for shared visibility and tracking.
+Implement branch policies and pull request approvals.
+Set up common artifact feeds for dependency sharing.
+
+================================================================
+
+1. What is C#?
+Answer:
+C# is an object-oriented, type-safe, and versatile programming language developed by Microsoft. 
+It is used to build a variety of applications such as web, desktop, mobile, and 
+cloud-based solutions.
+
+2. What are the main features of C#?
+Answer:
+Object-Oriented Programming (OOP).
+Automatic Garbage Collection.
+Type Safety.
+Delegates and Events.
+Asynchronous Programming with async and await.
+LINQ (Language Integrated Query).
+Interoperability with COM and .NET libraries.
+
+3. Explain the difference between ref and out keywords.
+Answer:
+ref: The variable must be initialized before passing to the method.
+out: The variable need not be initialized before passing to the method; 
+it must be assigned a value within the method.
+
+4. What is the difference between an abstract class and an interface?
+Answer:
+Abstract Class	Interface
+Can have method implementations.	
+Cannot have method implementations (until C# 8.0, which introduced default methods).
+Supports constructors.	No constructors allowed.
+Allows access modifiers.	All members are public by default.
+
+5. What is the difference between IEnumerable and IQueryable?
+Answer:
+IEnumerable: Executes queries in memory (client-side). Best for in-memory collections.
+IQueryable: Executes queries on the database server (deferred execution). 
+Suitable for querying large datasets.
+
+6. What is a delegate in C#?
+Answer:
+A delegate is a type-safe function pointer that allows methods to be passed as parameters. 
+It is used in event handling and callback mechanisms.
+
+7. What is the difference between value types and reference types?
+Answer:
+Value Types: Stored in the stack. Examples: int, float, bool.
+Reference Types: Stored in the heap. Examples: object, string, class.
+
+8. What is the purpose of var, dynamic, and object?
+Answer:
+var: Type is determined at compile-time.
+dynamic: Type is determined at runtime.
+object: Base type for all types in C#; type-checking occurs at runtime.
+
+9. Explain async and await in C#.
+Answer:
+async and await are used for asynchronous programming in C#.
+async: Marks a method as asynchronous.
+await: Suspends the method execution until the awaited task completes.
+
+10. What are extension methods?
+Answer:
+Extension methods allow you to add new methods to existing types without modifying them 
+or inheriting from them. They are defined as static methods in a static class with the 
+this keyword.
+
+11. Explain LINQ in C#.
+Answer:
+LINQ (Language Integrated Query) is a feature that provides query capabilities directly in C#.
+It can be used to query collections, databases, XML, and more.
+Example:
+Edit
+var results = from num in numbers  
+              where num > 5  
+              select num;  
+
+12. What is a Lambda Expression?
+Answer:
+A lambda expression is a concise way to write anonymous methods.
+Example:
+Edit
+Func<int, int> square = x => x * x;  
+
+13. What is the difference between String and StringBuilder?
+Answer:
+String: Immutable; every modification creates a new string.
+StringBuilder: Mutable; allows modifying the string without creating new instances.
+
+14. What is the using statement in C#?
+Answer:
+The using statement ensures the proper disposal of resources (like files, database connections) 
+that implement the IDisposable interface.
+Example:
+Edit
+using (var resource = new Resource())  
+{  
+    // Use the resource  
+}  
+
+15. Explain sealed classes and methods.
+Answer:
+Sealed Class: Cannot be inherited.
+Sealed Method: Prevents overriding of a method in derived classes.
+
+16. What is the difference between finalize and dispose?
+Answer:
+Finalize: Called by the garbage collector to clean up unmanaged resources.
+Dispose: Explicitly called by the programmer to release resources, usually implemented 
+via the IDisposable interface.
+
+17. What are nullable types in C#?
+Answer:
+Nullable types allow value types to represent null.
+Example:
+Edit
+int? nullableInt = null;  
+
+18. Explain boxing and unboxing in C#.
+Answer:
+Boxing: Converting a value type to an object type.
+Unboxing: Converting an object type back to a value type.
+Example:
+Edit
+int num = 5;  
+object obj = num; // Boxing  
+int num2 = (int)obj; // Unboxing  
+
+19. What is polymorphism in C#?
+Answer:
+Polymorphism allows methods to have the same name but behave differently based on the context.
+Compile-time Polymorphism: Method overloading.
+Runtime Polymorphism: Method overriding.
+
+20. Explain dependency injection and its types.
+Answer:
+Dependency injection is a design pattern that provides dependencies from external sources 
+instead of hardcoding them.
+Types:
+Constructor Injection.
+Property Injection.
+Method Injection.
+
+================================================================
+
+1. What is SQL?
+Answer:
+SQL (Structured Query Language) is a standard language used to communicate with 
+relational database systems for creating, reading, updating, and deleting data.
+
+2. What are the different types of SQL commands?
+Answer:
+DDL (Data Definition Language): CREATE, ALTER, DROP.
+DML (Data Manipulation Language): INSERT, UPDATE, DELETE.
+DQL (Data Query Language): SELECT.
+DCL (Data Control Language): GRANT, REVOKE.
+TCL (Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT.
+
+3. What is the difference between WHERE and HAVING clauses?
+Answer:
+WHERE: Filters rows before grouping.
+HAVING: Filters groups after grouping.
+
+4. What is the difference between INNER JOIN and OUTER JOIN?
+Answer:
+INNER JOIN: Returns records with matching values in both tables.
+OUTER JOIN: Returns matching records and unmatched records from one or both tables, 
+depending on whether it’s LEFT, RIGHT, or FULL OUTER JOIN.
+
+5. What is the primary key?
+Answer:
+A primary key is a unique identifier for a row in a table. 
+It ensures uniqueness and does not allow NULL values.
+
+6. What is a foreign key?
+Answer:
+A foreign key is a column that creates a relationship between two tables. 
+It references the primary key in another table.
+
+7. What is the difference between UNION and UNION ALL?
+Answer:
+UNION: Combines results of two queries and removes duplicates.
+UNION ALL: Combines results of two queries without removing duplicates.
+
+8. What are indexes in SQL?
+Answer:
+Indexes are database objects that improve query performance by allowing faster 
+data retrieval. Types include Clustered and Non-clustered indexes.
+
+9. What is normalization?
+Answer:
+Normalization is the process of organizing data to reduce redundancy and improve 
+data integrity. Common normal forms include 1NF, 2NF, 3NF, and BCNF.
+
+10. What is denormalization?
+Answer:
+Denormalization is the process of combining tables to improve read performance 
+by reducing joins, often used in data warehouses.
+
+11. What is a stored procedure?
+Answer:
+A stored procedure is a precompiled SQL query stored in the database that can be 
+executed repeatedly with parameters.
+
+12. What are triggers in SQL?
+Answer:
+Triggers are special procedures that are automatically executed in response to certain 
+events on a table (e.g., INSERT, UPDATE, or DELETE).
+
+13. What is a view in SQL?
+Answer:
+A view is a virtual table based on the result set of an SQL query. It does not store data 
+but displays data from one or more tables.
+
+14. What is a subquery?
+Answer:
+A subquery is a query nested inside another query. It can return single values, rows, 
+or entire tables. Types include correlated and non-correlated subqueries.
+
+15. What is the difference between DELETE and TRUNCATE?
+Answer:
+DELETE: Removes rows based on a condition and can be rolled back.
+TRUNCATE: Removes all rows from a table without logging individual row deletions 
+and cannot be rolled back.
+
+16. What is the difference between CHAR and VARCHAR?
+Answer:
+CHAR: Fixed-length storage.
+VARCHAR: Variable-length storage.
+
+17. How do you optimize a SQL query?
+Answer:
+Use indexes appropriately.
+Avoid SELECT *; use specific columns.
+Optimize joins and subqueries.
+Use proper indexing and avoid unnecessary computations.
+Analyze execution plans.
+
+18. What are constraints in SQL?
+Answer:
+Constraints are rules enforced on data in tables to ensure data integrity. 
+Examples include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK.
+
+19. What is the difference between RANK(), DENSE_RANK(), and ROW_NUMBER()?
+Answer:
+RANK(): Assigns ranks with gaps for duplicates.
+DENSE_RANK(): Assigns ranks without gaps for duplicates.
+ROW_NUMBER(): Assigns a unique number to each row.
+
+20. What are transactions, and what are the ACID properties?
+Answer:
+A transaction is a sequence of operations treated as a single unit of work.
+ACID properties:
+Atomicity: Transactions are all-or-nothing.
+Consistency: Ensures data integrity.
+Isolation: Transactions do not interfere with each other.
+Durability: Changes persist even after a failure.
+================================================================
+
+C#, ASP.NET MVC, and ASP.NET Core Questions :
+
+What is the difference between ASP.NET MVC and ASP.NET Core?
+Answer:
+ASP.NET MVC: Windows-based framework, dependent on IIS, and uses the .NET Framework.
+ASP.NET Core: Cross-platform, high-performance, cloud-optimized, and uses the .NET Core runtime.
+
+Explain dependency injection and its benefits.
+Answer:
+Dependency injection (DI) is a design pattern that provides dependencies to classes 
+from external sources, improving code modularity and testability.
+
+What is the difference between synchronous and asynchronous methods in C#?
+Answer:
+Synchronous: Executes tasks sequentially, blocking the thread.
+Asynchronous: Uses async and await to perform tasks without blocking the thread.
+
+What is the role of IActionResult in ASP.NET Core MVC?
+Answer:
+IActionResult is an interface that represents the result of an action method. 
+It allows flexibility in returning different types of responses (e.g., ViewResult, JsonResult).
+
+What is Entity Framework Core, and how is it different from Entity Framework?
+Answer:
+EF Core is a lightweight, cross-platform, and extensible version of Entity Framework. 
+It supports LINQ queries, change tracking, migrations, and more. It’s designed for .NET Core.
+
+RESTful HTTP Services Design :
+
+What are REST principles?
+Answer:
+REST principles include:
+Stateless communication
+Uniform interface (HTTP methods like GET, POST)
+Resource-based URLs
+Representation in JSON or XML
+
+How would you secure RESTful APIs?
+Answer:
+Use OAuth 2.0, API keys, HTTPS, CORS policies, and rate limiting.
+
+Explain idempotency in RESTful services.
+Answer:
+Idempotency means making multiple identical requests has the same effect as making a 
+single request (e.g., PUT and DELETE methods).
+
+Microservices and Docker :
+
+What are the main advantages of microservices architecture?
+Answer:
+Scalability
+Technology agnostic
+Independent deployment
+Fault isolation
+
+How do Docker containers improve development and deployment?
+Answer:
+Portability across environments.
+Faster deployments.
+Isolation of application dependencies.
+
+What is the difference between Docker and Kubernetes?
+Answer:
+Docker: Platform for containerization.
+Kubernetes: Orchestrates containers, manages scaling, networking, and deployment.
+
+Explain the concept of Azure Kubernetes Service (AKS).
+Answer:
+AKS is a managed Kubernetes service that simplifies the deployment and management of 
+containerized applications in Azure.
+
+Azure Development and Integration Services :
+
+What is Azure Logic Apps?
+Answer:
+Azure Logic Apps is a cloud service used to automate workflows and integrate applications, 
+data, and services.
+
+How does Azure Service Bus work?
+Answer:
+Azure Service Bus is a messaging service for reliable communication between services 
+using topics and queues.
+
+Explain the difference between Azure Functions and Logic Apps.
+Answer:
+Azure Functions: Event-driven serverless code execution.
+Logic Apps: Workflow automation platform.
+
+What is Azure Event Grid used for?
+Answer:
+Azure Event Grid delivers event notifications across services and resources in a scalable way.
+
+What are Azure Batch services?
+Answer:
+Azure Batch is a service for running large-scale parallel and high-performance 
+computing applications efficiently.
+
+SQL Server and Database :
+
+What are indexes, and why are they used?
+Answer:
+Indexes improve query performance by enabling faster data retrieval.
+
+How do you identify and resolve deadlocks in SQL Server?
+Answer:
+Use SQL Server Profiler or Extended Events to identify deadlocks.
+Resolve by optimizing queries, using transaction isolation levels, and ensuring a 
+consistent order of operations.
+
+What is the difference between clustered and non-clustered indexes?
+Answer:
+Clustered Index: Sorts and stores data rows in the table.
+Non-Clustered Index: Maintains a separate structure for data lookup.
+
+How do you optimize SQL query performance?
+Answer:
+Use indexing.
+Avoid SELECT *.
+Use proper joins.
+Analyze execution plans.
+
+What is the purpose of ROW_NUMBER() in SQL?
+Answer:
+Assigns a unique sequential integer to rows in a result set.
+
+Azure SQL, Redis Cache, and Monitoring :
+
+What is Azure Redis Cache?
+Answer:
+Azure Redis Cache is a fully managed in-memory data storage solution used for caching, 
+session management, and real-time analytics.
+
+How do you monitor and troubleshoot Azure SQL Database performance?
+Answer:
+Use Azure Monitor, Query Performance Insight, and SQL Query Store.
+
+Unit Testing :
+
+What are the differences between NUnit and XUnit?
+Answer:
+NUnit: Attribute-based test framework.
+XUnit: Focuses on extensibility and best practices.
+
+What is mocking in unit testing?
+Answer:
+Mocking simulates the behavior of dependencies to isolate the unit under test.
+
+Continuous Integration and Azure DevOps :
+
+What is Continuous Integration (CI)?
+Answer:
+CI is the practice of merging code changes frequently and verifying them through 
+automated builds and tests.
+
+What is an Azure DevOps Pipeline?
+Answer:
+A CI/CD pipeline in Azure DevOps automates the build, test, and deployment processes.
+
+How do you create and deploy Docker containers using Azure DevOps?
+Answer:
+Use a Dockerfile to build the image.
+Configure pipelines to build, push, and deploy containers.
+
+Bonus Questions :
+
+What is the role of Azure API Management?
+Answer:
+It manages APIs, enforces policies, provides security, and enables API versioning.
+
+================================================================
+Microsoft Cloud Native Lead_Azure :
+
+C#, ASP.NET Core, and Web API
+
+What are the key differences between .NET Core and .NET Framework?
+Answer:
+.NET Core: Cross-platform, modular, and designed for cloud-based applications.
+.NET Framework: Windows-only, monolithic, and suitable for legacy applications.
+
+Explain Dependency Injection (DI) and why it is important in .NET Core.
+Answer:
+DI is a design pattern that injects dependencies into objects instead of instantiating them. 
+It promotes loose coupling, testability, and maintainability.
+
+What is the role of middleware in ASP.NET Core?
+Answer:
+Middleware processes requests and responses in the pipeline. Examples include authentication, 
+routing, and exception handling.
+
+How would you design a RESTful API with proper security?
+Answer:
+Use HTTPS.
+Implement OAuth2.0 or JWT for authentication.
+Use rate limiting and API keys.
+Validate input and sanitize outputs.
+Azure Services and Cloud Native Development
+
+What is the difference between Azure Functions and Logic Apps?
+Answer:
+Azure Functions: Event-driven, serverless compute service for code execution.
+Logic Apps: Workflow automation for integrating services and apps.
+
+What are Azure Event Grid and Service Bus used for?
+Answer:
+Event Grid: Event-based service for routing events from multiple sources to subscribers.
+Service Bus: Messaging service for reliable communication between applications and services.
+
+How do you monitor and troubleshoot Azure App Services?
+Answer:
+Use Azure Monitor, Application Insights, and Diagnostic Logs for tracking performance, 
+usage, and errors.
+
+What is Azure API Management, and how is it used?
+Answer:
+Azure API Management manages APIs by enforcing policies, providing security, enabling API versioning, 
+and offering analytics.
+
+Microservices and Containerization
+
+What are the key principles of microservices architecture?
+Answer:
+Decentralized governance.
+Independent deployment.
+Lightweight communication (REST, gRPC).
+Fault isolation and resilience.
+
+How would you deploy a microservices-based application using Docker and Kubernetes?
+Answer:
+Create Docker containers for each microservice.
+Use Kubernetes for orchestration, scaling, and networking.
+Deploy using Helm charts or YAML manifests.
+
+SQL and Database
+
+What is the purpose of stored procedures, and how do they improve performance?
+Answer:
+Stored procedures encapsulate SQL logic for reuse, reduce network traffic, and 
+improve security by limiting direct table access.
+
+How do you optimize SQL queries for performance?
+Answer:
+Use indexes effectively.
+Avoid SELECT *.
+Use query execution plans to analyze performance bottlenecks.
+Normalize and denormalize tables as needed.
+
+What is the difference between SQL transactions and locks?
+Answer:
+Transactions: Group operations to maintain consistency.
+Locks: Ensure data integrity by preventing concurrent modifications.
+Unit Testing and Quality
+
+What is mocking, and how is it used in unit testing?
+Answer:
+Mocking simulates external dependencies to isolate the unit under test, enabling consistent and 
+reliable testing.
+
+What tools do you use for code quality and unit testing?
+Answer:
+Unit testing: NUnit, XUnit.
+Mocking: Moq, FakeItEasy.
+Code quality: SonarQube, StyleCop.
+
+Frontend Technologies
+
+What is the difference between React and Angular?
+Answer:
+React: Library for building UI components, uses JSX, and is more flexible.
+Angular: Framework for full application development with built-in tools like routing and state management.
+
+How do you ensure responsive design in your applications?
+Answer:
+Use CSS frameworks like Bootstrap, media queries, and relative units like percentages and em.
+
+Azure DevOps and CI/CD
+Explain how you would set up a CI/CD pipeline in Azure DevOps.
+Answer:
+CI: Use pipelines to automate code builds and tests.
+CD: Configure release pipelines to deploy to environments (e.g., Azure App Services, Kubernetes).
+Use YAML or classic editor to define pipelines.
+
+How do you ensure secure deployments in Azure DevOps?
+Answer:
+Use secrets in Azure Key Vault.
+Implement role-based access control (RBAC).
+Validate and test deployments in staging environments before production.
+
+General and Miscellaneous
+
+What is your approach to designing scalable and resilient cloud-native applications?
+Answer:
+Use distributed caching (Redis, Azure Cache).
+Leverage Azure Load Balancer for scalability.
+Implement retry policies and circuit breakers for fault tolerance.
+Design applications with horizontal scalability in mind.
+
+Preparation Tips
+
+Be ready to share examples of projects where you used these technologies.
+Explain design decisions and challenges faced.
+Show familiarity with Azure-specific services and tools.
+
+
+

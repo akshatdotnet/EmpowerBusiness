@@ -6,4 +6,29 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Account\qvda04ac.dnn~" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+  <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <!--<FrameworkReference Include="Microsoft.AspNetCore.App" />-->
+    
+    
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="EFCore.BulkExtensions" Version="8.0.0" />
+    <PackageReference Include="EPPlus" Version="6.2.6" />
+    <PackageReference Include="Hangfire" Version="1.8.5" />
+    <PackageReference Include="itext7" Version="8.0.1" />
+    <PackageReference Include="itext7.pdfhtml" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="MailKit" Version="4.0.0" />
+
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Empower.Data\Empower.Data.csproj" />    
+  </ItemGroup>
+
 </Project>

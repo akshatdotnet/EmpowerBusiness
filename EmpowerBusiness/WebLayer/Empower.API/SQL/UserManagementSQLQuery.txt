@@ -624,5 +624,107 @@ EXEC CheckUserExistence
 
 
 
+---------------------------------------------
+1. One-to-One Relationship
+
+CREATE TABLE Users (
+    UserId INT PRIMARY KEY,
+    UserName NVARCHAR(50)
+);
+
+CREATE TABLE UserProfiles (
+    ProfileId INT PRIMARY KEY,
+    UserId INT UNIQUE,
+    Bio NVARCHAR(255),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId)
+);
+
+INSERT INTO Users (UserId, UserName) VALUES (1, 'JohnDoe');
+INSERT INTO Users (UserId, UserName) VALUES (2, 'JaneSmith');
+
+INSERT INTO UserProfiles (ProfileId, UserId, Bio) VALUES (1, 1, 'Software Developer');
+INSERT INTO UserProfiles (ProfileId, UserId, Bio) VALUES (2, 2, 'Data Scientist');
+
+SELECT u.UserName, up.Bio
+FROM Users u
+LEFT JOIN UserProfiles up ON u.UserId = up.UserId;
+
+
+2. One-to-Many Relationship
+CREATE TABLE Customers (
+    CustomerId INT PRIMARY KEY,
+    CustomerName NVARCHAR(50)
+);
+
+CREATE TABLE Orders (
+    OrderId INT PRIMARY KEY,
+    CustomerId INT,
+    OrderDate DATE,
+    FOREIGN KEY (CustomerId) REFERENCES Customers(CustomerId)
+);
+
+
+INSERT INTO Customers (CustomerId, CustomerName) VALUES (1, 'Alice');
+INSERT INTO Customers (CustomerId, CustomerName) VALUES (2, 'Bob');
+
+INSERT INTO Orders (OrderId, CustomerId, OrderDate) VALUES (1, 1, '2024-12-01');
+INSERT INTO Orders (OrderId, CustomerId, OrderDate) VALUES (2, 1, '2024-12-02');
+INSERT INTO Orders (OrderId, CustomerId, OrderDate) VALUES (3, 2, '2024-12-03');
+
+
+SELECT c.CustomerName, o.OrderId, o.OrderDate
+FROM Customers c
+LEFT JOIN Orders o ON c.CustomerId = o.CustomerId;
+
+
+3. Many-to-Many Relationship
+CREATE TABLE Students (
+    StudentId INT PRIMARY KEY,
+    StudentName NVARCHAR(50)
+);
+
+CREATE TABLE Courses (
+    CourseId INT PRIMARY KEY,
+    CourseName NVARCHAR(50)
+);
+
+CREATE TABLE StudentCourses (
+    StudentId INT,
+    CourseId INT,
+    PRIMARY KEY (StudentId, CourseId),
+    FOREIGN KEY (StudentId) REFERENCES Students(StudentId),
+    FOREIGN KEY (CourseId) REFERENCES Courses(CourseId)
+);
+
+INSERT INTO Students (StudentId, StudentName) VALUES (1, 'Emma');
+INSERT INTO Students (StudentId, StudentName) VALUES (2, 'Liam');
+
+INSERT INTO Courses (CourseId, CourseName) VALUES (1, 'Math');
+INSERT INTO Courses (CourseId, CourseName) VALUES (2, 'Science');
+
+INSERT INTO StudentCourses (StudentId, CourseId) VALUES (1, 1); -- Emma enrolled in Math
+INSERT INTO StudentCourses (StudentId, CourseId) VALUES (1, 2); -- Emma enrolled in Science
+INSERT INTO StudentCourses (StudentId, CourseId) VALUES (2, 1); -- Liam enrolled in Math
+
+SELECT s.StudentName, c.CourseName
+FROM Students s
+JOIN StudentCourses sc ON s.StudentId = sc.StudentId
+JOIN Courses c ON sc.CourseId = c.CourseId;
+
+
+
+Relationship	Table Examples	                    Foreign Keys	                            Example Query
+One-to-One	    Users, UserProfiles	                UserProfiles.UserId → Users.UserId	        SELECT UserName, Bio FROM Users JOIN UserProfiles ON ...
+One-to-Many	    Customers, Orders	                Orders.CustomerId → Customers.CustomerId	SELECT CustomerName, OrderDate FROM Customers JOIN Orders ON ...
+Many-to-Many	Students, Courses, StudentCourses	StudentCourses.StudentId →                  SELECT StudentName, CourseName FROM Students JOIN ...
+                                                    Students.StudentId, StudentCourses.CourseId 
+                                                    → Courses.CourseId	
+
+=====================================================
+
+
+
+
+
 
 

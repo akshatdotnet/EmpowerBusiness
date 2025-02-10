@@ -1,0 +1,711 @@
+
+
+=====================
+
+
+=====================
+Can you explain this career gap on your resume?
+=>
+"My last role initially aligned well with my skills, but over time, responsibilities shifted, and the work no longer aligned 
+with my long-term goals. Despite the challenging job market, I chose to leave and focus on upskilling 
+through freelancing projects. This period allowed me to refine my expertise, learn new technologies, 
+and ensure I was prepared for roles better suited to my aspirations."
+
+Salary Expection vs. Company Budget?
+=>
+"I’m flexible on salary and open to revisiting the discussion post-technical interview. This role is a pivotal step in my career, 
+and I’m committed to a long-term association. Based on my skills and experience, I’m expecting around 22 LPA. 
+I want to be transparent about having another offer at 19 LPA and a counteroffer from my current employer. 
+I’d appreciate exploring flexibility in the offer, perhaps through benefits or a joining bonus. 
+I’m ready to join within 30 days and look forward to contributing."
+
+why are you interested in this role when you hold an offer.
+=>
+"I’m interested in this role because it aligns perfectly with my career goals and offers opportunities to leverage my skills 
+in a meaningful way. While I have an offer, this role stands out due to the company’s vision, the challenging responsibilities, 
+and the potential for growth it offers. I value the chance to contribute to an organization where I can make a lasting impact 
+and grow professionally. My decision is not just about an offer but about finding the right fit for long-term success."
+
+Question: Why are you interested in this position?
+Answer:
+I am excited about this role because it aligns with my expertise in C# and .NET Core for API development and my hands-on experience 
+in Azure Cloud services. The opportunity to collaborate with cross-functional teams and contribute to scalable solutions 
+resonates with my passion for impactful software development. Additionally, the integration with CRM systems, especially Dynamics 365, 
+and the focus on Kubernetes implementation and application modernization are areas where I can bring significant value while also 
+expanding my skills.
+
+Question: Can you describe your experience with Azure DevOps and CI/CD pipelines?
+Answer:
+I have extensive experience creating and managing Azure DevOps CI/CD pipelines to automate builds, tests, and deployments. 
+This includes setting up YAML-based pipelines, implementing version control strategies, and ensuring smooth integration 
+and deployment processes. I have worked with both containerized and non-containerized applications, optimizing pipelines 
+for Kubernetes-based deployments. These efforts have resulted in faster release cycles and reduced deployment risks.
+
+Question: How do you approach API development in .NET?
+Answer:
+For API development, I follow a modular approach, leveraging .NET Core features such as dependency injection, middleware, 
+and API versioning. I prioritize clean architecture with a focus on scalability and maintainability, using tools like 
+Entity Framework Core for data access and Swagger for API documentation. Security is a key focus, where I implement practices 
+like authentication (JWT), authorization, and input validation to ensure robust APIs.
+
+===================== Mock Interview Practice :
+
+Introduction: "Thank you for the opportunity to speak with you today. My name is pradeepkumar, and I have over 10 years of experience 
+in software development and project management, particularly with C# .NET technologies. 
+My background includes managing full lifecycle development projects, from requirements gathering to deployment, across various domains."
+
+Background and Experience: "I began my career as a software developer, which gave me a strong foundation in C#, .NET, and related technologies. 
+Over the years, I transitioned into project management, where I could leverage my technical expertise to lead development teams effectively. 
+My experience spans multiple industries, including inventory management, e-commerce, Travel and Tourism and real estate, 
+where I’ve successfully managed complex projects that delivered significant business value."
+
+Inventory & Billing Invoicing BMS Project: "One of the key projects I managed was an Inventory BMS (Business Management System) for a large retail chain. 
+This project involved designing and implementing a comprehensive inventory tracking and management system using .NET Core, 
+which integrated with their existing ERP system. The system streamlined their inventory processes, reducing manual errors by 30% 
+and improving overall efficiency. My role included leading the development team, coordinating with stakeholders to gather requirements, 
+and ensuring the project was delivered on time and within budget."
+
+E-commerce Project: "In another project, I led the development of a scalable e-commerce platform built on .NET 6, 
+which catered to a rapidly growing online retail business. The platform included features like secure payment processing, 
+customer relationship management (CRM) integration, and a robust product catalog management system. 
+This project involved significant coordination with cross-functional teams, including marketing and customer support, 
+to ensure that the platform met all business and user needs."
+
+PMS Project: "Additionally, I managed a Property Management System (PMS) for a real estate firm, 
+which was built using the latest .NET 8 features. This system allowed the client to manage their properties, leases, and tenant information 
+more efficiently. We implemented features like automated rent collection, tenant communication tools, and reporting dashboards. 
+The project also required integrating with third-party services for credit checks and online payments. 
+My role was crucial in ensuring seamless integration and delivering a user-friendly system that met all client expectations."
+
+Conclusion: "Overall, my experience in managing these diverse projects has honed my ability to deliver complex software solutions that align 
+with business objectives while ensuring high-quality standards and timely delivery."
+
+1. How do you manage project timelines and ensure that a C# .NET project stays on track?
+Answer: "I use a combination of agile methodologies, such as Scrum or Kanban, along with project management tools like Jira or Azure DevOps 
+to monitor and track progress. Regular stand-up meetings, sprint planning, and reviews help in identifying any potential delays early. 
+I also emphasize maintaining a clear communication channel with the development team and stakeholders to quickly address any roadblocks. 
+Risk management is critical, so I perform regular risk assessments to foresee potential issues and adjust timelines or resources accordingly."
+
+2. How do you handle scope changes in a .NET project?
+Answer: "Scope changes are common in software projects. I ensure that any requested changes go through a formal change control process, 
+where the impact on the timeline, budget, and resources is thoroughly evaluated. I communicate the implications of these changes to stakeholders 
+and make sure that the team is aligned with the new objectives. Prioritization is key, so I work with the client and 
+team to prioritize changes based on their impact and business value."
+
+3. Can you describe your experience with .NET 8 and its new features?
+Answer: ".NET 8 introduces several performance enhancements, new APIs, and improvements in areas like minimal APIs, Blazor, and 
+AOT (Ahead of Time) compilation. I have led teams that have adopted .NET 8, leveraging its capabilities to improve application performance 
+and scalability. For instance, we utilized the new AOT compilation to reduce startup times and memory usage in our applications. 
+I'm also familiar with the enhancements in data access with Entity Framework Core 8, which helped streamline database operations in our projects."
+
+4. How do you ensure quality in a C# .NET project?
+Answer: "Quality assurance is integral to project success. I ensure quality by implementing a robust CI/CD pipeline that includes 
+automated testing (unit, integration, and end-to-end). Code reviews and pair programming are also part of the development process 
+to maintain code quality. Additionally, I encourage the use of static code analysis tools like SonarQube to detect potential issues early. 
+Regular client demos and feedback sessions are also conducted to ensure that the product meets the required standards and expectations."
+
+5. How do you manage stakeholder communication and expectations in a .NET project?
+Answer: "Effective communication is vital for managing stakeholder expectations. I establish clear communication channels from the outset, 
+including regular status updates, milestone reviews, and demo sessions. I use tools like Microsoft Teams or Slack for day-to-day communication 
+and project management software like Azure DevOps to provide stakeholders with real-time visibility into the project’s progress. 
+By setting clear objectives, timelines, and deliverables from the start, I manage expectations and ensure that stakeholders are aligned with 
+the project's goals."
+
+#Azure Services
+	1.Virtual Machine
+	2.Azure Functions
+	3.Azure Blob Storage
+	4.Azure Dist Storage
+	5.Azure Synapse
+	6.Azure DNS
+	7.Azure Load Balance
+	8.Azure Content Delivery Network (CDN)
+	9.Azure Cosmos DB
+	10.Azure SQL Database
+	11.Azure Cache for Redis
+	12.Azure Event Hubs
+	13.Azure HDInsight
+	14.Computer vision (Cognitive services)
+	15.Service Bus
+	16.Queue Storage
+	17.Azure Monitor
+	
+========================================================
+
+C#, ASP.NET, and MVC
+
+Architecture Design :	
+Monolith - A single, all-in-one factory where every department (e.g., assembly, packaging) works under one roof.
+Modular Monolith - A factory with separate departments under one roof, each working independently but still part of one building.
+Microservices -	A distributed set of specialized factories, each handling a specific task, located in different locations.
+
+How Higher level language convert into machine language in .net.
+	CLR Common Language Runtime
+	Basically CLR is heart of .Net its provide a runtime environment to your application it handled your code execution.
+	Source Code => MSIL => (Just In Time Compiler)   => Native or Machine (.exe or .dll)
+	Your Source Code converted into MSIL (Microsoft Intermediate Language) and MSIL with the help Of JIT converted into 
+	native or Machine code.
+
+Q1. What is the difference between IEnumerable, ICollection, and IList in C#?
+A1.
+IEnumerable: Read-only, forward-only access to a collection of items. Commonly used for LINQ queries.
+ICollection: Extends IEnumerable with methods for adding, removing, and counting items.
+IList: Extends ICollection with the ability to access elements by index.
+
+Q2. What is the purpose of ViewData, ViewBag, and TempData in ASP.NET MVC?
+A2.
+ViewData: Dictionary for passing data from the controller to the view. Requires casting.
+ViewBag: Dynamic wrapper around ViewData. No need for casting.
+TempData: Used to pass data between two requests. Stored in the session temporarily.
+
+Q3. Explain Dependency Injection in MVC.
+A3. Dependency Injection (DI) is a design pattern used to achieve Inversion of Control (IoC). 
+It allows you to inject dependencies (e.g., services, repositories) into controllers via constructor injection or method injection,
+improving code maintainability and testability.
+
+Knowledge of AWS
+Q4. How do you deploy an ASP.NET application on AWS?
+A4.
+Host the application on an EC2 instance or use AWS Elastic Beanstalk for managed deployment.
+Configure the environment with required settings (e.g., IIS, .NET runtime).
+Use RDS for database services.
+Use S3 for storing static files.
+Leverage IAM roles, security groups, and load balancers for security and scalability.
+
+Q5. What is the difference between S3 and EBS?
+A5.
+S3: Object storage for unstructured data like images, backups, and static files.
+EBS: Block storage, primarily used as a storage solution for EC2 instances.
+
+Docker and Kubernetes
+Q6. How do Docker containers differ from virtual machines?
+A6.
+Containers: Lightweight, share the host OS kernel, and start quickly.
+Virtual Machines: Heavier, run a full OS, and have slower startup times.
+
+Q7. How would you deploy a microservice application using Kubernetes?
+A7.
+Create Docker images for each microservice.
+Write Kubernetes deployment and service YAML files.
+Use kubectl to deploy the services to the cluster.
+Configure ConfigMaps, Secrets, and Horizontal Pod Autoscalers.
+Use an Ingress Controller for routing.
+API Creation, JSON, SOAP
+
+Q8. What are the key differences between REST and SOAP?
+A8.
+REST: Lightweight, uses JSON, relies on HTTP methods, and is stateless.
+SOAP: Protocol-based, uses XML, supports WS-Security, and is more complex.
+
+Q9. How do you secure an API in .NET Core?
+A9.
+Implement authentication using JWT or OAuth2.
+Enforce HTTPS.
+Use API keys for clients.
+Validate input and sanitize output.
+Apply rate limiting and logging.
+Understanding Authentication and Security
+
+Q10. What is the difference between authentication and authorization?
+A10.
+Authentication: Verifies the identity of a user (e.g., via username and password).
+Authorization: Determines what resources an authenticated user can access.
+
+Q11. How would you handle sensitive data in an application?
+A11.
+Use encryption for sensitive data (e.g., AES for data at rest).
+Use HTTPS/TLS for data in transit.
+Store secrets in a secure vault (e.g., AWS Secrets Manager, Azure Key Vault).
+Apply proper role-based access control (RBAC).
+Microservices Design and Development
+
+Q12. How do you design a microservices architecture?
+A12.
+Decompose the system into smaller, independent services based on business capabilities.
+Use APIs for inter-service communication (e.g., REST or gRPC).
+Use a service registry (e.g., Eureka) for discovery.
+Implement circuit breakers and retries using patterns like Polly.
+Use an API Gateway for centralized routing and security.
+
+Q13. How would you handle inter-service communication in microservices?
+A13.
+Synchronous: Use REST or gRPC for direct communication.
+Asynchronous: Use message brokers like RabbitMQ, Kafka, or AWS SQS.
+
+Q14. How do you ensure the scalability of microservices?
+A14.
+Use Kubernetes to scale services based on CPU/memory usage.
+Implement horizontal scaling.
+Use caching (e.g., Redis, Memcached).
+Design stateless services for easier scaling.
+
+=================mock interview question================
+1. Can you explain the key features of .NET 8?
+=> .NET 8 brings various enhancements and new features, such as:
+Native AOT (Ahead of Time Compilation): Significantly reduces application startup time and memory usage by compiling applications to native code.
+ASP.NET Core Improvements: Enhanced support for Blazor, SignalR, and minimal APIs, improving performance and developer experience.
+Containerization and Cloud Native Development: Improved support for building and deploying applications using Docker containers and Kubernetes.
+Performance Enhancements: New optimizations across the runtime and libraries to make .NET applications faster.
+Cross-Platform Development: Continued improvements in cross-platform support, making it easier to develop applications for Windows, macOS, and Linux.
+Improved Observability: Enhanced metrics and tracing capabilities to facilitate better monitoring in production.
+
+2. How do you handle code versioning and deployments in a .NET project?
+=> In .NET projects, versioning and deployments are handled using tools and techniques such as:
+Git for Version Control: Using Git for managing source code versions, with feature branching and pull requests to manage collaboration.
+Semantic Versioning: Following semantic versioning for NuGet packages (e.g., Major.Minor.Patch) to manage breaking changes, features, and patches.
+CI/CD Pipelines: Setting up CI/CD pipelines using tools like Azure DevOps, GitHub Actions, or Jenkins to automate builds, testing, 
+and deployment processes.
+Docker and Kubernetes: Leveraging containerization with Docker and deploying to cloud services like Azure Kubernetes Service (AKS) for 
+scalable deployment.
+
+3. What is the difference between .NET Core and .NET Framework?
+=> Cross-platform Support: .NET Core (now .NET 5 and beyond) is cross-platform and supports Windows, Linux, and macOS, while 
+.NET Framework is limited to Windows.
+Performance: .NET Core/5/6/7/8 provides better performance, especially for server applications.
+Microservices: .NET Core is more suitable for building cloud-based, microservice-oriented architectures, 
+while .NET Framework is more suited for traditional monolithic apps.
+Active Development: .NET Core (and its successors) are actively developed, whereas .NET Framework is in maintenance mode.
+
+4. How would you handle technical debt in a .NET development team?
+=>Managing technical debt involves:
+Identifying Debt: Regular code reviews, automated static analysis (using tools like SonarQube or Resharper), and monitoring 
+for common technical debt signs such as code smells, duplicated code, and poor test coverage.
+Prioritizing Fixes: Balancing immediate feature delivery with planned refactoring tasks to address technical debt over time.
+Establishing Coding Standards: Implementing team-wide coding standards and guidelines to prevent the accumulation of technical debt.
+Refactoring and Testing: Regularly refactoring the codebase and ensuring robust test coverage with unit tests and integration tests 
+using frameworks like xUnit or NUnit.
+
+5. How would you approach performance optimization in a .NET application?
+=>Performance optimization strategies include:
+Profiling: Use tools like Visual Studio Profiler, JetBrains dotTrace, or BenchmarkDotNet to identify performance 
+bottlenecks in the code.
+Asynchronous Programming: Leverage async and await to avoid blocking threads during I/O-bound operations.
+Caching: Implement in-memory caching using MemoryCache or distributed caching solutions like Redis to reduce database 
+or external service calls.
+Entity Framework Optimization: Use techniques such as lazy loading, eager loading, and optimizing LINQ queries to improve 
+Entity Framework performance.
+Memory Management: Monitor and optimize memory usage to avoid excessive garbage collection or memory leaks by efficiently 
+handling resources and managing object lifetimes.
+
+6. How do you ensure code quality in a .NET team?
+=>Ensuring code quality can be achieved through:
+Automated Testing: Writing unit tests, integration tests, and end-to-end tests using frameworks like MSTest, xUnit, or NUnit.
+Code Reviews: Encouraging peer code reviews to ensure adherence to best practices and coding standards.
+Static Code Analysis: Using static analysis tools like SonarQube or Resharper to detect potential code issues early.
+Continuous Integration: Implementing CI/CD pipelines to automatically run tests and checks on code before it is merged into the main branch.
+Coding Guidelines: Establishing and enforcing coding standards through shared guidelines and style enforcement tools (like StyleCop or EditorConfig).
+
+7. Describe your experience leading a development team. How do you handle conflict among team members?
+=>
+Leadership Approach: My leadership approach is to faster collaboration and create a culture of open communication. 
+I ensure that all team members are aligned with project goals, and I provide mentorship to junior developers.
+Conflict Resolution: For resolving conflicts, I facilitate open discussions between the involved parties to understand their perspectives 
+and find a common ground. I also emphasize the importance of focusing on solutions rather than personal differences.
+
+8. How do you manage project deadlines and ensure timely delivery in a fast-paced environment?
+=>Managing deadlines requires:
+Clear Communication: Keeping all stakeholders informed of project progress, risks, and changes.
+Agile Methodologies: Using Agile methodologies (e.g., Scrum or Kanban) to break down the project into 
+manageable sprints with clear deliverables.
+Prioritization: Prioritizing tasks based on business value and focusing on the most critical features first.
+Monitoring Progress: Regularly reviewing the team’s progress through daily stand-ups, 
+sprint retrospectives, and task tracking tools (like Jira or Azure DevOps).
+
+9. How do you ensure scalability in a .NET application?
+=>Ensuring scalability involves:
+Horizontal Scaling: Designing the application to support horizontal scaling (adding more servers) with load balancing.
+Cloud Services: Leveraging cloud platforms like Azure to use services such as Azure App Services, Functions, 
+and Kubernetes for scalable architecture.
+Microservices Architecture: Breaking down the monolithic application into smaller, independently deployable microservices.
+Efficient Database Design: Using techniques like sharding, partitioning, and indexing to ensure that the database can handle increasing load.
+Caching and CDN: Implementing caching (e.g., Redis) and using Content Delivery Networks (CDNs) to reduce load on the application servers.
+
+10. How do you approach mentoring junior developers?
+=>
+Pair Programming: I often pair up with junior developers on complex tasks to guide them through problem-solving and best practices.
+Code Reviews: I provide constructive feedback during code reviews, focusing on teaching rather than just correcting.
+Knowledge Sharing: I encourage knowledge sharing through regular technical sessions or “lunch and learns” to help 
+junior developers grow in areas like design patterns, debugging techniques, and new technologies.
+=========================================
+
+C# and .NET Core
+Q1: What are the key differences between .NET Core and .NET Framework?
+A:
+Cross-platform support: .NET Core runs on Windows, macOS, and Linux, while .NET Framework is Windows-only.
+Performance: .NET Core offers better performance due to optimizations like the Kestrel server.
+Deployment model: .NET Core supports self-contained deployments, where all dependencies are included, unlike .NET Framework.
+Microservices: .NET Core is more suited for microservices architecture due to its modular and lightweight nature.
+
+Q2: Explain Dependency Injection (DI) and its implementation in .NET Core.
+A:
+Dependency Injection is a design pattern used to achieve Inversion of Control (IoC), allowing objects to receive 
+their dependencies from an external source rather than creating them.
+In .NET Core:
+Configure services in Startup.cs using IServiceCollection.
+Use AddSingleton, AddScoped, or AddTransient methods based on the lifetime scope required.
+Inject dependencies in constructors using IServiceProvider.
+
+Example:
+public class MyService : IMyService { ... }
+
+// In Startup.cs
+services.AddScoped<IMyService, MyService>();
+
+// Constructor injection
+public class MyController
+{
+    private readonly IMyService _service;
+    public MyController(IMyService service)
+    {
+        _service = service;
+    }
+}
+
+Q3: How do you handle exceptions in a .NET Core REST API?
+A:
+Use middleware for centralized exception handling:
+app.UseExceptionHandler("/error");
+Create custom error response using ExceptionFilter.
+Return appropriate HTTP status codes (e.g., 400, 404, 500).
+Example:
+public class GlobalExceptionMiddleware
+{
+    private readonly RequestDelegate _next;
+    public GlobalExceptionMiddleware(RequestDelegate next) => _next = next;
+
+    public async Task Invoke(HttpContext context)
+    {
+        try
+        {
+            await _next(context);
+        }
+        catch (Exception ex)
+        {
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsync("An error occurred.");
+        }
+    }
+}
+
+Q4: What is the purpose of IHostedService and BackgroundService in .NET Core?
+A:
+IHostedService: Used to implement long-running background tasks, such as polling or scheduled jobs.
+BackgroundService: A base class that simplifies implementing IHostedService.
+Example:
+public class MyBackgroundService : BackgroundService
+{
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            // Perform background tasks
+            await Task.Delay(1000, stoppingToken);
+        }
+    }
+}
+Register in Program.cs:
+services.AddHostedService<MyBackgroundService>();
+
+REST API
+Q5: How do you ensure security in a REST API?
+A:
+Authentication and Authorization: Use JWT or OAuth 2.0.
+HTTPS: Enforce secure communication.
+Input validation: Prevent SQL injection and XSS attacks.
+Rate limiting: Protect against DDoS attacks.
+Use CORS: Allow only trusted domains.
+
+Q6: How do you version REST APIs?
+A:
+URL versioning: /api/v1/products.
+Query string: /api/products?version=1.
+Header-based: Use a custom header like X-API-Version.
+Example: URL versioning in ASP.NET Core:
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
+public class ProductsController : ControllerBase { ... }
+
+Q7: What is HATEOAS in REST APIs?
+A:
+HATEOAS (Hypermedia As The Engine Of Application State) allows clients to navigate the API dynamically using links provided 
+in the response.
+Example:
+{
+  "id": 1,
+  "name": "Product A",
+  "links": [
+    { "rel": "self", "href": "/api/products/1" },
+    { "rel": "update", "href": "/api/products/1" }
+  ]
+}
+
+Microservices
+Q8: What are the benefits of a microservices architecture?
+A:
+Scalability: Services can be scaled independently.
+Technology diversity: Different technologies can be used for different services.
+Fault isolation: A failure in one service doesn’t affect others.
+Faster deployment: Small, independent services allow quicker releases.
+
+Q9: How do you ensure communication between microservices?
+A:
+Synchronous: Use REST or gRPC.
+Asynchronous: Use message brokers like RabbitMQ, Kafka, or Azure Service Bus.
+
+Q10: How do you manage data consistency in microservices?
+A:
+Event sourcing: Store state as a sequence of events.
+Saga pattern: Handle distributed transactions using compensating actions.
+Database-per-service: Each microservice manages its own data.
+
+Angular
+Q11: How does Angular implement dependency injection?
+A:
+Angular uses a hierarchical injector tree where services provided at a module or component level 
+are available to their children.
+
+typescript
+@Injectable({
+  providedIn: 'root',
+})
+export class MyService { }
+
+Q12: How do you handle state management in Angular?
+A:
+Use services to share state between components.
+For complex applications, use libraries like NgRx or Akita.
+
+Q13: Explain the role of Angular lifecycle hooks.
+A:
+Angular lifecycle hooks allow you to execute logic at specific stages of a component's lifecycle:
+ngOnInit: Called after the component is initialized.
+ngOnChanges: Triggered when input properties change.
+ngOnDestroy: Cleanup logic before the component is destroyed.
+
+Q14: How do you optimize Angular applications?
+A:
+Use OnPush change detection strategy.
+Lazy load modules.
+Minimize DOM manipulations.
+Use trackBy in *ngFor to optimize rendering.
+
+=============Mock Interview 1===========
+Infosys C# interview questions | Infosys C# interview experience :
+1.Can you explain some of the feature of dotnet core.
+2.What is dependency injection.
+3.How to enable session in dotnet core.
+4.How Exception handle in dotnet core.
+5.what is difference between monolithic and microservice based architecture.
+6.What are the main concepts of OOPS? What are classes and objects explain it?
+    Main Concepts of Oops :	Enacapsulation=>Abstraction =>Polymorphism=>Inheritance =>Class=>Object
+7.Can tell slq query to get 2nd and 5th highest salary of employee.
+8.What is difference between store procedure and function.
+9.Different Keys in SQL (Primary Key, Candidate Key, Foreign Key)
+10.How you will do perfomance tuning in SQL Serve or Web Application & Waht are the filters dotnet core.
+
+Lead Interview Experience :
+1.Explain one of the challanges situation where you handle in your project.
+2.How you will handle testing in your application.
+3.Can you explain process of deployment the Azure DevOps CI/CD pipelines, Source Code Versioning and DevOps practices.
+4.What design pattern have used in your projects. How to use dependancy injection in your project.
+5.One Scenerion have text files there dublicate numbers how will read and take unique number form that files.
+6.What is difference between aunthentication & authorization.
+7.What is the purpose of using web api. what filters in web api.
+
+.Net Core Interview Real Experience | .Net MVC Interview Questions and Answers
+1.How Higher level language convert into machine language in .net.
+2.What is assembly and dll.
+3.Have you work on code security part.
+4.What is LINQ & Entity Framework and Why we use in project.
+5.Why we use using statement in C#.
+6.What is SOLID Princeples.
+7.What is difference between interface & abstration class.
+8.What is managed and unmanaged code.
+9.What is the difference between .Net Framework and .Net core.
+10.What is RESTfull service and WCF service. What are different type of filter we have.
+
+Angular :
+1. What are the key differences between AngularJS and Angular?
+2. What are Angular decorators, and explain the commonly used ones?
+3. Explain the lifecycle hooks of an Angular component.
+4. What is the difference between a service and a factory in Angular?
+5. What is the role of ng-content and how do you use it?
+6. What is change detection in Angular, and how does it work?
+7. What is RxJS, and how is it used in Angular?
+8. How do Angular forms differ (Template-driven vs. Reactive forms)?
+9. What are Angular modules and why are they important?
+10.What is lazy loading in Angular, and how is it implemented?
+
+Q.What is Angular CLI?
+Q.What are Angular Services?
+Q.Explain Angular Component LifeCycle Hooks?
+Q.What is Angular Routing, and how is it implemented?
+Q.Explain the concept of Two-way Data Binding in Angular?
+
+Basic :
+1.Angular Framework
+2.Components & Modules
+3.Data Binding
+4.Directives
+5.Decorator & Pipes
+6.Services & Depenency Injection
+7.Component Lifecycle - Hooks
+
+Advance :
+8.Routing
+9.Obervable \ HTTPCLIENT \ RxJS
+10.TypeScript - Basic
+11.TypeScript - Oops 
+12.Angualr Form
+13.Authentication / JWT/ AUTH GURAD/ HTTPCLIENT
+14.Parent Child components communication
+
+=============Mock Interview 2===========
+
+1. Can you walk us through your experience with decommissioning legacy systems 
+or removing application components?
+Answer:
+In my previous projects, I have worked on decommissioning legacy components, 
+ensuring a smooth transition without affecting business operations. 
+I followed a structured approach:
+Code Analysis: Used tools like ReSharper, SonarQube, and static code analysis 
+to identify dependencies.
+Impact Assessment: Worked with stakeholders to evaluate the impact on other systems.
+Phased Removal: Gradually removed dependencies, starting with unused components and APIs.
+Testing & Validation: Conducted unit testing, integration testing, and regression testing 
+to ensure system stability.
+Refactoring: Optimized the codebase, ensuring maintainability and performance.
+For instance, in a banking project, I helped remove a legacy payment gateway, 
+refactored API calls, and ensured business continuity by integrating a new system without 
+disrupting operations.
+
+2. How would you approach identifying and removing BankFast dependencies in the codebase?
+Answer:
+I would take a structured approach to ensure a smooth decommissioning:
+Code Discovery & Mapping:
+Use static code analysis tools (ReSharper, Roslyn, SonarQube) to find references.
+Search for using, namespace, and API calls related to BankFast.
+Identify database tables, stored procedures, and scheduled jobs associated with BankFast.
+Dependency Quantification:
+Categorize dependencies (direct vs. indirect).
+Check for API integrations, middleware dependencies, and configuration settings.
+Phased Decommissioning Plan:
+Remove unused BankFast components first.
+Refactor impacted areas incrementally.
+Deploy in phases to mitigate risks.
+Testing Strategy:
+Implement unit tests and integration tests for impacted modules.
+Work with QA to validate functionality across the system.
+Stakeholder Collaboration:
+Communicate changes with Business Analysts and Project Managers.
+Provide documentation and knowledge transfer.
+
+3. What challenges do you foresee in this decommissioning process? How would you address them?
+Answer:
+Some key challenges include:
+Hidden Dependencies: Some parts of the system might have implicit dependencies.
+Solution: Use dependency analyzers and runtime logging to catch runtime dependencies.
+Data Migration: If BankFast involves data storage, we need to ensure data integrity.
+Solution: Implement data archival and migration strategies before removal.
+Downtime & Business Disruptions: Removing code in one go can cause unexpected failures.
+Solution: Follow an incremental decommissioning approach, removing components in phases with 
+proper rollback mechanisms.
+Stakeholder Buy-in: Business teams may have concerns about impact.
+Solution: Conduct impact assessments, document findings, and maintain transparent communication.
+
+4. How do you ensure that removing BankFast components does not break existing functionality?
+Answer:
+I would ensure this by following a structured testing and validation approach:
+Unit Testing:
+Write/update unit tests using xUnit/NUnit/MSTest to verify affected modules.
+Integration Testing:
+Ensure APIs, services, and DB queries work correctly after the removal.
+Regression Testing:
+Work with the QA team to validate end-to-end workflows.
+Canary Deployments:
+Deploy changes incrementally and monitor logs before a full rollout.
+Feature Flags:
+Use feature toggles to disable BankFast without fully removing it immediately.
+
+5. What tools would you use for this project and why?
+Answer:
+Code Analysis:
+ReSharper, SonarQube, Roslyn – To identify dependencies.
+Version Control & CI/CD:
+Git, Azure DevOps, Jenkins – For managing changes and automating deployments.
+Database Management:
+SQL Server Profiler, EF Core Migrations – To analyze database dependencies.
+Testing Frameworks:
+xUnit, NUnit, MSTest – For unit and integration testing.
+Postman, Swagger – For API testing.
+Monitoring & Logging:
+Serilog, ELK Stack, Application Insights – To track issues post-deployment.
+
+6. Can you explain your experience with .NET Core and API integrations?
+Answer:
+I have extensive experience working with .NET Core, developing RESTful APIs, 
+and integrating third-party services. My expertise includes:
+Building Scalable APIs: Using ASP.NET Core Web API with best practices like 
+dependency injection, middleware, and logging.
+Securing APIs: Implementing JWT authentication, OAuth2, and API gateways.
+Database Interactions: Using Entity Framework Core, stored procedures, 
+and optimizing queries for performance.
+Third-Party Integrations: Worked with APIs such as payment gateways, banking services, 
+and cloud storage.
+Async & Performance Optimization: Used async/await, caching, and distributed architectures 
+to enhance performance.
+Example: I developed a financial transaction API that integrated with a banking system, 
+handling secure payments and ensuring compliance with regulatory standards.
+
+7. How do you handle database changes when refactoring an application?
+Answer:
+Identify Database Dependencies:
+Use SQL Profiler to track queries related to the module being removed.
+Check stored procedures, views, and triggers linked to BankFast.
+Data Migration & Backup:
+Migrate necessary data to an archival system.
+Take database snapshots before making schema changes.
+Schema Updates:
+Use EF Core Migrations to update schema incrementally.
+Drop unused columns/tables after validating dependencies.
+Testing & Validation:
+Perform database integrity checks.
+Run SQL scripts in a staging environment before applying changes to production.
+
+8. How do you ensure proper documentation during the decommissioning process?
+Answer:
+Dependency Mapping: Document all identified BankFast dependencies.
+Change Logs: Maintain a record of code removals and database modifications.
+Impact Analysis Reports: Share insights on affected modules and risks.
+Testing Reports: Track unit/integration test results before deployment.
+Knowledge Transfer: Conduct walkthroughs for teams managing the codebase post-decommissioning.
+
+9. Have you worked with financial or banking applications before? What challenges did you face?
+Answer:
+Yes, I have worked on finance and trading systems. Some challenges I tackled include:
+Compliance & Security: Implemented encryption, access controls, and regulatory compliance (e.g., PCI DSS).
+Data Consistency: Ensured transaction integrity using ACID properties and distributed databases.
+Performance Optimization: Used caching, indexing, and query optimization for high-volume transactions.
+Legacy System Integrations: Migrated outdated APIs and integrated modern payment gateways.
+
+10. Why should we hire you for this role?
+Answer:
+With 10+ years of experience in .NET development, microservices, and enterprise application refactoring, 
+I bring:
+Proven expertise in decommissioning legacy systems without business disruption.
+Strong technical skills in C#, .NET Core, API integrations, and SQL databases.
+Hands-on experience with CI/CD, cloud platforms (Azure), and DevOps.
+Excellent stakeholder collaboration, ensuring smooth project execution.
+I am confident that my experience aligns perfectly with the needs of this project.
+
+=============Mock Interview 3===========
+
+=============Mock Interview 4===========
+
+=============Mock Interview 5===========
+
+========================================
+
+
+
+

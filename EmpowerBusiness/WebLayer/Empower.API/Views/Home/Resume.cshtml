@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+
+            header p {
+                margin: 5px 0 0;
+            }
+
+        /* Section styles */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #003366;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            color: #003366;
+        }
+
+        .content {
+            margin: 10px 0 20px;
+        }
+
+            .content p {
+                margin: 5px 0;
+            }
+
+        /* List styles */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            ul li {
+                margin: 5px 0;
+                display: flex;
+                align-items: center;
+            }
+
+                ul li::before {
+                    content: '✔';
+                    margin-right: 10px;
+                    color: #003366;
+                }
+
+        /* Contact button */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #003366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .contact-btn:hover {
+                background-color: #00509e;
+            }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366;
+            color: #fff;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 0.9rem;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Senior Software Developer | C# .NET & Azure Cloud Specialist</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Summary</h2>
+            <div class="content">
+                <p>Results-oriented software developer with 15+ years of experience in designing, developing, and deploying enterprise-level applications using C#, .NET Core, and Azure Cloud services. Proven expertise in leading cross-functional teams, delivering high-quality solutions, and optimizing application performance.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <div class="content">
+                <ul>
+                    <li>C# and .NET Framework</li>
+                    <li>Azure Cloud Services (App Services, Azure Functions, Blob Storage)</li>
+                    <li>Microservices Architecture</li>
+                    <li>SQL Server and Azure SQL</li>
+                    <li>RESTful APIs and Web Services</li>
+                    <li>DevOps: CI/CD with Azure DevOps</li>
+                    <li>Docker and Kubernetes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Experience</h2>
+            <div class="content">
+                <h3>Senior Software Developer</h3>
+                <p>XYZ Corporation | Jan 2010 – Present</p>
+                <ul>
+                    <li>Architected and implemented scalable microservices using .NET Core and Azure Kubernetes Service (AKS).</li>
+                    <li>Optimized application performance by integrating Azure App Services and Azure Functions.</li>
+                    <li>Developed CI/CD pipelines for automated deployments on Azure DevOps.</li>
+                </ul>
+                <h3>Software Developer</h3>
+                <p>ABC Solutions | Jan 2008 – Dec 2009</p>
+                <ul>
+                    <li>Designed and built RESTful APIs for web and mobile applications.</li>
+                    <li>Collaborated with the QA team to improve test coverage and reduce defects by 20%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="content">
+                <p><strong>Master's in Computer Science</strong> - University of Technology, 2007</p>
+                <p><strong>Bachelor's in Information Technology</strong> - College of Engineering, 2005</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <div class="content">
+                <ul>
+                    <li>Microsoft Certified: Azure Solutions Architect Expert</li>
+                    <li>Microsoft Certified: Azure Developer Associate</li>
+                    <li>Scrum Alliance Certified ScrumMaster (CSM)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Contact</h2>
+            <div class="content">
+                <p>Email: johndoe@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <a href="#" class="contact-btn">Download Resume</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

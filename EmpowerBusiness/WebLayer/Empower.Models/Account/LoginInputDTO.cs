@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empower.Models.Constants;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,5 +27,25 @@ namespace Empower.Models.Account
         [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
         public string ReturnURL { get; set; } = @"/";
+
+        [LocalizedRequired("Login.EmailMobile.Required")]
+        [LocalizedMaxLength(UserConsts.MaxUserEmailLength, "Common.MaxLength.Required")]
+        [LocalizedMinLength(UserConsts.MinUserEmailLength, "Common.MinLength.Required")]
+        [LocalizedDisplay("Login.EmailMobile.Label")]
+        public string EmailMobile { get; set; } = string.Empty;
+
+        //[LocalizedRequired("Login.Password.Required")]
+        //// [LocalizedMinLength(UserConsts.MinPasswordHashLength, "SignUp.Password.MinLength")]
+        //[LocalizedMaxLength(UserConsts.MaxPasswordHashLength, "SignUp.Password.MaxLength")]
+        ////[LocalizedRegExp(ApplicationRegExp.Password, "SignUp.Password.MinLength.ErrorMsg")]
+        //[LocalizedDisplay("Login.Password.Label")]
+        //public string Password { get; set; } = string.Empty;
+
+        //public bool RememberMe { get; set; }
+
+        //public string? ReturnURL { get; set; } = @"/";
+        public string? ErrorMessage { get; set; }
+        //public ForgotPasswordInputDTO? ForgotPasswordInput { get; set; }
+        public int? AdminUserId { get; set; }
     }
 }

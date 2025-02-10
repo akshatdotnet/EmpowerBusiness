@@ -18,6 +18,11 @@ namespace Empower.BMS.Controllers
             return View();
         }
 
+        public IActionResult FoodDeliver()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

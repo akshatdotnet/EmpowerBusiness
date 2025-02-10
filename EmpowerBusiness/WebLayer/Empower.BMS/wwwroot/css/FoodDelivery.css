@@ -1,0 +1,90 @@
+﻿/* General Reset */
+body, h1, h2, h3, p, ul, li, a, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 8px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+.restaurant-section, .cart-section {
+    padding: 20px;
+}
+
+.restaurant-list, .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-card, .cart-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .restaurant-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+button {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #e55d4d;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .restaurant-card, .cart-item {
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 70%;
+    }
+}

@@ -1,0 +1,110 @@
+﻿
+
+Architecture Design :	
+Monolith - A single, all-in-one factory where every department (e.g., assembly, packaging) works under one roof.
+Modular Monolith - A factory with separate departments under one roof, each working independently but still part of one building.
+Microservices -	A distributed set of specialized factories, each handling a specific task, located in different locations.
+
+
+	MonolithApp/
+├── Controllers/
+├── Models/
+├── Services/
+├── Repositories/
+├── Data/
+├── Helpers/
+├── Properties/
+└── Program.cs
+
+
+ModuleMonolithApp/
+├── Modules/
+│   ├── Users/
+│   │   ├── Controllers/
+│   │   ├── Models/
+│   │   ├── Services/
+│   │   ├── Repositories/
+│   │   └── UsersModule.cs
+│   ├── Orders/
+│   │   ├── Controllers/
+│   │   ├── Models/
+│   │   ├── Services/
+│   │   ├── Repositories/
+│   │   └── OrdersModule.cs
+├── Shared/
+│   ├── Data/
+│   ├── Utilities/
+│   └── SharedKernel/
+├── appsettings.json
+├── Program.cs
+└── Startup.cs
+
+
+MicroservicesApp/
+├── ApiGateway/
+├── AuthService/
+├── UserService/
+├── OrderService/
+├── Shared/
+│   ├── Models/
+│   ├── Utilities/
+│   └── EventBus/
+├── docker-compose.yml
+└── README.md
+
+
+Project Structure and Solution Layers:
+Web Layer (MVC): Responsible for handling user interactions, displaying views, and managing request/response flow.
+Business Logic Layer (Services): Contains the core business logic of the application.
+Data Access Layer (Repositories): Manages database interactions using Entity Framework Core.
+Domain Models: Defines the entities that represent data within the system.
+Database: SQL Server or another supported database used with Entity Framework Core.
+
+Task-Wise Breakdown with Estimates
+	Task  -	Details	Time Estimate (Hours)
+	1. Requirement Analysis	Collecting business requirements, creating UML diagrams. - 12
+	2. Project Setup	Setting up the .NET solution structure, configuring database. - 8
+	3. Authentication Module	User registration, login/logout, JWT-based security implementation. - 16
+	4. Product Catalog	CRUD operations for products, category-based filtering, and pagination.	- 20
+	5. Shopping Cart	Add, update, and remove items; session management. - 16
+	6. Order Management	Checkout process, order status updates, order history for users. - 20
+	7. Payment Integration	Integration with PayPal/Stripe APIs, error handling for payment failures. - 16
+	8. Admin Panel	Manage products, orders, and user details with secure access. - 24
+	9. Reports and Dashboard	Sales trends, inventory status, and analytics for admin users.	- 20
+	10. Testing	Unit tests for APIs, integration testing for all modules.	- 16
+	11. Deployment	Hosting on Azure with CI/CD pipelines.	- 8
+	Total Estimate: 176 Hours (~4-5 weeks)
+
+===========================================================
+	NodeJS Command :
+	node -v
+	npm -v
+
+	Project Structure
+	MyNodeApp/
+	├── package.json          // Node.js project configuration
+	├── server.js             // Entry point for the app
+	├── node_modules/         // Installed dependencies
+	├── .gitignore            // Git ignore file
+	├── README.md             // Project documentation
+
+	npm init -y          # Initialize a Node.js project
+	npm install express  # Install Express.js as an example
+
+
+	MyNodeApp/
+	├── server.js
+	├── routes/
+	├── controllers/
+	├── models/
+	├── views/             # For templating (e.g., EJS, Pug)
+	├── public/            # Static files (CSS, JS, images)
+	├── package.json
+	└── README.md
+
+	npm install -g nodemon
+	nodemon server.js
+
+	node_modules/
+	.env
+
